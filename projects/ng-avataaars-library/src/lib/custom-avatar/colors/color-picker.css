@@ -1,0 +1,14 @@
+.kip-avatar-pick-color {
+  width: 40px;
+  height: 40px;
+  border-style: solid;
+  border-width: 1px;
+  margin: 2px;
+  border-color: black;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.kip-avatar-selected-color {
+  border-color: red;
+}

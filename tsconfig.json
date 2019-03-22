@@ -17,6 +17,26 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "ng-avataars-lib": [
+        "dist/ng-avataars-lib"
+      ],
+      "ng-avataars-lib/*": [
+        "dist/ng-avataars-lib/*"
+      ],
+      "ng-avataaars-lib": [
+        "dist/ng-avataaars-lib"
+      ],
+      "ng-avataaars-lib/*": [
+        "dist/ng-avataaars-lib/*"
+      ],
+      "ng-avataaars-library": [
+        "dist/ng-avataaars-library"
+      ],
+      "ng-avataaars-library/*": [
+        "dist/ng-avataaars-library/*"
+      ]
+    }
   }
 }

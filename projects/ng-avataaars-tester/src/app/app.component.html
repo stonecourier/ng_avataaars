@@ -1,0 +1,46 @@
+<nav class="navbar navbar-expand-lg kip-header">
+  <a class="navbar-brand" (click)="info = !info">ng-avataaars</a>
+  <div>
+    <ul class="navbar-nav">
+      <li class="nav-item active" *ngIf="!info">
+        <a class="nav-link" (click)="info = true">Info</a>
+      </li>
+      <li class="nav-item active" *ngIf="info">
+        <a class="nav-link" (click)="info = false">Back</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<div class="container">
+  <div class="card mt-3" *ngIf="info">
+    <div class="card-body">
+      <h5 class="card-title">Information</h5>
+      <div class="card-text">
+        ng-avataaars is an angular component you can include in your project to allow users to make their own
+        avatars.<br /><br />
+        You can also use it here to get the generated svg for your own use.<br /><br />
+        Features
+        <ul>
+          <li>Billions of permutations of avatars available.</li>
+          <li>Svgs are generated on client.</li>
+          <li>Can be localised into other languages</li>
+          <li>Unwanted options can be turned off</li>
+          <li>Can wire up your own services to save/load avatar. This example uses local storage.</li>
+          <li> Uses bootstrap for styling.</li>
+        </ul>
+        Angular component ported from the <a href="https://github.com/fangpenlin/avataaars">React Component</a>
+        developed
+        by
+        <a href="https://twitter.com/fangpenlin">Fang-Pen Lin</a>, based on the Sketch library <a
+          href="https://avataaars.com/">Avataaars</a> designed by <a href="https://twitter.com/pablostanley">Pablo
+          Stanley</a>.
+        <br /><br />
+        Free for personal and commercial use.<br /><br /><a href="javascript:alert('Not set up yet')">Github
+          Repository</a>
+      </div>
+    </div>
+  </div>
+  <kip-custom-avatar *ngIf="!info" (avatarSaved)="onAvatarSaved($event)" [noSvgOutput]="false"
+    [(avatarSelection)]="avatarSelection">
+  </kip-custom-avatar>
+</div>

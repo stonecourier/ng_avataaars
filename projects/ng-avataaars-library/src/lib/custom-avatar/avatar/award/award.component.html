@@ -1,0 +1,11 @@
+<svg:g [ngSwitch]="awardType">
+  <g *ngSwitchCase="'TrophyA'" kip-custom-avatar-award-trophy-a />
+  <g *ngSwitchCase="'TrophyB'" kip-custom-avatar-award-trophy-b />
+  <g *ngSwitchCase="'BirthdayA'" kip-custom-avatar-award-birthday-a />
+  <g *ngSwitchCase="'BirthdayB'" kip-custom-avatar-award-birthday-b />
+  <g *ngSwitchCase="'BirthdayC'" kip-custom-avatar-award-birthday-c />
+  <g *ngSwitchCase="'BirthdayD'" kip-custom-avatar-award-birthday-d />
+  <g *ngSwitchCase="'Correct'" kip-custom-avatar-award-correct />
+  <g *ngSwitchCase="'Incorrect'" kip-custom-avatar-award-incorrect />
+  <g *ngSwitchCase="'ThumbUp'" kip-custom-avatar-award-thumb-up [skinColor]="skinColor" [clotheColor]="clotheColor" [clotheColor2]="clotheColor2"  />
+</svg:g>
