@@ -2,7 +2,7 @@
 
 ng-avataaars is an angular component you can include in your project to allow users to make their own avatars.
 
-<p align="center"><img src='avataaar_example.png?raw=true' style='width: 300px' /></p>
+<p align="center"><img src='avataaar_example.png?raw=true' style='width: 150px' /></p>
 
 You can also use it here to get the generated svg for your own use.
 
@@ -33,7 +33,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { NgAvataaarsLibraryModule } from 'ng-avataaars-library';
+import { NgAvataaarsModule } from 'ng-avataaars';
 
 @NgModule({
   declarations: [
@@ -41,7 +41,7 @@ import { NgAvataaarsLibraryModule } from 'ng-avataaars-library';
   ],
   imports: [
     BrowserModule,
-    NgAvataaarsLibraryModule
+    NgAvataaarsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
@@ -133,16 +133,16 @@ Config options available
 
 | Option | Type | Default | Description |
 | --- | --- | --- | --- |
-| noNose | boolean | true | Turns on noses choices (being extended) |
+| noNose | boolean | true | Turns on nose choices (being extended) |
 | noPet | boolean | true | Turns on pet choices (being extended) - appears bottom left |
 | noAward | boolean | true | Turns on awards/birthday graphics (being extended) - appears bottom right |
-| noFacialHair | boolean | true | Turns of ability to choose/see facial hair - can be used for children/women |
+| noFacialHair | boolean | true | Turns off ability to choose/see facial hair - could be used for children/women |
 | noSvgOutput | boolean | true | Disables ability to see/use svg output button |
 | noRandom | boolean | false | Disables ability to see/use random button |
-| noColorBackground | boolean | false | Disables ability to choose and background/circle option |
+| noColorBackground | boolean | false | Disables ability to choose the background/circle option |
 | noSave | boolean | false | Disables ability to see/use save button |
 
-Saving of the avatar can be achieved by wiring up the avatarSavedEvent.
+Saving of the avatar can be achieved by wiring up the avatarSaved event.
 
 Example using local storage.
 
