@@ -58,7 +58,7 @@ Options that can be passed in
 avatarSelection - used for setting the current avatar.
 
 ```typescript
-export interface AvatarSelection {
+interface AvatarSelection {
   avatarStyle: AvatarStyle;
   topType: TopType;
   accessoriesType: AccessoriesType;
