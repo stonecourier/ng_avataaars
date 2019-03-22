@@ -23,3 +23,7 @@ Features
 Angular component ported from the [React Component](https://github.com/fangpenlin/avataaars) developed by [Fang-Pen Lin](https://twitter.com/fangpenlin), based on the Sketch library [Avataaars](https://avataaars.com/) designed by [Pablo Stanley](https://twitter.com/pablostanley).
 
 Free for personal and commercial use.
+
+## Demo
+
+A demo can be found [here](https://stonecourier.github.io/ng_avataaars/). 
