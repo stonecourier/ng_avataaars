@@ -1,0 +1,25 @@
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+/* tslint:disable:component-selector */
+import { Component } from '@angular/core';
+import { PetType } from '../../options';
+var CustomAvatarPetBirdComponent = /** @class */ (function () {
+    function CustomAvatarPetBirdComponent() {
+        this.option = PetType.Bird;
+    }
+    CustomAvatarPetBirdComponent.decorators = [
+        { type: Component, args: [{
+                    selector: '[kip-custom-avatar-pet-bird]',
+                    template: "<svg:g>\r\n  <path style=\"fill:#FFDF5E;\" d=\"M511.999,256c0,139.827-112.106,253.48-251.348,255.956c-1.546,0.031-3.093,0.042-4.65,0.042\r\n    c-89.411,0-168.123-45.839-213.91-115.304C15.489,356.32,0.004,307.962,0.004,256c0-141.384,114.614-255.998,255.998-255.998\r\n    S511.999,114.616,511.999,256z\" />\r\n  <path style=\"fill:#FF8E4F;\" d=\"M354.222,61.444c0,0,29.284-14.724,42.879-47.632c4.507-10.91,20.774-8.514,22.029,3.222\r\n    c2.622,24.527-5.098,59.579-46.816,101.297\" />\r\n  <g>\r\n    <path style=\"fill:#60C5E8;\" d=\"M377.094,253.764c-35.714,35.714-86.36,47.375-131.823,34.993\r\n      c-22.068-5.998-42.924-17.669-60.248-34.993c-53.049-53.039-53.049-139.033,0-192.072c30.218-30.218,71.126-43.217,110.539-38.995\r\n      h0.01c29.769,3.176,58.702,16.175,81.522,38.995C430.132,114.731,430.132,200.725,377.094,253.764z\" />\r\n    <path style=\"fill:#60C5E8;\" d=\"M377.094,443.317c-11.442,11.442-23.667,21.64-36.488,30.605\r\n      c-24.795,17.324-51.847,29.999-79.955,38.034c-1.546,0.031-3.093,0.042-4.65,0.042c-34.659,0-67.709-6.886-97.854-19.372\r\n      c-47.637-19.717-88.021-53.394-116.056-95.931l142.93-142.93l39.204-39.204L377.094,61.692c0.895,0.895,1.773,1.801,2.637,2.716\r\n      c28.845,29.651,49.539,64.267,62.04,101.073C473.798,259.73,452.242,368.169,377.094,443.317z\" />\r\n  </g>\r\n  <path style=\"fill:#3AA5C9;\" d=\"M274.935,272.812c0,0-12.518,5.235-29.664,15.945c-45.286,28.285-122.827,94.771-87.123,203.868\r\n    c-47.637-19.717-88.021-53.394-116.056-95.931l142.93-142.93c-53.049-53.039-53.049-139.033,0-192.072\r\n    c30.218-30.218,71.126-43.217,110.539-38.995c-60.729,0.01-115.21,105.085-71.335,191.863\r\n    C234.884,235.645,251.341,255.655,274.935,272.812z\" />\r\n  <g>\r\n    <path style=\"fill:#EAEAEA;\" d=\"M377.094,443.317c-11.442,11.442-23.667,21.64-36.488,30.605\r\n      c-32.036-94.259-10.47-202.698,64.679-277.836c11.442-11.442,23.667-21.65,36.488-30.605\r\n      C473.798,259.73,452.242,368.169,377.094,443.317z\" />\r\n    <path style=\"fill:#EAEAEA;\" d=\"M262.012,240.789c46.279,46.279,17.677,125.852-47.521,131.565\r\n      c-55.135,4.832-111.915-13.463-154.586-54.887c-0.728-0.694-1.446-1.399-2.151-2.105c-27.862-27.862-45.627-61.97-53.33-97.813\r\n      c-10.838-50.37-1.759-104.163,27.214-148.795c0.074-0.114,0.148-0.228,0.223-0.342c11.764-18.042,37.253-20.521,52.484-5.29\r\n      L262.012,240.789z\" />\r\n  </g>\r\n  <circle style=\"fill:#3C363F;\" cx=\"308.827\" cy=\"95.273\" r=\"35.062\" />\r\n  <circle style=\"fill:#5C5560;\" cx=\"320.707\" cy=\"88.732\" r=\"15.969\" />\r\n  <path style=\"fill:#C6C6C6;\" d=\"M219.317,291.132c-15.614,15.614-78.07-65.926-98.888-45.107s57.667,79.389,38.168,98.877\r\n    c-19.072,19.072-66.712,3.158-98.692-27.435c-0.728-0.694-1.446-1.399-2.151-2.105c-27.862-27.862-45.627-61.97-53.33-97.813\r\n    c-10.838-50.37-1.759-104.163,27.214-148.795C67.214,104.33,147.782,184.898,168,205.116\r\n    C194.162,231.279,234.931,275.518,219.317,291.132z\" />\r\n</svg:g>"
+                }] }
+    ];
+    return CustomAvatarPetBirdComponent;
+}());
+export { CustomAvatarPetBirdComponent };
+if (false) {
+    /** @type {?} */
+    CustomAvatarPetBirdComponent.prototype.option;
+}
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiYmlyZC5jb21wb25lbnQuanMiLCJzb3VyY2VSb290Ijoibmc6Ly9uZy1hdmF0YWFhcnMtbGlicmFyeS8iLCJzb3VyY2VzIjpbImxpYi9jdXN0b20tYXZhdGFyL2F2YXRhci9wZXQvYmlyZC5jb21wb25lbnQudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7QUFFQSxPQUFPLEVBQUUsU0FBUyxFQUFFLE1BQU0sZUFBZSxDQUFDO0FBQzFDLE9BQU8sRUFBVSxPQUFPLEVBQUUsTUFBTSxlQUFlLENBQUM7QUFFaEQ7SUFBQTtRQU1FLFdBQU0sR0FBRyxPQUFPLENBQUMsSUFBSSxDQUFDO0lBQ3hCLENBQUM7O2dCQVBBLFNBQVMsU0FBQztvQkFDVCxRQUFRLEVBQUUsOEJBQThCO29CQUN4QyxpNkZBQW9DO2lCQUNyQzs7SUFJRCxtQ0FBQztDQUFBLEFBUEQsSUFPQztTQUZZLDRCQUE0Qjs7O0lBQ3ZDLDhDQUFzQiIsInNvdXJjZXNDb250ZW50IjpbIi8qIHRzbGludDpkaXNhYmxlOmNvbXBvbmVudC1zZWxlY3RvciAqL1xyXG5cclxuaW1wb3J0IHsgQ29tcG9uZW50IH0gZnJvbSAnQGFuZ3VsYXIvY29yZSc7XHJcbmltcG9ydCB7IE9wdGlvbiwgUGV0VHlwZSB9IGZyb20gJy4uLy4uL29wdGlvbnMnO1xyXG5cclxuQENvbXBvbmVudCh7XHJcbiAgc2VsZWN0b3I6ICdba2lwLWN1c3RvbS1hdmF0YXItcGV0LWJpcmRdJyxcclxuICB0ZW1wbGF0ZVVybDogJy4vYmlyZC5jb21wb25lbnQuaHRtbCcsXHJcbn0pXHJcblxyXG5leHBvcnQgY2xhc3MgQ3VzdG9tQXZhdGFyUGV0QmlyZENvbXBvbmVudCBpbXBsZW1lbnRzIE9wdGlvbjxQZXRUeXBlPiB7XHJcbiAgb3B0aW9uID0gUGV0VHlwZS5CaXJkO1xyXG59XHJcbiJdfQ==
