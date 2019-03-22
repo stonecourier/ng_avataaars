@@ -2,6 +2,8 @@
 
 ng-avataaars is an angular component you can include in your project to allow users to make their own avatars.
 
+<p align="center"><img src='avataaar_example.png?raw=true' style='width: 300px' /></p>
+
 You can also use it here to get the generated svg for your own use.
 
 Features        
