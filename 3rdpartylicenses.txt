@@ -269,6 +269,7 @@ Apache-2.0
 MIT
 
 ng-avataaars-library
+MIT
 MIT License
 
 Copyright (c) 2018 Peter Messenger
