@@ -1,6 +1,22 @@
 {
-  "name": "ng-avataaars-library",
-  "version": "0.0.1",
+  "name": "ng-avataaars",
+  "version": "0.1.0",
+  "description":"ng-avataaars is an angular component you can include in your project to allow users to make their own avatars.",
+  "author": "Peter Messenger",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/stonecourier/ng_avataaars.git"
+  },
+  "bugs": {
+    "url": "https://github.com/stonecourier/ng_avataaars/issues"
+  },
+  "homepage": "https://github.com/stonecourier/ng_avataaars",
+  "keywords": [
+    "angular",
+    "avatar",
+    "typescript"
+  ],
+  "license": "MIT",
   "peerDependencies": {
     "@angular/common": "^7.1.0",
     "@angular/core": "^7.1.0"
