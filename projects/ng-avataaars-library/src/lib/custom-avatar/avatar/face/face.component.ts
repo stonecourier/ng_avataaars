@@ -1,7 +1,7 @@
 /* tslint:disable:component-selector */
 
 import { Component, Input } from '@angular/core';
-import { NoseType, MouthType, EyeType, EyebrowType, HairColor } from '../../options';
+import { NoseType, MouthType, EyeType, EyebrowType, HairColor, EarringType, EarringColor } from '../../options';
 
 @Component({
   selector: '[kip-custom-avatar-face]',
@@ -11,17 +11,23 @@ import { NoseType, MouthType, EyeType, EyebrowType, HairColor } from '../../opti
 export class CustomAvatarFaceComponent {
 
   @Input()
-  noseType: NoseType = NoseType.Default;
+  noseType: NoseType;
 
   @Input()
-  mouthType: MouthType = MouthType.Concerned;
+  mouthType: MouthType;
 
   @Input()
-  eyeType: EyeType = EyeType.Cry;
+  eyeType: EyeType;
 
   @Input()
-  eyebrowType: EyebrowType = EyebrowType.Angry;
+  eyebrowType: EyebrowType;
 
   @Input()
   eyebrowColor: HairColor;
+
+  @Input()
+  earringType: EarringType;
+
+  @Input()
+  earringColor: EarringColor;
 }

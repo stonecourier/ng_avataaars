@@ -6,7 +6,8 @@ import {
   AvatarStyle, TopType, AccessoriesType, HairColor, FacialHairType, ClotheType,
   ClotheColor, EyeType, EyebrowType, MouthType, SkinColor, BackgroundColor, GraphicType,
   PetType, AwardType, HatColor, AccessoriesColor, AvatarSelection, AvatarExclusion,
-  NoseType
+  NoseType,
+  EarringType, EarringColor
 } from './options';
 import { accessoriesColorTranslation } from './colors/accessories-color-translation';
 import { hairColorTranslation } from './colors/hair-color-translation';
@@ -15,6 +16,7 @@ import { clotheColorTranslation } from './colors/clothe-color-translation';
 import { backgroundColorTranslation } from './colors/background-color-translation';
 import { hatColorTranslation } from './colors/hat-color-translation';
 import { randomId } from './helper/randomid';
+import { earringColorTranslation } from './colors/ear-ring-color-translation';
 
 export interface KeyValue {
   value: string;
@@ -53,6 +55,8 @@ export interface AvatarText {
   clotheColors3: string;
   graphics: string;
   skinColors: string;
+  earrings: string;
+  earringColors: string;
 }
 
 export enum tabIndexes {
@@ -66,7 +70,8 @@ export enum tabIndexes {
   facialHair = 8,
   clothes = 9,
   pet = 10,
-  award = 11
+  award = 11,
+  earring = 12
 }
 
 @Component({
@@ -101,7 +106,9 @@ export class CustomAvatarComponent {
       awardType: AwardType.None,
       hatColor: HatColor.Black,
       accessoriesColor: AccessoriesColor.Black,
-      noseType: NoseType.Default
+      noseType: NoseType.Default,
+      earringType: EarringType.Blank,
+      earringColor: EarringColor.Black
     };
 
   private _lastSaved: AvatarSelection;
@@ -145,7 +152,9 @@ export class CustomAvatarComponent {
     clotheColors2: 'Clothe colours (Secondary)',
     clotheColors3: 'Clothe colours (Tertiary)',
     graphics: 'Graphics',
-    skinColors: 'Skin colours'
+    skinColors: 'Skin colours',
+    earrings: 'Ear Rings',
+    earringColors: 'Ear Ring colors'
   };
 
   // Controls whether noses can be selected
@@ -162,6 +171,11 @@ export class CustomAvatarComponent {
 
   @Input()
   noAward = true;
+
+  // Controls whether ear-rings can be selected
+
+  @Input()
+  noEarring = true;
 
   // Controls whether an svg output button is available
 
@@ -218,7 +232,9 @@ export class CustomAvatarComponent {
         hatColor: value.hatColor,
         accessoriesColor: value.accessoriesColor,
         accessoriesType: value.accessoriesType,
-        noseType: value.noseType ? value.noseType : this._currentAvatar.noseType
+        noseType: value.noseType ? value.noseType : this._currentAvatar.noseType,
+        earringType: value.earringType,
+        earringColor: value.earringColor
       };
       this._lastSaved = value;
       this.changeDetectorRef.markForCheck();
@@ -329,6 +345,41 @@ export class CustomAvatarComponent {
 
   get accessoriesColors(): KeyValue[] {
     return this.getKeyValues(AccessoriesColor);
+  }
+
+  // #endregion
+
+  // #region Earring Type and Color
+
+  set earringType(value: EarringType) {
+    if (this._currentAvatar.earringType !== value) {
+      this._currentAvatar.earringType = value;
+      this.refreshAvatar();
+    }
+  }
+
+  get earringType() {
+    return this._currentAvatar.earringType;
+  }
+
+  get earringTypes(): KeyValue[] {
+    return this.getKeyValuesWithExclusions(EarringType, this.avatarExclusion &&
+      this.avatarExclusion.earringTypes ? this.avatarExclusion.earringTypes : []);
+  }
+
+  set earringColor(value: EarringColor) {
+    if (this._currentAvatar.earringColor !== value) {
+      this._currentAvatar.earringColor = value;
+      this.refreshAvatar();
+    }
+  }
+
+  get earringColor() {
+    return this._currentAvatar.earringColor;
+  }
+
+  get earringColors(): KeyValue[] {
+    return this.getKeyValues(EarringColor);
   }
 
   // #endregion
@@ -661,6 +712,10 @@ export class CustomAvatarComponent {
     return accessoriesColorTranslation(value);
   }
 
+  earringColorConvert(value: EarringColor) {
+    return earringColorTranslation(value);
+  }
+
   hairColorConvert(value: HairColor) {
     return hairColorTranslation(value);
   }
@@ -734,7 +789,9 @@ export class CustomAvatarComponent {
         hatColor: this.avatarSelection.hatColor,
         accessoriesColor: this.avatarSelection.accessoriesColor,
         accessoriesType: this.avatarSelection.accessoriesType,
-        noseType: this.avatarSelection.noseType
+        noseType: this.avatarSelection.noseType,
+        earringColor: this.avatarSelection.earringColor,
+        earringType: this.avatarSelection.earringType
       };
       this.avatarSaved.emit({ avatarSelection: saveAvatar, svg: this.svg });
       this._lastSaved = saveAvatar;
@@ -766,7 +823,9 @@ export class CustomAvatarComponent {
         hatColor: this._lastSaved.hatColor,
         accessoriesColor: this._lastSaved.accessoriesColor,
         accessoriesType: this._lastSaved.accessoriesType,
-        noseType: this._lastSaved.noseType
+        noseType: this._lastSaved.noseType,
+        earringType: this._lastSaved.earringType,
+        earringColor: this._lastSaved.earringColor
       };
     }
   }
@@ -800,6 +859,10 @@ export class CustomAvatarComponent {
     if (!this.noNose) {
       this._currentAvatar.noseType = this.randomEnumValueWithExclusions(NoseType, this.noseTypes);
     }
+    if (!this.noEarring) {
+      this._currentAvatar.earringType = this.randomEnumValueWithExclusions(EarringType, this.earringTypes);
+    }
+    this._currentAvatar.earringColor = this.randomEnumValue(EarringColor);
     this.refreshAvatar();
   }
 

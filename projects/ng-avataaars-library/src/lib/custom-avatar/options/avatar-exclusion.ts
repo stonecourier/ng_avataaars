@@ -1,7 +1,7 @@
 import {
   AvatarStyle, TopType, AccessoriesType, FacialHairType, ClotheType,
   EyeType, EyebrowType, MouthType, GraphicType,
-  PetType, AwardType, NoseType
+  PetType, AwardType, NoseType, EarringType
 } from '../options';
 
 export interface AvatarExclusion {
@@ -17,4 +17,5 @@ export interface AvatarExclusion {
   petTypes?: PetType[];
   awardTypes?: AwardType[];
   noseTypes?: NoseType[];
+  earringTypes?: EarringType[];
 }

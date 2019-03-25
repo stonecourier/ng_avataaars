@@ -3,7 +3,7 @@ import {
   AvatarStyle, NoseType, MouthType, EyeType, EyebrowType,
   SkinColor, AccessoriesType, FacialHairType, HairColor, TopType,
   ClotheType, BackgroundColor, ClotheColor, GraphicType, PetType, AwardType,
-  HatColor, AccessoriesColor
+  HatColor, AccessoriesColor, EarringColor, EarringType
 } from '../options';
 import { randomId } from '../helper/randomid';
 import { urlfix } from '../helper/urlfix';
@@ -148,6 +148,12 @@ export class CustomAvatarBaseComponent {
 
   @Input()
   accessoriesColor: AccessoriesColor;
+
+  @Input()
+  earringType: EarringType;
+
+  @Input()
+  earringColor: EarringColor;
 
   mask1: string = randomId('kip-mask');
   mask2: string = randomId('kip-mask');

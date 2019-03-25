@@ -81,6 +81,8 @@ interface AvatarSelection {
   hatColor: HatColor;
   accessoriesColor: AccessoriesColor;
   noseType: NoseType;
+  earringType: EarringType;
+  earringColor: EarringColor;
 }
 ```
 
@@ -114,6 +116,8 @@ interface AvatarText {
   clotheColors3: string;
   graphics: string;
   skinColors: string;
+  earrings: string;
+  earringColors: string;
 }
 ```
 avatarExclusion - used for disabling choices. Example
@@ -132,6 +136,7 @@ Config options available
 | Option | Type | Default | Description |
 | --- | --- | --- | --- |
 | noNose | boolean | true | Turns on nose choices (being extended) |
+| noEarring | boolean | true | Turns on earring choices (being extended) |
 | noPet | boolean | true | Turns on pet choices (being extended) - appears bottom left |
 | noAward | boolean | true | Turns on awards/birthday graphics (being extended) - appears bottom right |
 | noFacialHair | boolean | true | Turns off ability to choose/see facial hair - could be used for children/women |

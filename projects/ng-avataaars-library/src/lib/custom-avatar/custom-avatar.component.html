@@ -3,61 +3,78 @@
     <div class="card p-2 w-100">
       <div class="row">
         <div class="col-sm-4 p-2" style="text-align:center">
-          <kip-custom-avatar-base widthFull="true" viewBox="0 0 264 280" [attr.id]="id"
-            [graphicType]="graphicType" [clotheColor]="clotheColor" [backgroundColor]="backgroundColor"
-            [avatarStyle]="avatarStyle" [clotheType]="clotheType" [mouthType]="mouthType" [eyeType]="eyeType"
-            [eyebrowType]="eyebrowType" [skinColor]="skinColor" [topType]="topType" [hairColor]="hairColor"
-            [facialHairType]="facialHairType" [facialHairColor]="facialHairColor" [eyebrowColor]="eyebrowColor"
-            [petType]="petType" [awardType]="awardType" [hatColor]="hatColor" [accessoriesType]="accessoriesType"
+          <kip-custom-avatar-base widthFull="true" viewBox="0 0 264 280" [attr.id]="id" [graphicType]="graphicType"
+            [clotheColor]="clotheColor" [backgroundColor]="backgroundColor" [avatarStyle]="avatarStyle"
+            [clotheType]="clotheType" [mouthType]="mouthType" [eyeType]="eyeType" [eyebrowType]="eyebrowType"
+            [skinColor]="skinColor" [topType]="topType" [hairColor]="hairColor" [facialHairType]="facialHairType"
+            [facialHairColor]="facialHairColor" [eyebrowColor]="eyebrowColor" [petType]="petType"
+            [awardType]="awardType" [hatColor]="hatColor" [accessoriesType]="accessoriesType"
             [accessoriesColor]="accessoriesColor" [clotheColor2]="clotheColor2" [clotheColor3]="clotheColor3"
-            [noPet]="noPet" [noAward]="noAward" [noseType]="noseType">
+            [noPet]="noPet" [noAward]="noAward" [noseType]="noseType" [earringType]="earringType"
+            [earringColor]="earringColor">
           </kip-custom-avatar-base>
           <textarea [id]="svgId" style="display:none">{{ svg }}</textarea>
         </div>
         <div class="col-sm-8 p-2">
           <ul class="nav nav-tabs">
             <li class="nav-item">
-              <kip-custom-avatar-icon-background [index]="tabIndexes.background" [currentIndex]="tabIndex" (selectTab)="tabIndex = $event">
+              <kip-custom-avatar-icon-background [index]="tabIndexes.background" [currentIndex]="tabIndex"
+                (selectTab)="tabIndex = $event">
               </kip-custom-avatar-icon-background>
             </li>
             <li class="nav-item">
-              <kip-custom-avatar-icon-top [index]="tabIndexes.top" [currentIndex]="tabIndex" (selectTab)="tabIndex = $event">
+              <kip-custom-avatar-icon-top [index]="tabIndexes.top" [currentIndex]="tabIndex"
+                (selectTab)="tabIndex = $event">
               </kip-custom-avatar-icon-top>
             </li>
             <li class="nav-item">
-              <kip-custom-avatar-icon-eye [index]="tabIndexes.eyes" [currentIndex]="tabIndex" (selectTab)="tabIndex = $event">
+              <kip-custom-avatar-icon-eye [index]="tabIndexes.eyes" [currentIndex]="tabIndex"
+                (selectTab)="tabIndex = $event">
               </kip-custom-avatar-icon-eye>
             </li>
             <li class="nav-item">
-              <kip-custom-avatar-icon-eye-brow [index]="tabIndexes.eyebrows" [currentIndex]="tabIndex" (selectTab)="tabIndex = $event">
+              <kip-custom-avatar-icon-eye-brow [index]="tabIndexes.eyebrows" [currentIndex]="tabIndex"
+                (selectTab)="tabIndex = $event">
               </kip-custom-avatar-icon-eye-brow>
             </li>
             <li class="nav-item">
-              <kip-custom-avatar-icon-accessories [index]="tabIndexes.accessory" [currentIndex]="tabIndex" (selectTab)="tabIndex = $event">
+              <kip-custom-avatar-icon-accessories [index]="tabIndexes.accessory" [currentIndex]="tabIndex"
+                (selectTab)="tabIndex = $event">
               </kip-custom-avatar-icon-accessories>
             </li>
+            <li class="nav-item" *ngIf="!noEarring">
+              <kip-custom-avatar-icon-ear-ring [index]="tabIndexes.earring" [currentIndex]="tabIndex"
+                (selectTab)="tabIndex = $event">
+              </kip-custom-avatar-icon-ear-ring>
+            </li>
             <li class="nav-item" *ngIf="!noNose">
-              <kip-custom-avatar-icon-nose [index]="tabIndexes.nose" [currentIndex]="tabIndex" (selectTab)="tabIndex = $event">
+              <kip-custom-avatar-icon-nose [index]="tabIndexes.nose" [currentIndex]="tabIndex"
+                (selectTab)="tabIndex = $event">
               </kip-custom-avatar-icon-nose>
             </li>
             <li class="nav-item">
-              <kip-custom-avatar-icon-mouth [index]="tabIndexes.mouth" [currentIndex]="tabIndex" (selectTab)="tabIndex = $event">
+              <kip-custom-avatar-icon-mouth [index]="tabIndexes.mouth" [currentIndex]="tabIndex"
+                (selectTab)="tabIndex = $event">
               </kip-custom-avatar-icon-mouth>
             </li>
             <li class="nav-item" *ngIf="!noFacialHair">
-              <kip-custom-avatar-icon-facial-hair [index]="tabIndexes.facialHair" [currentIndex]="tabIndex" (selectTab)="tabIndex = $event">
+              <kip-custom-avatar-icon-facial-hair [index]="tabIndexes.facialHair" [currentIndex]="tabIndex"
+                (selectTab)="tabIndex = $event">
               </kip-custom-avatar-icon-facial-hair>
             </li>
             <li class="nav-item">
-              <kip-custom-avatar-icon-clothes [index]="tabIndexes.clothes" [currentIndex]="tabIndex" (selectTab)="tabIndex = $event">
+              <kip-custom-avatar-icon-clothes [index]="tabIndexes.clothes" [currentIndex]="tabIndex"
+                (selectTab)="tabIndex = $event">
               </kip-custom-avatar-icon-clothes>
             </li>
             <li class="nav-item" *ngIf="!noPet">
-              <kip-custom-avatar-icon-pet [index]="tabIndexes.pet" [currentIndex]="tabIndex" (selectTab)="tabIndex = $event">
+              <kip-custom-avatar-icon-pet [index]="tabIndexes.pet" [currentIndex]="tabIndex"
+                (selectTab)="tabIndex = $event">
               </kip-custom-avatar-icon-pet>
             </li>
             <li class="nav-item" *ngIf="!noAward">
-              <kip-custom-avatar-icon-award [index]="tabIndexes.award" [currentIndex]="tabIndex" (selectTab)="tabIndex = $event">
+              <kip-custom-avatar-icon-award [index]="tabIndexes.award" [currentIndex]="tabIndex"
+                (selectTab)="tabIndex = $event">
               </kip-custom-avatar-icon-award>
             </li>
           </ul>
@@ -112,6 +129,22 @@
                   <kip-custom-avatar-color-picker [title]="avatarText.accessoryColors" [colors]="accessoriesColors"
                     [colorConverter]="accessoriesColorConvert" [currentColor]="accessoriesColor"
                     (colorPicked)="accessoriesColor=$event">
+                  </kip-custom-avatar-color-picker>
+                </div>
+                <div *ngSwitchCase="tabIndexes.earring" class="kip-avatar-pick-svg">
+                  <kip-custom-avatar-picker [title]="avatarText.earrings" [options]="earringTypes"
+                    [currentOption]="earringType" (optionPicked)="earringType=$event"
+                    [backgroundColor]="skinColorConvert(skinColor)">
+                    <ng-template let-item kipPickerTemplate="item">
+                      <svg viewBox="0 0 200 200">
+                        <g transform="translate(40,0)" kip-custom-avatar-ear-ring [earringType]="item.value"
+                          [earringColor]="earringColor" />
+                      </svg>
+                    </ng-template>
+                  </kip-custom-avatar-picker>
+                  <kip-custom-avatar-color-picker [title]="avatarText.earringColors" [colors]="earringColors"
+                    [colorConverter]="earringColorConvert" [currentColor]="earringColor"
+                    (colorPicked)="earringColor=$event">
                   </kip-custom-avatar-color-picker>
                 </div>
                 <div *ngSwitchCase="tabIndexes.facialHair" class="kip-avatar-pick-svg">

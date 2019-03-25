@@ -1,0 +1,5 @@
+<svg:g [ngSwitch]="earringType">
+  <g *ngSwitchCase="'Left'" kip-custom-avatar-ear-ring-left [earringColor]="earringColor" />
+  <g *ngSwitchCase="'Right'" kip-custom-avatar-ear-ring-right [earringColor]="earringColor" />
+  <g *ngSwitchCase="'Both'" kip-custom-avatar-ear-ring-both [earringColor]="earringColor" />
+</svg:g>

@@ -1,7 +1,7 @@
 import {
   AvatarStyle, TopType, AccessoriesType, HairColor, FacialHairType, ClotheType,
   ClotheColor, EyeType, EyebrowType, MouthType, SkinColor, BackgroundColor, GraphicType,
-  PetType, AwardType, HatColor, AccessoriesColor, NoseType
+  PetType, AwardType, HatColor, AccessoriesColor, NoseType, EarringType, EarringColor
 } from '../options';
 
 export interface AvatarSelection {
@@ -27,4 +27,6 @@ export interface AvatarSelection {
   hatColor: HatColor;
   accessoriesColor: AccessoriesColor;
   noseType: NoseType;
+  earringType: EarringType;
+  earringColor: EarringColor;
 }

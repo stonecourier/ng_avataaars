@@ -19,6 +19,7 @@ import { CustomAvatarIconClothesComponent } from './custom-avatar/icons/clothes.
 import { CustomAvatarIconPetComponent } from './custom-avatar/icons/pet.component';
 import { CustomAvatarIconAwardComponent } from './custom-avatar/icons/award.component';
 import { CustomAvatarIconNoseComponent } from './custom-avatar/icons/nose.component';
+import { CustomAvatarIconEarringComponent } from './custom-avatar/icons/ear-ring.component';
 
 import { CustomAvatarClothesComponent } from './custom-avatar/avatar/clothes/clothes.component';
 import { CustomAvatarClothesBlazerShirtComponent } from './custom-avatar/avatar/clothes/blazer-shirt.component';
@@ -132,6 +133,11 @@ import { CustomAvatarTopWinterHat2Component } from './custom-avatar/avatar/top/w
 import { CustomAvatarTopWinterHat3Component } from './custom-avatar/avatar/top/winter-hat3.component';
 import { CustomAvatarTopWinterHat4Component } from './custom-avatar/avatar/top/winter-hat4.component';
 
+import { CustomAvatarEarringComponent } from './custom-avatar/avatar/face/ear-ring/ear-ring.component';
+import { CustomAvatarEarringLeftComponent } from './custom-avatar/avatar/face/ear-ring/left.component';
+import { CustomAvatarEarringRightComponent } from './custom-avatar/avatar/face/ear-ring/right.component';
+import { CustomAvatarEarringBothComponent } from './custom-avatar/avatar/face/ear-ring/both.component';
+
 import { CustomAvatarAccessoriesComponent } from './custom-avatar/avatar/top/accessories/accessories.component';
 import { CustomAvatarAccessoriesPrescription01Component } from './custom-avatar/avatar/top/accessories/prescription-01.component';
 import { CustomAvatarAccessoriesPrescription02Component } from './custom-avatar/avatar/top/accessories/prescription-02.component';
@@ -179,6 +185,10 @@ import { CustomAvatarAwardThumbUpComponent } from './custom-avatar/avatar/award/
   ],
   declarations: [
     PickerTemplateDirective,
+    CustomAvatarEarringComponent,
+    CustomAvatarEarringLeftComponent,
+    CustomAvatarEarringRightComponent,
+    CustomAvatarEarringBothComponent,
     CustomAvatarPickerComponent,
     CustomAvatarAwardComponent,
     CustomAvatarColorPickerComponent,
@@ -193,6 +203,7 @@ import { CustomAvatarAwardThumbUpComponent } from './custom-avatar/avatar/award/
     CustomAvatarIconPetComponent,
     CustomAvatarIconAwardComponent,
     CustomAvatarIconNoseComponent,
+    CustomAvatarIconEarringComponent,
     CustomAvatarAwardTrophyAComponent,
     CustomAvatarAwardTrophyBComponent,
     CustomAvatarAwardBirthdayAComponent,
