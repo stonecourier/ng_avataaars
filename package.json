@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "buildlib": "ng build ng-avataaars-library",
     "test": "ng test",
     "eslint": "eslint projects/**/*.ts",
     "eslintfix": "eslint projects/**/*.ts --fix",
