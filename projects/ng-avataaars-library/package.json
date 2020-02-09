@@ -1,6 +1,6 @@
 {
   "name": "ng-avataaars-library",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description":"ng-avataaars is an angular component you can include in your project to allow users to make their own avatars.",
   "author": "Peter Messenger",
   "repository": {
@@ -19,6 +19,7 @@
   "license": "MIT",
   "peerDependencies": {
     "@angular/common": "9.0.0",
-    "@angular/core": "9.0.0"
+    "@angular/core": "9.0.0",
+    "tslib": "1.10.0"
   }
 }

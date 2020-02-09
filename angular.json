@@ -14,6 +14,11 @@
           "options": {
             "tsConfig": "projects/ng-avataars-lib/tsconfig.lib.json",
             "project": "projects/ng-avataars-lib/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ng-avataars-lib/tsconfig.lib.prod.json"
+            }
           }
         },
         "test": {
