@@ -1,10 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { SaveAvatar } from 'ng-avataaars-library';
-import {
-  AvatarSelection, AvatarStyle, TopType, AccessoriesType, HairColor, FacialHairType, ClotheType,
+import {  AvatarSelection, AvatarStyle, TopType, AccessoriesType, HairColor, FacialHairType, ClotheType,
   ClotheColor, EyeType, EyebrowType, MouthType, SkinColor, BackgroundColor, GraphicType, PetType, AwardType,
-  HatColor, AccessoriesColor, NoseType, EarringType, EarringColor
-} from 'ng-avataaars-library/lib/custom-avatar/options';
+  HatColor, AccessoriesColor, NoseType, EarringType, EarringColor, SaveAvatar } from 'ng-avataaars-library';
+
 
 @Component({
   selector: 'app-root',

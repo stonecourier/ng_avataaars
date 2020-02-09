@@ -17,9 +17,9 @@ import {
 
 export class CustomAvatarBaseComponent {
 
-  @Input() width = 300;
+  @Input() width : number | undefined = undefined;
   @Input() widthFull = false;
-  @Input() height = 300;
+  @Input() height : number | undefined = undefined
   @Input() transform = '';
   @Input() viewBox = '';
   @Input() noFeatures = false;
