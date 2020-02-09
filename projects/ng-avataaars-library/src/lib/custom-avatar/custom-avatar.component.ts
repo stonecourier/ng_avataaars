@@ -1,21 +1,21 @@
 /* tslint:disable:forin */
 
-import { Component, Input, EventEmitter, Output, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
-import {
-  AvatarStyle, TopType, AccessoriesType, HairColor, FacialHairType, ClotheType,
-  ClotheColor, EyeType, EyebrowType, MouthType, SkinColor, BackgroundColor, GraphicType,
-  PetType, AwardType, HatColor, AccessoriesColor, AvatarSelection, AvatarExclusion,
-  NoseType,
-  EarringType, EarringColor, tabIndexes
-} from './options';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, EventEmitter, Input, Output } from '@angular/core';
 import { accessoriesColorTranslation } from './colors/accessories-color-translation';
-import { hairColorTranslation } from './colors/hair-color-translation';
-import { skinColorTranslation } from './colors/skin-color-translation';
-import { clotheColorTranslation } from './colors/clothe-color-translation';
 import { backgroundColorTranslation } from './colors/background-color-translation';
-import { hatColorTranslation } from './colors/hat-color-translation';
-import { randomId } from './helper/randomid';
+import { clotheColorTranslation } from './colors/clothe-color-translation';
 import { earringColorTranslation } from './colors/ear-ring-color-translation';
+import { hairColorTranslation } from './colors/hair-color-translation';
+import { hatColorTranslation } from './colors/hat-color-translation';
+import { skinColorTranslation } from './colors/skin-color-translation';
+import { randomId } from './helper/randomid';
+import {
+  tabIndexes, AccessoriesColor, AccessoriesType, AvatarExclusion, AvatarSelection, AvatarStyle,
+  AwardType, BackgroundColor, ClotheColor, ClotheType, EarringColor, EarringType, EyebrowType,
+  EyeType, FacialHairType, GraphicType, HairColor, HatColor, MouthType,
+  NoseType,
+  PetType, SkinColor, TopType
+} from './options';
 
 export interface KeyValue {
   value: string;
@@ -67,132 +67,9 @@ export interface AvatarText {
 
 export class CustomAvatarComponent {
 
-  private _currentAvatar: AvatarSelection =
-    {
-      avatarStyle: AvatarStyle.Transparent,
-      topType: TopType.LongHairFro,
-      accessoriesType: AccessoriesType.Prescription01,
-      hairColor: HairColor.SilverGray,
-      facialHairType: FacialHairType.Blank,
-      facialHairColor: HairColor.Black,
-      eyebrowColor: HairColor.SilverGray,
-      clotheType: ClotheType.GraphicShirt,
-      clotheColor: ClotheColor.PastelOrange,
-      clotheColor2: ClotheColor.Blue01,
-      clotheColor3: ClotheColor.Black,
-      eyeType: EyeType.Cry,
-      eyebrowType: EyebrowType.UpDownNatural,
-      mouthType: MouthType.Serious,
-      skinColor: SkinColor.Brown,
-      backgroundColor: BackgroundColor.ColorA,
-      graphicType: GraphicType.Bat,
-      petType: PetType.None,
-      awardType: AwardType.None,
-      hatColor: HatColor.Black,
-      accessoriesColor: AccessoriesColor.Black,
-      noseType: NoseType.Default,
-      earringType: EarringType.Blank,
-      earringColor: EarringColor.Black
-    };
-
-  private _lastSaved: AvatarSelection | null = null;
-
-  constructor(private readonly changeDetectorRef: ChangeDetectorRef) {
-    this.refreshAvatar();
-  }
-
-  tabIndex: tabIndexes = tabIndexes.background;
-  tabIndexes = tabIndexes;
-  readonly id: string = randomId('avatar');
-  readonly svgId: string = randomId('svgId');
-  svg = '';
-
-  // All the texts for avatar localization
-
-  @Input()
-  avatarText: AvatarText = {
-    random: 'Random',
-    save: 'Save',
-    revert: 'Revert',
-    svg: 'Svg',
-    background: 'Backgrounds',
-    backgroundColor: 'Background colours',
-    eyes: 'Eyes',
-    eyebrows: 'Eyebrows',
-    eyebrowColors: 'Eyebrow colours',
-    accessories: 'Accessories',
-    accessoryColors: 'Accessory colours',
-    facialHairs: 'Facial hair',
-    facialHairColors: 'Facial hair colours',
-    noses: 'Noses',
-    mouths: 'Mouths',
-    pets: 'Pets',
-    awards: 'Awards',
-    hatsAndHairStyles: 'Hats/Hair Styles',
-    hairColors: 'Hair colours',
-    hatColors: 'Hat colours',
-    clothes: 'Clothes',
-    clotheColors1: 'Clothe colours',
-    clotheColors2: 'Clothe colours (Secondary)',
-    clotheColors3: 'Clothe colours (Tertiary)',
-    graphics: 'Graphics',
-    skinColors: 'Skin colours',
-    earrings: 'Ear Rings',
-    earringColors: 'Ear Ring colors'
-  };
-
-  // Controls whether noses can be selected
-
-  @Input()
-  noNose = true;
-
-  // Controls whether pets can be selected
-
-  @Input()
-  noPet = true;
-
-  // Controls whether awards can be selected
-
-  @Input()
-  noAward = true;
-
-  // Controls whether ear-rings can be selected
-
-  @Input()
-  noEarring = true;
-
-  // Controls whether an svg output button is available
-
-  @Input()
-  noSvgOutput = true;
-
-  // Controls whether a random button is available
-
-  @Input()
-  noRandom = false;
-
-  // Controls whethter saving is available
-
-  @Input()
-  noSave = false;
-
-  // Controls whether facial hair is available (for kids/females etc)
-
-  @Input()
-  noFacialHair = false;
-
-  // Controls whether the circle background and setting color for it is available
-
-  @Input()
-  noColorBackground = false;
-
-  @Output()
-  avatarSaved: EventEmitter<SaveAvatar> = new EventEmitter<SaveAvatar>();
-
   // Current Avatar options
 
-  @Input()
-  set avatarSelection(value: AvatarSelection) {
+  @Input() set avatarSelection(value: AvatarSelection) {
     if (value !== null) {
       this._currentAvatar = {
         avatarStyle: this.noColorBackground ? AvatarStyle.Transparent : value.avatarStyle,
@@ -228,16 +105,6 @@ export class CustomAvatarComponent {
   get avatarSelection(): AvatarSelection {
     return this._currentAvatar;
   }
-
-  // Optional parameter allowing choices to be turned off (for example may not want vomit as a choice for mouth options)
-
-  @Input()
-  avatarExclusion: AvatarExclusion = {
-    mouthTypes: [MouthType.Vomit],
-    graphicTypes: [GraphicType.Hola],
-    topTypes: [TopType.Eyepatch],
-    eyeTypes: [EyeType.Dizzy]
-  };
 
   // #region Background Color
 
@@ -688,6 +555,138 @@ export class CustomAvatarComponent {
     return this.getKeyValues(SkinColor);
   }
 
+  get saveAvatarEnabled() {
+    if (this._lastSaved === undefined) {
+      return true;
+    }
+
+    if (this.isEqual(this._currentAvatar, this._lastSaved)) {
+      return false;
+    }
+
+    return true;
+  }
+
+  private _currentAvatar: AvatarSelection =
+    {
+      avatarStyle: AvatarStyle.Transparent,
+      topType: TopType.LongHairFro,
+      accessoriesType: AccessoriesType.Prescription01,
+      hairColor: HairColor.SilverGray,
+      facialHairType: FacialHairType.Blank,
+      facialHairColor: HairColor.Black,
+      eyebrowColor: HairColor.SilverGray,
+      clotheType: ClotheType.GraphicShirt,
+      clotheColor: ClotheColor.PastelOrange,
+      clotheColor2: ClotheColor.Blue01,
+      clotheColor3: ClotheColor.Black,
+      eyeType: EyeType.Cry,
+      eyebrowType: EyebrowType.UpDownNatural,
+      mouthType: MouthType.Serious,
+      skinColor: SkinColor.Brown,
+      backgroundColor: BackgroundColor.ColorA,
+      graphicType: GraphicType.Bat,
+      petType: PetType.None,
+      awardType: AwardType.None,
+      hatColor: HatColor.Black,
+      accessoriesColor: AccessoriesColor.Black,
+      noseType: NoseType.Default,
+      earringType: EarringType.Blank,
+      earringColor: EarringColor.Black
+    };
+
+  private _lastSaved: AvatarSelection | null = null;
+
+  tabIndex: tabIndexes = tabIndexes.background;
+  tabIndexes = tabIndexes;
+  readonly id: string = randomId('avatar');
+  readonly svgId: string = randomId('svgId');
+  svg = '';
+
+  // All the texts for avatar localization
+
+  @Input() avatarText: AvatarText = {
+    random: 'Random',
+    save: 'Save',
+    revert: 'Revert',
+    svg: 'Svg',
+    background: 'Backgrounds',
+    backgroundColor: 'Background colours',
+    eyes: 'Eyes',
+    eyebrows: 'Eyebrows',
+    eyebrowColors: 'Eyebrow colours',
+    accessories: 'Accessories',
+    accessoryColors: 'Accessory colours',
+    facialHairs: 'Facial hair',
+    facialHairColors: 'Facial hair colours',
+    noses: 'Noses',
+    mouths: 'Mouths',
+    pets: 'Pets',
+    awards: 'Awards',
+    hatsAndHairStyles: 'Hats/Hair Styles',
+    hairColors: 'Hair colours',
+    hatColors: 'Hat colours',
+    clothes: 'Clothes',
+    clotheColors1: 'Clothe colours',
+    clotheColors2: 'Clothe colours (Secondary)',
+    clotheColors3: 'Clothe colours (Tertiary)',
+    graphics: 'Graphics',
+    skinColors: 'Skin colours',
+    earrings: 'Ear Rings',
+    earringColors: 'Ear Ring colors'
+  };
+
+  // Controls whether noses can be selected
+
+  @Input() noNose = true;
+
+  // Controls whether pets can be selected
+
+  @Input() noPet = true;
+
+  // Controls whether awards can be selected
+
+  @Input() noAward = true;
+
+  // Controls whether ear-rings can be selected
+
+  @Input() noEarring = true;
+
+  // Controls whether an svg output button is available
+
+  @Input() noSvgOutput = true;
+
+  // Controls whether a random button is available
+
+  @Input() noRandom = false;
+
+  // Controls whethter saving is available
+
+  @Input() noSave = false;
+
+  // Controls whether facial hair is available (for kids/females etc)
+
+  @Input() noFacialHair = false;
+
+  // Controls whether the circle background and setting color for it is available
+
+  @Input() noColorBackground = false;
+
+  @Output() readonly avatarSaved: EventEmitter<SaveAvatar> = new EventEmitter<SaveAvatar>();
+
+  // Optional parameter allowing choices to be turned off (for example may not want vomit as a choice for mouth options)
+
+  @Input() avatarExclusion: AvatarExclusion = {
+    mouthTypes: [MouthType.Vomit],
+    graphicTypes: [GraphicType.Hola],
+    topTypes: [TopType.Eyepatch],
+    eyeTypes: [EyeType.Dizzy]
+  };
+
+  constructor(private readonly changeDetectorRef: ChangeDetectorRef) {
+    this.refreshAvatar();
+  }
+
   // #endregion
 
   // #region Color Converters
@@ -735,18 +734,6 @@ export class CustomAvatarComponent {
         element.style.display = 'none';
       }
     }, 100);
-  }
-
-  get saveAvatarEnabled() {
-    if (this._lastSaved === undefined) {
-      return true;
-    }
-
-    if (this.isEqual(this._currentAvatar, this._lastSaved)) {
-      return false;
-    }
-
-    return true;
   }
 
   saveAvatar() {

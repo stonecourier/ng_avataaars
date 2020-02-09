@@ -1,8 +1,8 @@
 /* tslint:disable:directive-class-suffix */
 
-import { Input, Directive } from '@angular/core';
-import { Option, FacialHairType, HairColor } from '../../../options';
+import { Directive, Input } from '@angular/core';
 import { hairColorTranslation } from '../../../colors/hair-color-translation';
+import { FacialHairType, HairColor, Option } from '../../../options';
 
 @Directive()
 export class CustomAvatarFacialHairBaseComponent implements Option<FacialHairType> {

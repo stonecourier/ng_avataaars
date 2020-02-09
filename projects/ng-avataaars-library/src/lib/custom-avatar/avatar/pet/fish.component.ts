@@ -5,7 +5,7 @@ import { Option, PetType } from '../../options';
 
 @Component({
   selector: '[kip-custom-avatar-pet-fish]',
-  templateUrl: './fish.component.html',
+  templateUrl: './fish.component.html'
 })
 
 export class CustomAvatarPetFishComponent implements Option<PetType> {

@@ -1,9 +1,9 @@
 /* tslint:disable:directive-class-suffix */
 
-import { Input, Directive } from '@angular/core';
-import { Option, AccessoriesType, AccessoriesColor } from '../../../options';
+import { Directive, Input } from '@angular/core';
 import { accessoriesColorTranslation } from '../../../colors/accessories-color-translation';
 import { urlfix } from '../../../helper/urlfix';
+import { AccessoriesColor, AccessoriesType, Option } from '../../../options';
 
 @Directive()
 export class CustomAvatarAccessoriesBaseComponent implements Option<AccessoriesType> {
@@ -20,4 +20,3 @@ export class CustomAvatarAccessoriesBaseComponent implements Option<AccessoriesT
     return urlfix(path);
   }
 }
-

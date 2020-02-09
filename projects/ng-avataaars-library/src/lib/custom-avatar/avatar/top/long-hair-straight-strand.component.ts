@@ -1,13 +1,13 @@
 /* tslint:disable:component-selector */
 
 import { Component } from '@angular/core';
-import { TopType } from '../../options';
 import { randomId } from '../../helper/randomid';
+import { TopType } from '../../options';
 import { CustomAvatarTopBaseComponent } from './top-base.component';
 
 @Component({
   selector: '[kip-custom-avatar-top-long-hair-straight-strand]',
-  templateUrl: './long-hair-straight-strand.component.html',
+  templateUrl: './long-hair-straight-strand.component.html'
 })
 
 export class CustomAvatarTopLongHairStraightStrandComponent extends CustomAvatarTopBaseComponent {

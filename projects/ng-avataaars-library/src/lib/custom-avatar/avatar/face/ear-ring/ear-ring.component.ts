@@ -1,11 +1,11 @@
 /* tslint:disable:component-selector */
 
 import { Component, Input } from '@angular/core';
-import { EarringType, EarringColor } from '../../../options';
+import { EarringColor, EarringType } from '../../../options';
 
 @Component({
   selector: '[kip-custom-avatar-ear-ring]',
-  templateUrl: './ear-ring.component.html',
+  templateUrl: './ear-ring.component.html'
 })
 
 export class CustomAvatarEarringComponent {

@@ -1,11 +1,11 @@
 /* tslint:disable:component-selector */
 
 import { Component } from '@angular/core';
-import { Option, EyeType } from '../../../options';
+import { EyeType, Option } from '../../../options';
 
 @Component({
   selector: '[kip-custom-avatar-eyes-dizzy]',
-  templateUrl: './dizzy.component.html',
+  templateUrl: './dizzy.component.html'
 })
 
 export class CustomAvatarEyesDizzyComponent implements Option<EyeType> {

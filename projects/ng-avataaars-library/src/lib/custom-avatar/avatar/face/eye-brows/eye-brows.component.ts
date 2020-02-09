@@ -1,13 +1,12 @@
 /* tslint:disable:component-selector */
 
 import { Component, Input } from '@angular/core';
-import { EyebrowType, HairColor } from '../../../options';
 import { hairColorTranslation } from '../../../colors/hair-color-translation';
-
+import { EyebrowType, HairColor } from '../../../options';
 
 @Component({
   selector: '[kip-custom-avatar-eye-brows]',
-  templateUrl: './eye-brows.component.html',
+  templateUrl: './eye-brows.component.html'
 })
 
 export class CustomAvatarEyebrowsComponent {

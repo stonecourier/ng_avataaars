@@ -1,11 +1,11 @@
 /* tslint:disable:component-selector */
 
 import { Component, Input } from '@angular/core';
-import { ClotheType, ClotheColor, GraphicType } from '../../options';
+import { ClotheColor, ClotheType, GraphicType } from '../../options';
 
 @Component({
   selector: '[kip-custom-avatar-clothes]',
-  templateUrl: './clothes.component.html',
+  templateUrl: './clothes.component.html'
 })
 
 export class CustomAvatarClothesComponent {

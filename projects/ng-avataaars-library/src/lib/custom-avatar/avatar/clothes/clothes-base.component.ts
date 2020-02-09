@@ -1,9 +1,9 @@
 /* tslint:disable:directive-class-suffix */
 
-import { Input, Directive } from '@angular/core';
-import { Option, ClotheType, ClotheColor, GraphicType } from '../../options';
+import { Directive, Input } from '@angular/core';
 import { clotheColorTranslation } from '../../colors/clothe-color-translation';
 import { urlfix } from '../../helper/urlfix';
+import { ClotheColor, ClotheType, GraphicType, Option } from '../../options';
 
 @Directive()
 export class CustomAvatarClothesBaseComponent implements Option<ClotheType> {

@@ -1,5 +1,5 @@
-import { Option, MouthType } from '../../../options';
 import { urlfix } from '../../../helper/urlfix';
+import { MouthType, Option } from '../../../options';
 
 export class MouthBaseComponent implements Option<MouthType> {
 

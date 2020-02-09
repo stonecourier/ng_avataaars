@@ -4,7 +4,7 @@ import { CustomAvatarIconBaseComponent } from './icon-base.component';
 @Component({
   selector: 'kip-custom-avatar-icon-eye-brow',
   styleUrls: ['./icon-base.css'],
-  templateUrl: './eye-brow.component.html',
+  templateUrl: './eye-brow.component.html'
 })
 
 export class CustomAvatarIconEyeBrowComponent extends CustomAvatarIconBaseComponent {

@@ -1,13 +1,13 @@
 /* tslint:disable:component-selector */
 
 import { Component } from '@angular/core';
-import { FacialHairType } from '../../../options';
 import { randomId } from '../../../helper/randomid';
+import { FacialHairType } from '../../../options';
 import { CustomAvatarFacialHairBaseComponent } from './facial-hair-base.component';
 
 @Component({
   selector: '[kip-custom-avatar-facial-hair-moustache-fancy]',
-  templateUrl: './moustache-fancy.component.html',
+  templateUrl: './moustache-fancy.component.html'
 })
 
 export class CustomAvatarFacialHairMoustacheFancyComponent extends CustomAvatarFacialHairBaseComponent {

@@ -7,7 +7,7 @@ import { MouthBaseComponent } from './mouth-base.component';
 
 @Component({
   selector: '[kip-custom-avatar-mouth-tongue]',
-  templateUrl: './tongue.component.html',
+  templateUrl: './tongue.component.html'
 })
 
 export class CustomAvatarMouthTongueComponent extends MouthBaseComponent {

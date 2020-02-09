@@ -2,13 +2,13 @@
 
 import { Component, Input } from '@angular/core';
 import {
-  AccessoriesType, TopType, FacialHairType, HairColor, HatColor,
-  AccessoriesColor
+  AccessoriesColor, AccessoriesType, FacialHairType, HairColor, HatColor,
+  TopType
 } from '../../options';
 
 @Component({
   selector: '[kip-custom-avatar-top]',
-  templateUrl: './top.component.html',
+  templateUrl: './top.component.html'
 })
 
 export class CustomAvatarTopComponent {

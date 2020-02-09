@@ -5,11 +5,10 @@ import { EyeType } from '../../../options';
 
 @Component({
   selector: '[kip-custom-avatar-eyes]',
-  templateUrl: './eyes.component.html',
+  templateUrl: './eyes.component.html'
 })
 
 export class CustomAvatarEyesComponent {
 
-  @Input()
-  eyeType: EyeType = EyeType.Close;
+  @Input() eyeType: EyeType = EyeType.Close;
 }

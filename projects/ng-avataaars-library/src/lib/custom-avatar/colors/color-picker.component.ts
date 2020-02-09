@@ -1,9 +1,9 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'kip-custom-avatar-color-picker',
   styleUrls: ['./color-picker.css'],
-  templateUrl: './color-picker.component.html',
+  templateUrl: './color-picker.component.html'
 })
 
 export class CustomAvatarColorPickerComponent {

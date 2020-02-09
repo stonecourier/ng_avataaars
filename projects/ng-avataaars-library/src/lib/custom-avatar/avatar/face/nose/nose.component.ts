@@ -5,12 +5,11 @@ import { NoseType } from '../../../options';
 
 @Component({
   selector: '[kip-custom-avatar-nose]',
-  templateUrl: './nose.component.html',
+  templateUrl: './nose.component.html'
 })
 
 export class CustomAvatarNoseComponent {
 
-  @Input()
-  noseType: NoseType = NoseType.Default;
+  @Input() noseType: NoseType = NoseType.Default;
 
 }

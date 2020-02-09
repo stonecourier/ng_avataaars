@@ -1,13 +1,13 @@
 /* tslint:disable:component-selector */
 
 import { Component } from '@angular/core';
-import { ClotheType } from '../../options';
 import { randomId } from '../../helper/randomid';
+import { ClotheType } from '../../options';
 import { CustomAvatarClothesBaseComponent } from './clothes-base.component';
 
 @Component({
   selector: '[kip-custom-avatar-clothes-shirt-scoop-neck]',
-  templateUrl: './shirt-scoop-neck.component.html',
+  templateUrl: './shirt-scoop-neck.component.html'
 })
 
 export class CustomAvatarClothesShirtScoopNeckComponent extends CustomAvatarClothesBaseComponent {

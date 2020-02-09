@@ -1,10 +1,10 @@
-import { Component, Input, Output, EventEmitter, TemplateRef, ContentChildren, AfterContentInit } from '@angular/core';
+import { AfterContentInit, Component, ContentChildren, EventEmitter, Input, Output, TemplateRef } from '@angular/core';
 import { PickerTemplateDirective } from './custom-avatar-picker-template.directive';
 
 @Component({
   selector: 'kip-custom-avatar-picker',
   styleUrls: ['./custom-avatar-picker.css'],
-  templateUrl: './custom-avatar-picker.component.html',
+  templateUrl: './custom-avatar-picker.component.html'
 })
 
 export class CustomAvatarPickerComponent implements AfterContentInit {

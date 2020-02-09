@@ -6,7 +6,7 @@ import { CustomAvatarEarringBaseComponent } from './ear-ring-base.component';
 
 @Component({
   selector: '[kip-custom-avatar-ear-ring-left]',
-  templateUrl: './left.component.html',
+  templateUrl: './left.component.html'
 })
 
 export class CustomAvatarEarringLeftComponent extends CustomAvatarEarringBaseComponent {

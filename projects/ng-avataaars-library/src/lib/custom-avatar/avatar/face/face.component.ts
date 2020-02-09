@@ -1,11 +1,11 @@
 /* tslint:disable:component-selector */
 
 import { Component, Input } from '@angular/core';
-import { NoseType, MouthType, EyeType, EyebrowType, HairColor, EarringType, EarringColor } from '../../options';
+import { EarringColor, EarringType, EyebrowType, EyeType, HairColor, MouthType, NoseType } from '../../options';
 
 @Component({
   selector: '[kip-custom-avatar-face]',
-  templateUrl: './face.component.html',
+  templateUrl: './face.component.html'
 })
 
 export class CustomAvatarFaceComponent {

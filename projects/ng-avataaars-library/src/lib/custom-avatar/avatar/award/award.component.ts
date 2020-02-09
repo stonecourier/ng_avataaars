@@ -1,11 +1,11 @@
 /* tslint:disable:component-selector */
 
 import { Component, Input } from '@angular/core';
-import { AwardType, SkinColor, ClotheColor } from '../../options';
+import { AwardType, ClotheColor, SkinColor } from '../../options';
 
 @Component({
   selector: '[kip-custom-avatar-award]',
-  templateUrl: './award.component.html',
+  templateUrl: './award.component.html'
 })
 
 export class CustomAvatarAwardComponent {

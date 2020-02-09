@@ -5,7 +5,7 @@ import { FacialHairType, HairColor } from '../../../options';
 
 @Component({
   selector: '[kip-custom-avatar-facial-hair]',
-  templateUrl: './facial-hair.component.html',
+  templateUrl: './facial-hair.component.html'
 })
 
 export class CustomAvatarFacialHairComponent {

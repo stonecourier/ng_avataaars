@@ -1,6 +1,6 @@
 /* tslint:disable:directive-class-suffix */
 
-import { Input, Output, EventEmitter, Directive } from '@angular/core';
+import { Directive, EventEmitter, Input, Output } from '@angular/core';
 import { tabIndexes } from '../options';
 
 @Directive()

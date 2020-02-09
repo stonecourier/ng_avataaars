@@ -1,18 +1,18 @@
 import { Component, Input } from '@angular/core';
-import {
-  AvatarStyle, NoseType, MouthType, EyeType, EyebrowType,
-  SkinColor, AccessoriesType, FacialHairType, HairColor, TopType,
-  ClotheType, BackgroundColor, ClotheColor, GraphicType, PetType, AwardType,
-  HatColor, AccessoriesColor, EarringColor, EarringType
-} from '../options';
-import { randomId } from '../helper/randomid';
-import { urlfix } from '../helper/urlfix';
 import { backgroundColorTranslation } from '../colors/background-color-translation';
 import { skinColorTranslation } from '../colors/skin-color-translation';
+import { randomId } from '../helper/randomid';
+import { urlfix } from '../helper/urlfix';
+import {
+  AccessoriesColor, AccessoriesType, AvatarStyle, AwardType, BackgroundColor,
+  ClotheColor, ClotheType, EarringColor, EarringType, EyebrowType,
+  EyeType, FacialHairType, GraphicType, HairColor, HatColor, MouthType,
+  NoseType, PetType, SkinColor, TopType
+} from '../options';
 
 @Component({
   selector: 'kip-custom-avatar-base',
-  templateUrl: './avatar.component.html',
+  templateUrl: './avatar.component.html'
 })
 
 export class CustomAvatarBaseComponent {

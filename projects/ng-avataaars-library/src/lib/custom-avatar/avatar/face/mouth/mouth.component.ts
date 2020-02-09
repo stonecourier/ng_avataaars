@@ -5,12 +5,11 @@ import { MouthType } from '../../../options';
 
 @Component({
   selector: '[kip-custom-avatar-mouth]',
-  templateUrl: './mouth.component.html',
+  templateUrl: './mouth.component.html'
 })
 
 export class CustomAvatarMouthComponent {
 
-  @Input()
-  mouthType: MouthType = MouthType.Concerned;
+  @Input() mouthType: MouthType = MouthType.Concerned;
 
 }

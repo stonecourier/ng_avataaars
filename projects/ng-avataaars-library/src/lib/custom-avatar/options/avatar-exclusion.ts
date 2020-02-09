@@ -1,7 +1,7 @@
 import {
-  AvatarStyle, TopType, AccessoriesType, FacialHairType, ClotheType,
-  EyeType, EyebrowType, MouthType, GraphicType,
-  PetType, AwardType, NoseType, EarringType
+  AccessoriesType, AvatarStyle, AwardType, ClotheType, EarringType,
+  EyebrowType, EyeType, FacialHairType, GraphicType,
+  MouthType, NoseType, PetType, TopType
 } from '../options';
 
 export interface AvatarExclusion {

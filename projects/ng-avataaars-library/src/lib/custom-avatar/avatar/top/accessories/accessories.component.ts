@@ -1,11 +1,11 @@
 /* tslint:disable:component-selector */
 
 import { Component, Input } from '@angular/core';
-import { AccessoriesType, AccessoriesColor } from '../../../options';
+import { AccessoriesColor, AccessoriesType } from '../../../options';
 
 @Component({
   selector: '[kip-custom-avatar-accessories]',
-  templateUrl: './accessories.component.html',
+  templateUrl: './accessories.component.html'
 })
 
 export class CustomAvatarAccessoriesComponent {

@@ -7,7 +7,7 @@ import { MouthBaseComponent } from './mouth-base.component';
 
 @Component({
   selector: '[kip-custom-avatar-mouth-scream-open]',
-  templateUrl: './scream-open.component.html',
+  templateUrl: './scream-open.component.html'
 })
 
 export class CustomAvatarMouthScreamOpenComponent extends MouthBaseComponent {

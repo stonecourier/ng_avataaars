@@ -1,13 +1,13 @@
 /* tslint:disable:component-selector */
 
 import { Component } from '@angular/core';
-import { AccessoriesType } from '../../../options';
 import { randomId } from '../../../helper/randomid';
+import { AccessoriesType } from '../../../options';
 import { CustomAvatarAccessoriesBaseComponent } from './accessories-base.component';
 
 @Component({
   selector: '[kip-custom-avatar-accessories-sunglasses]',
-  templateUrl: './sunglasses.component.html',
+  templateUrl: './sunglasses.component.html'
 })
 
 export class CustomAvatarAccessoriesSunglassesComponent extends CustomAvatarAccessoriesBaseComponent {

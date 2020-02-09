@@ -1,11 +1,11 @@
 /* tslint:disable:component-selector */
 
 import { Component } from '@angular/core';
-import { Option, EyebrowType } from '../../../options';
+import { EyebrowType, Option } from '../../../options';
 
 @Component({
   selector: '[kip-custom-avatar-eye-brow-frown-natural]',
-  templateUrl: './frown-natural.component.html',
+  templateUrl: './frown-natural.component.html'
 })
 
 export class CustomAvatarEyebrowsFrownNaturalComponent implements Option<EyebrowType> {
