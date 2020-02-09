@@ -17,150 +17,66 @@ import { skinColorTranslation } from '../colors/skin-color-translation';
 
 export class CustomAvatarBaseComponent {
 
-  private _backColor = '';
-  private _backgroundColor: BackgroundColor;
-  private _skinColor: SkinColor;
-  private _color: string;
-
-  @Input()
-  width: number;
-
-  @Input()
-  widthFull: boolean;
-
-  @Input()
-  height: number;
-
-  @Input()
-  transform = '';
-
-  @Input()
-  viewBox = '';
-
-  @Input()
-  noFeatures = false;
-
-  @Input()
-  noPet = false;
-
-  @Input()
-  noAward = false;
-
-  @Input()
-  avatarStyle: AvatarStyle = AvatarStyle.Transparent;
-
-  @Input()
-  svgClass: string;
-
-  @Input()
-  set backgroundColor(value: BackgroundColor) {
-    if (this._backgroundColor !== value) {
-      this._backgroundColor = value;
-      this._backColor = backgroundColorTranslation(value);
-    }
-  }
-
-  get backgroundColor() {
-    return this._backgroundColor;
-  }
+  @Input() width = 300;
+  @Input() widthFull = false;
+  @Input() height = 300;
+  @Input() transform = '';
+  @Input() viewBox = '';
+  @Input() noFeatures = false;
+  @Input() noPet = false;
+  @Input() noAward = false;
+  @Input() avatarStyle: AvatarStyle = AvatarStyle.Transparent;
+  @Input() svgClass = '';
+  @Input() backgroundColor: BackgroundColor = BackgroundColor.ColorA;
 
   get backColor() {
-    return this._backColor;
+    return backgroundColorTranslation(this.backgroundColor);
   }
 
-  @Input()
-  clotheType: ClotheType;
-
-  @Input()
-  graphicType: GraphicType;
-
-  @Input()
-  clotheColor: ClotheColor;
-
-  @Input()
-  clotheColor2: ClotheColor;
-
-  @Input()
-  clotheColor3: ClotheColor;
-
-  @Input()
-  topType: TopType;
-
-  @Input()
-  set skinColor(value: SkinColor) {
-    if (this._skinColor !== value) {
-      this._skinColor = value;
-      this._color = skinColorTranslation(value);
-    }
-  }
-
-  get skinColor() {
-    return this._skinColor;
-  }
+  @Input() clotheType: ClotheType = ClotheType.BlazerShirt;
+  @Input() graphicType: GraphicType = GraphicType.Bat;
+  @Input() clotheColor: ClotheColor = ClotheColor.Black;
+  @Input() clotheColor2: ClotheColor = ClotheColor.Black;
+  @Input() clotheColor3: ClotheColor = ClotheColor.Black;
+  @Input() topType: TopType = TopType.Hat;
+  @Input() skinColor: SkinColor = SkinColor.Black;
 
   get color() {
-    return this._color;
+    return skinColorTranslation(this.skinColor);
   }
 
-  @Input()
-  noseType: NoseType;
-
-  @Input()
-  mouthType: MouthType;
-
-  @Input()
-  eyeType: EyeType;
-
-  @Input()
-  eyebrowType: EyebrowType;
-
-  @Input()
-  eyebrowColor: HairColor;
-
-  @Input()
-  accessoriesType: AccessoriesType;
-
-  @Input()
-  facialHairType: FacialHairType;
-
-  @Input()
-  facialHairColor: HairColor;
-
-  @Input()
-  hairColor: HairColor;
-
-  @Input()
-  petType: PetType;
+  @Input() noseType: NoseType = NoseType.Default;
+  @Input() mouthType: MouthType = MouthType.Default;
+  @Input() eyeType: EyeType = EyeType.Happy;
+  @Input() eyebrowType: EyebrowType = EyebrowType.Default;
+  @Input() eyebrowColor: HairColor = HairColor.Black;
+  @Input() accessoriesType: AccessoriesType = AccessoriesType.Blank;
+  @Input() facialHairType: FacialHairType = FacialHairType.Blank;
+  @Input() facialHairColor: HairColor = HairColor.Black;
+  @Input() hairColor: HairColor = HairColor.Black;
+  @Input() petType: PetType = PetType.None;
 
   get petTypeVisible() {
     return !this.noFeatures && this.petType !== PetType.None && !this.noPet;
   }
 
-  @Input()
-  awardType: AwardType;
+  @Input() awardType: AwardType = AwardType.None;
 
   get awardTypeVisible() {
     return !this.noFeatures && this.awardType !== AwardType.None && !this.noAward;
   }
 
-  @Input()
-  hatColor: HatColor;
+  @Input() hatColor: HatColor = HatColor.Black;
+  @Input() accessoriesColor: AccessoriesColor = AccessoriesColor.Black;
+  @Input() earringType: EarringType = EarringType.Blank;
+  @Input() earringColor: EarringColor = EarringColor.Black;
 
-  @Input()
-  accessoriesColor: AccessoriesColor;
-
-  @Input()
-  earringType: EarringType;
-
-  @Input()
-  earringColor: EarringColor;
-
-  mask1: string = randomId('kip-mask');
-  mask2: string = randomId('kip-mask');
-  mask3: string = randomId('kip-mask');
-  path1: string = randomId('kip-path');
-  path3: string = randomId('kip-path');
-  path5: string = randomId('kip-path');
+  readonly mask1: string = randomId('ptx-mask');
+  readonly mask2: string = randomId('ptx-mask');
+  readonly mask3: string = randomId('ptx-mask');
+  readonly path1: string = randomId('ptx-path');
+  readonly path3: string = randomId('ptx-path');
+  readonly path5: string = randomId('ptx-path');
 
   urlFix(path: string) {
     return urlfix(path);

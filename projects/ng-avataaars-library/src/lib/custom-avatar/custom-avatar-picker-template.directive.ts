@@ -5,9 +5,9 @@ import { Directive, Input, TemplateRef } from '@angular/core';
 })
 export class PickerTemplateDirective {
 
-  @Input() type: string;
+  @Input() type = '';
 
-  @Input('kipPickerTemplate') name: string;
+  @Input('kipPickerTemplate') name = '';
 
   constructor(public template: TemplateRef<any>) { }
 

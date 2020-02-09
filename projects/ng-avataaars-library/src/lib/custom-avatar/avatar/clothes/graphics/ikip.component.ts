@@ -12,7 +12,7 @@ import { CustomAvatarClothesGraphicsBaseComponent } from './graphics-base.compon
 
 export class CustomAvatarClothesGraphicsIKipComponent extends CustomAvatarClothesGraphicsBaseComponent {
 
-  option = GraphicType.IKip;
+  get option() { return GraphicType.IKip; }
 
-  mask1: string = randomId('kip-mask');
+  readonly mask1: string = randomId('kip-mask');
 }

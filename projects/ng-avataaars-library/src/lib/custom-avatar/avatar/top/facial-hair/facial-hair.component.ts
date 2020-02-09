@@ -10,9 +10,6 @@ import { FacialHairType, HairColor } from '../../../options';
 
 export class CustomAvatarFacialHairComponent {
 
-  @Input()
-  facialHairType: FacialHairType;
-
-  @Input()
-  facialHairColor: HairColor;
+  @Input() facialHairType: FacialHairType = FacialHairType.Blank;
+  @Input() facialHairColor: HairColor = HairColor.Black;
 }

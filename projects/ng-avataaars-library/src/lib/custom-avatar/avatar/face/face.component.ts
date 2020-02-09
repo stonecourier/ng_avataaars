@@ -10,24 +10,17 @@ import { NoseType, MouthType, EyeType, EyebrowType, HairColor, EarringType, Earr
 
 export class CustomAvatarFaceComponent {
 
-  @Input()
-  noseType: NoseType;
+  @Input() noseType: NoseType = NoseType.Default;
 
-  @Input()
-  mouthType: MouthType;
+  @Input() mouthType: MouthType = MouthType.Default;
 
-  @Input()
-  eyeType: EyeType;
+  @Input() eyeType: EyeType = EyeType.Happy;
 
-  @Input()
-  eyebrowType: EyebrowType;
+  @Input() eyebrowType: EyebrowType = EyebrowType.Default;
 
-  @Input()
-  eyebrowColor: HairColor;
+  @Input() eyebrowColor: HairColor = HairColor.Black;
 
-  @Input()
-  earringType: EarringType;
+  @Input() earringType: EarringType = EarringType.Blank;
 
-  @Input()
-  earringColor: EarringColor;
+  @Input() earringColor: EarringColor = EarringColor.Black;
 }

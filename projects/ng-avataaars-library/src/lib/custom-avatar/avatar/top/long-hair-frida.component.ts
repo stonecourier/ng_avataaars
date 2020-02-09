@@ -12,18 +12,18 @@ import { CustomAvatarTopBaseComponent } from './top-base.component';
 
 export class CustomAvatarTopLongHairFridaComponent extends CustomAvatarTopBaseComponent {
 
-  option = TopType.LongHairFrida;
+  get option() { return TopType.LongHairFrida; }
 
-  mask1: string = randomId('kip-mask');
-  path1: string = randomId('kip-path');
-  path2: string = randomId('kip-path');
-  filter1: string = randomId('kip-filter');
-  filter2: string = randomId('kip-filter');
-  filter3: string = randomId('kip-filter');
-  filter4: string = randomId('kip-filter');
-  filter5: string = randomId('kip-filter');
-  filter6: string = randomId('kip-filter');
-  filter7: string = randomId('kip-filter');
+  readonly mask1: string = randomId('kip-mask');
+  readonly path1: string = randomId('kip-path');
+  readonly path2: string = randomId('kip-path');
+  readonly filter1: string = randomId('kip-filter');
+  readonly filter2: string = randomId('kip-filter');
+  readonly filter3: string = randomId('kip-filter');
+  readonly filter4: string = randomId('kip-filter');
+  readonly filter5: string = randomId('kip-filter');
+  readonly filter6: string = randomId('kip-filter');
+  readonly filter7: string = randomId('kip-filter');
 
 
   constructor() {

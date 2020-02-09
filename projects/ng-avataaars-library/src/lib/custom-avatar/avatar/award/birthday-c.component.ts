@@ -9,5 +9,5 @@ import { Option, AwardType } from '../../options';
 })
 
 export class CustomAvatarAwardBirthdayCComponent implements Option<AwardType> {
-  option = AwardType.BirthdayC;
+  get option() { return AwardType.BirthdayC; }
 }

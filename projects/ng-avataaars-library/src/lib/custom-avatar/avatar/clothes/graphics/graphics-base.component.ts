@@ -5,25 +5,12 @@ import { urlfix } from '../../../helper/urlfix';
 
 export class CustomAvatarClothesGraphicsBaseComponent implements Option<GraphicType> {
 
-  private _clotheColor2: ClotheColor;
-  private _color2 = '';
+  get option() { return GraphicType.Bat; }
 
-  option = GraphicType.Bat;
-
-  @Input()
-  set clotheColor2(value: ClotheColor) {
-    if (this._clotheColor2 !== value) {
-      this._clotheColor2 = value;
-      this._color2 = clotheColorTranslation(value);
-    }
-  }
-
-  get clotheColor2() {
-    return this._clotheColor2;
-  }
+  @Input() clotheColor2: ClotheColor = ClotheColor.Black;
 
   get color2() {
-    return this._color2;
+    return clotheColorTranslation(this.clotheColor2);
   }
 
   urlFix(path: string) {

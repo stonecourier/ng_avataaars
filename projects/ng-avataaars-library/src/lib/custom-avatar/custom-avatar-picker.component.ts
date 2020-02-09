@@ -9,22 +9,13 @@ import { PickerTemplateDirective } from './custom-avatar-picker-template.directi
 
 export class CustomAvatarPickerComponent implements AfterContentInit {
 
-  @Input()
-  title: string;
+  @Input() title = '';
+  @Input() currentOption = '';
+  @Input() options: { value: string; label: string }[] = [];
+  @Input() backgroundColor = '';
+  @Output() readonly optionPicked = new EventEmitter<string>();
 
-  @Input()
-  currentOption: string;
-
-  @Input()
-  options: { value: string, label: any }[];
-
-  @Input()
-  backgroundColor: string;
-
-  @Output()
-  optionPicked = new EventEmitter<string>();
-
-  itemTemplate: TemplateRef<any>;
+  itemTemplate: TemplateRef<any> | null = null;
 
   @ContentChildren(PickerTemplateDirective) templates: any;
 
@@ -33,7 +24,7 @@ export class CustomAvatarPickerComponent implements AfterContentInit {
   }
 
   ngAfterContentInit() {
-    this.templates.forEach((item) => {
+    this.templates.forEach((item: any) => {
       switch (item.getType()) {
         case 'item':
           this.itemTemplate = item.template;

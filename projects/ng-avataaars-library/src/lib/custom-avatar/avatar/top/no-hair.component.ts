@@ -12,11 +12,11 @@ import { CustomAvatarTopBaseComponent } from './top-base.component';
 
 export class CustomAvatarTopNoHairComponent extends CustomAvatarTopBaseComponent {
 
-  option = TopType.NoHair;
+  get option() { return TopType.NoHair; }
 
-  mask1: string = randomId('kip-mask');
-  path1: string = randomId('kip-path');
-  filter1: string = randomId('kip-filter');
+  readonly mask1: string = randomId('kip-mask');
+  readonly path1: string = randomId('kip-path');
+  readonly filter1: string = randomId('kip-filter');
 
   constructor() {
     super();

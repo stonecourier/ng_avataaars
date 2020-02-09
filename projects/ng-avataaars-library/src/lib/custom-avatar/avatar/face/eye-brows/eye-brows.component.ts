@@ -12,25 +12,10 @@ import { hairColorTranslation } from '../../../colors/hair-color-translation';
 
 export class CustomAvatarEyebrowsComponent {
 
-  @Input()
-  eyebrowType: EyebrowType;
-
-  private _eyebrowColor: HairColor;
-  private _color;
-
-  @Input()
-  set eyebrowColor(value: HairColor) {
-    if (this._eyebrowColor !== value) {
-      this._eyebrowColor = value;
-      this._color = hairColorTranslation(value);
-    }
-  }
-
-  get eyebrowColor() {
-    return this._eyebrowColor;
-  }
+  @Input() eyebrowType: EyebrowType = EyebrowType.Default;
+  @Input() eyebrowColor: HairColor = HairColor.Black;
 
   get color() {
-    return this._color;
+    return hairColorTranslation(this.eyebrowColor);
   }
 }

@@ -10,9 +10,6 @@ import { AccessoriesType, AccessoriesColor } from '../../../options';
 
 export class CustomAvatarAccessoriesComponent {
 
-  @Input()
-  accessoriesType: AccessoriesType;
-
-  @Input()
-  accessoriesColor: AccessoriesColor;
+  @Input() accessoriesType: AccessoriesType = AccessoriesType.Blank;
+  @Input() accessoriesColor: AccessoriesColor = AccessoriesColor.Black;
 }

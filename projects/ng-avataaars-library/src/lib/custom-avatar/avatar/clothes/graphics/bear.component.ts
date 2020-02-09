@@ -12,9 +12,9 @@ import { CustomAvatarClothesGraphicsBaseComponent } from './graphics-base.compon
 
 export class CustomAvatarClothesGraphicsBearComponent extends CustomAvatarClothesGraphicsBaseComponent {
 
-  option = GraphicType.Bear;
+  get option() { return GraphicType.Bear; }
 
-  mask1: string = randomId('kip-mask');
-  mask2: string = randomId('kip-mask');
-  path1: string = randomId('kip-path');
+  readonly mask1: string = randomId('kip-mask');
+  readonly mask2: string = randomId('kip-mask');
+  readonly path1: string = randomId('kip-path');
 }

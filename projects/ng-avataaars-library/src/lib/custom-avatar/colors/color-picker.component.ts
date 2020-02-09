@@ -8,20 +8,11 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 export class CustomAvatarColorPickerComponent {
 
-  @Input()
-  title: string;
-
-  @Input()
-  currentColor: string;
-
-  @Input()
-  colors: { value: string, label: any }[];
-
-  @Input()
-  colorConverter: (value: string) => string;
-
-  @Output()
-  colorPicked = new EventEmitter<string>();
+  @Input() title = '';
+  @Input() currentColor = '';
+  @Input() colors: { value: string; label: string }[] = [];
+  @Output() readonly colorPicked = new EventEmitter<string>();
+  @Input() colorConverter: (value: string) => string = (_value: string) => '';
 
   pick(value: string) {
     this.colorPicked.emit(value);

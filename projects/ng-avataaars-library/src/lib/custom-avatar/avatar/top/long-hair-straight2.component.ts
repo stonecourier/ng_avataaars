@@ -12,13 +12,13 @@ import { CustomAvatarTopBaseComponent } from './top-base.component';
 
 export class CustomAvatarTopLongHairStraight2Component extends CustomAvatarTopBaseComponent {
 
-  option = TopType.LongHairStraight2;
+  get option() { return TopType.LongHairStraight2; }
 
-  mask1: string = randomId('kip-mask');
-  mask2: string = randomId('kip-mask');
-  path1: string = randomId('kip-path');
-  path2: string = randomId('kip-path');
-  path3: string = randomId('kip-path');
+  readonly mask1: string = randomId('kip-mask');
+  readonly mask2: string = randomId('kip-mask');
+  readonly path1: string = randomId('kip-path');
+  readonly path2: string = randomId('kip-path');
+  readonly path3: string = randomId('kip-path');
 
   constructor() {
     super();

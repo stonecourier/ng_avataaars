@@ -10,15 +10,8 @@ import { AwardType, SkinColor, ClotheColor } from '../../options';
 
 export class CustomAvatarAwardComponent {
 
-  @Input()
-  awardType: AwardType = AwardType.None;
-
-  @Input()
-  skinColor: SkinColor;
-
-  @Input()
-  clotheColor: ClotheColor;
-
-  @Input()
-  clotheColor2: ClotheColor;
+  @Input() awardType: AwardType = AwardType.None;
+  @Input() skinColor: SkinColor = SkinColor.Black;
+  @Input() clotheColor: ClotheColor = ClotheColor.Black;
+  @Input() clotheColor2: ClotheColor = ClotheColor.Black;
 }

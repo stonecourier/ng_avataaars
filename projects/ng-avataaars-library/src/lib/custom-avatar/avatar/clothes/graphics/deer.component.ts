@@ -12,7 +12,7 @@ import { CustomAvatarClothesGraphicsBaseComponent } from './graphics-base.compon
 
 export class CustomAvatarClothesGraphicsDeerComponent extends CustomAvatarClothesGraphicsBaseComponent {
 
-  option = GraphicType.Deer;
+  get option() { return GraphicType.Deer; }
 
-  mask1: string = randomId('kip-mask');
+  readonly mask1: string = randomId('kip-mask');
 }

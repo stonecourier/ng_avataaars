@@ -12,60 +12,24 @@ import { skinColorTranslation } from '../../colors/skin-color-translation';
 
 export class CustomAvatarAwardThumbUpComponent implements Option<AwardType> {
 
-  private _clotheColor: ClotheColor;
-  private _color = '';
-  private _clotheColor2: ClotheColor;
-  private _color2 = '';
-  private _skinColor: SkinColor;
-  private _color3: string;
+  get option() { return AwardType.ThumbUp; }
 
-  option = AwardType.ThumbUp;
+  @Input() clotheColor: ClotheColor = ClotheColor.Black;
 
-  @Input()
-  set clotheColor(value: ClotheColor) {
-    if (this._clotheColor !== value) {
-      this._clotheColor = value;
-      this._color = clotheColorTranslation(value);
-    }
-  }
+  @Input() clotheColor2: ClotheColor = ClotheColor.Black;
 
-  get clotheColor() {
-    return this._clotheColor;
-  }
-
-  @Input()
-  set clotheColor2(value: ClotheColor) {
-    if (this._clotheColor2 !== value) {
-      this._clotheColor2 = value;
-      this._color2 = clotheColorTranslation(value);
-    }
-  }
-
-  get clotheColor2() {
-    return this._clotheColor2;
-  }
-
-  @Input()
-  set skinColor(value: SkinColor) {
-    if (this._skinColor !== value) {
-      this._skinColor = value;
-      this._color3 = skinColorTranslation(value);
-    }
-  }
-
-  get skinColor() {
-    return this._skinColor;
-  }
+  @Input() skinColor: SkinColor = SkinColor.Black;
 
   get color() {
-    return this._color;
+    return clotheColorTranslation(this.clotheColor);
   }
 
   get color2() {
-    return this._color2;
+    return clotheColorTranslation(this.clotheColor2);
   }
 
   get color3() {
-    return this._color3;
+    return skinColorTranslation(this.skinColor);
   }
+
 }

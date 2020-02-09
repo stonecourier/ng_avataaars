@@ -10,5 +10,5 @@ import { MouthBaseComponent } from './mouth-base.component';
 })
 
 export class CustomAvatarMouthTwinkleComponent extends MouthBaseComponent {
-  option: MouthType.Twinkle;
+  get option() { return MouthType.Twinkle; }
 }

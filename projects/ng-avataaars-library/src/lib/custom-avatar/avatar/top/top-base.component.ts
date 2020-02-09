@@ -9,56 +9,24 @@ import { urlfix } from '../../helper/urlfix';
 
 export class CustomAvatarTopBaseComponent implements Option<TopType> {
 
-  private _hairColor: HairColor;
-  private _color = '';
-  private _hatColor: HatColor;
-  private _color2 = '';
+  get option() { return TopType.Eyepatch; }
 
-  option = TopType.Eyepatch;
-
-  @Input()
-  set hairColor(value: HairColor) {
-    if (this._hairColor !== value) {
-      this._hairColor = value;
-      this._color = hairColorTranslation(value);
-    }
-  }
-
-  get hairColor() {
-    return this._hairColor;
-  }
+  @Input() hairColor: HairColor = HairColor.Black;
 
   get color() {
-    return this._color;
+    return hairColorTranslation(this.hairColor);
   }
 
-  @Input()
-  set hatColor(value: HatColor) {
-    if (this._hatColor !== value) {
-      this._hatColor = value;
-      this._color2 = hatColorTranslation(value);
-    }
-  }
-
-  get hatColor() {
-    return this._hatColor;
-  }
+  @Input() hatColor: HatColor = HatColor.Black;
 
   get color2() {
-    return this._color2;
+    return hatColorTranslation(this.hatColor);
   }
 
-  @Input()
-  facialHairType: FacialHairType;
-
-  @Input()
-  facialHairColor: HairColor;
-
-  @Input()
-  accessoriesType: AccessoriesType;
-
-  @Input()
-  accessoriesColor: AccessoriesColor;
+  @Input() facialHairType: FacialHairType = FacialHairType.Blank;
+  @Input() facialHairColor: HairColor = HairColor.Black;
+  @Input() accessoriesType: AccessoriesType = AccessoriesType.Blank;
+  @Input() accessoriesColor: AccessoriesColor = AccessoriesColor.Black;
 
   urlFix(path: string) {
     return urlfix(path);

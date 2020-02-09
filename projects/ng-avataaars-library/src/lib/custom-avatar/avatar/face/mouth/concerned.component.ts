@@ -12,8 +12,8 @@ import { MouthBaseComponent } from './mouth-base.component';
 
 export class CustomAvatarMouthConcernedComponent extends MouthBaseComponent {
 
-  option: MouthType.Concerned;
+  get option() { return MouthType.Concerned; }
 
-  mask1: string = randomId('kip-mask');
-  path1: string = randomId('kip-path');
+  readonly mask1: string = randomId('kip-mask');
+  readonly path1: string = randomId('kip-path');
 }

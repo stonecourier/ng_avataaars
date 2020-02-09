@@ -10,9 +10,7 @@ import { GraphicType, ClotheColor } from '../../../options';
 
 export class CustomAvatarClothesGraphicsComponent {
 
-  @Input()
-  graphicType: GraphicType = GraphicType.Bat;
+  @Input() graphicType: GraphicType = GraphicType.Bat;
+  @Input() clotheColor2: ClotheColor = ClotheColor.Black;
 
-  @Input()
-  clotheColor2: ClotheColor;
 }

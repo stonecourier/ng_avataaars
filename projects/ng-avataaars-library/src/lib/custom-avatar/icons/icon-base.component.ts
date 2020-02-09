@@ -1,15 +1,12 @@
 import { Input, Output, EventEmitter } from '@angular/core';
+import { tabIndexes } from '../options';
 
 export class CustomAvatarIconBaseComponent {
 
-  @Input()
-  index: number;
+  @Input() index: tabIndexes = 0;
+  @Input() currentIndex: tabIndexes = 0;
 
-  @Input()
-  currentIndex: number;
-
-  @Output()
-  selectTab = new EventEmitter<number>();
+  @Output() readonly selectTab = new EventEmitter<tabIndexes>();
 
   get avatarTabFillColor() {
     return this.currentIndex === this.index ? 'black' : 'gray';

@@ -3,7 +3,7 @@ import { urlfix } from '../../../helper/urlfix';
 
 export class MouthBaseComponent implements Option<MouthType> {
 
-  option = MouthType.Concerned;
+  get option() { return MouthType.Concerned; }
 
   urlFix(path: string) {
     return urlfix(path);

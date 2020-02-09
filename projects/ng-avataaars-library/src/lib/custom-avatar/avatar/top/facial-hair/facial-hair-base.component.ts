@@ -4,24 +4,11 @@ import { hairColorTranslation } from '../../../colors/hair-color-translation';
 
 export class CustomAvatarFacialHairBaseComponent implements Option<FacialHairType> {
 
-  private _hairColor: HairColor;
-  private _color;
+  get option() { return FacialHairType.BeardLight; }
 
-  option = FacialHairType.BeardLight;
-
-  @Input()
-  set facialHairColor(value: HairColor) {
-    if (this._hairColor !== value) {
-      this._hairColor = value;
-      this._color = hairColorTranslation(value);
-    }
-  }
-
-  get facialHairColor() {
-    return this._hairColor;
-  }
+  @Input() facialHairColor: HairColor = HairColor.Black;
 
   get color() {
-    return this._color;
+    return hairColorTranslation(this.facialHairColor);
   }
 }

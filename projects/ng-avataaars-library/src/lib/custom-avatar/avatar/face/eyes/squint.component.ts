@@ -11,12 +11,12 @@ import { urlfix } from '../../../helper/urlfix';
 })
 
 export class CustomAvatarEyesSquintComponent implements Option<EyeType> {
-  option = EyeType.Squint;
+  get option() { return EyeType.Squint; }
 
-  mask1: string = randomId('kip-mask');
-  mask2: string = randomId('kip-mask');
-  path1: string = randomId('kip-path');
-  path2: string = randomId('kip-path');
+  readonly mask1: string = randomId('kip-mask');
+  readonly mask2: string = randomId('kip-mask');
+  readonly path1: string = randomId('kip-path');
+  readonly path2: string = randomId('kip-path');
 
   urlFix(path: string) {
     return urlfix(path);

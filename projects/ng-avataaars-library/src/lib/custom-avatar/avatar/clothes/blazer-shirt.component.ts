@@ -12,8 +12,8 @@ import { CustomAvatarClothesBaseComponent } from './clothes-base.component';
 
 export class CustomAvatarClothesBlazerShirtComponent extends CustomAvatarClothesBaseComponent {
 
-  option: ClotheType.BlazerShirt;
+  get option() { return ClotheType.BlazerShirt; }
 
-  mask1: string = randomId('kip-mask');
-  path1: string = randomId('kip-path');
+  readonly mask1: string = randomId('kip-mask');
+  readonly path1: string = randomId('kip-path');
 }

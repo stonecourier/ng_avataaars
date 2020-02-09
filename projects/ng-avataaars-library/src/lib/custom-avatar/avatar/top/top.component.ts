@@ -13,25 +13,12 @@ import {
 
 export class CustomAvatarTopComponent {
 
-  @Input()
-  topType: TopType;
-
-  @Input()
-  accessoriesType: AccessoriesType;
-
-  @Input()
-  facialHairType: FacialHairType;
-
-  @Input()
-  hairColor: HairColor;
-
-  @Input()
-  facialHairColor: FacialHairType;
-
-  @Input()
-  hatColor: HatColor;
-
-  @Input()
-  accessoriesColor: AccessoriesColor;
+  @Input() topType: TopType = TopType.Eyepatch;
+  @Input() accessoriesType: AccessoriesType = AccessoriesType.Blank;
+  @Input() facialHairType: FacialHairType = FacialHairType.Blank;
+  @Input() hairColor: HairColor = HairColor.Auburn;
+  @Input() facialHairColor: HairColor = HairColor.Auburn;
+  @Input() hatColor: HatColor = HatColor.Black;
+  @Input() accessoriesColor: AccessoriesColor = AccessoriesColor.Black;
 
 }

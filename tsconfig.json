@@ -7,6 +7,12 @@
     "declaration": false,
     "module": "es2015",
     "moduleResolution": "node",
+    "forceConsistentCasingInFileNames": true,
+    "strictNullChecks": true,
+    "strictPropertyInitialization": true,
+    "strict": false,
+    "strictBindCallApply": true,
+    "strictFunctionTypes": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "importHelpers": true,
@@ -38,5 +44,19 @@
         "dist/ng-avataaars-library/*"
       ]
     }
+  },
+  "angularCompilerOptions": {
+    "fullTemplateTypeCheck": true,
+    "strictInputTypes": true,
+    "strictNullInputTypes": true,
+    "strictAttributeTypes": true,
+    "strictSafeNavigationTypes": true,
+    "strictDomLocalRefTypes": true,
+    "strictOutputEventTypes": true,
+    "strictDomEventTypes": true,
+    "strictContextGenerics": true,
+    "strictTemplates": true,
+    "strictInjectionParameters": true,
+    "preserveWhitespaces": false
   }
 }

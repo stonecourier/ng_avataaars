@@ -10,10 +10,10 @@ import { CustomAvatarClothesBaseComponent } from './clothes-base.component';
   templateUrl: './blazer-sweater.component.html',
 })
 
-export class CustomAvatarClothesBlazerSweaterComponent  extends CustomAvatarClothesBaseComponent {
+export class CustomAvatarClothesBlazerSweaterComponent extends CustomAvatarClothesBaseComponent {
 
-  option: ClotheType.BlazerSweater;
+  get option() { return ClotheType.BlazerSweater; }
 
-  mask1: string = randomId('kip-mask');
-  path1: string = randomId('kip-path');
+  readonly mask1: string = randomId('kip-mask');
+  readonly path1: string = randomId('kip-path');
 }

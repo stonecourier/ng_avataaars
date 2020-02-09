@@ -10,18 +10,9 @@ import { ClotheType, ClotheColor, GraphicType } from '../../options';
 
 export class CustomAvatarClothesComponent {
 
-  @Input()
-  clotheType: ClotheType;
-
-  @Input()
-  clotheColor: ClotheColor;
-
-  @Input()
-  clotheColor2: ClotheColor;
-
-  @Input()
-  clotheColor3: ClotheColor;
-
-  @Input()
-  graphicType: GraphicType;
+  @Input() clotheType: ClotheType = ClotheType.Overall;
+  @Input() clotheColor: ClotheColor = ClotheColor.Black;
+  @Input() clotheColor2: ClotheColor = ClotheColor.Black;
+  @Input() clotheColor3: ClotheColor = ClotheColor.Black;
+  @Input() graphicType: GraphicType = GraphicType.Bat;
 }

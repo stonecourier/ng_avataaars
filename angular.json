@@ -363,5 +363,8 @@
       }
     }
   },
-  "defaultProject": "ng-avataars-lib"
+  "defaultProject": "ng-avataars-lib",
+  "cli": {
+    "analytics": false
+  }
 }

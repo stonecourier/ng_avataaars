@@ -9,5 +9,5 @@ import { Option, NoseType } from '../../../options';
 })
 
 export class CustomAvatarNoseClownComponent implements Option<NoseType> {
-  option: NoseType.Clown;
+  get option() { return NoseType.Clown; }
 }

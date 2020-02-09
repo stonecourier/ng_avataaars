@@ -9,5 +9,5 @@ import { Option, PetType } from '../../options';
 })
 
 export class CustomAvatarPetFishComponent implements Option<PetType> {
-  option = PetType.Fish;
+  get option() { return PetType.Fish; }
 }

@@ -12,11 +12,11 @@ import { CustomAvatarAccessoriesBaseComponent } from './accessories-base.compone
 
 export class CustomAvatarAccessoriesSunglassesComponent extends CustomAvatarAccessoriesBaseComponent {
 
-  option = AccessoriesType.Sunglasses;
+  get option() { return AccessoriesType.Sunglasses; }
 
-  path1: string = randomId('kip-path');
-  path2: string = randomId('kip-path');
-  filter1: string = randomId('kip-filter');
-  linearGradient1: string = randomId('kip-linear-gradient');
-  linearGradient2: string = randomId('kip-linear-gradient');
+  readonly path1: string = randomId('kip-path');
+  readonly path2: string = randomId('kip-path');
+  readonly filter1: string = randomId('kip-filter');
+  readonly linearGradient1: string = randomId('kip-linear-gradient');
+  readonly linearGradient2: string = randomId('kip-linear-gradient');
 }

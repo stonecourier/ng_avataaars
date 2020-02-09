@@ -5,25 +5,12 @@ import { urlfix } from '../../../helper/urlfix';
 
 export class CustomAvatarAccessoriesBaseComponent implements Option<AccessoriesType> {
 
-  private _accessoriesColor: AccessoriesColor;
-  private _color;
+  get option() { return AccessoriesType.Blank; }
 
-  option = AccessoriesType.Blank;
-
-  @Input()
-  set accessoriesColor(value: AccessoriesColor) {
-    if (this._accessoriesColor !== value) {
-      this._accessoriesColor = value;
-      this._color = accessoriesColorTranslation(value);
-    }
-  }
-
-  get accessoriesColor() {
-    return this._accessoriesColor;
-  }
+  @Input() accessoriesColor: AccessoriesColor = AccessoriesColor.Black;
 
   get color() {
-    return this._color;
+    return accessoriesColorTranslation(this.accessoriesColor);
   }
 
   urlFix(path: string) {

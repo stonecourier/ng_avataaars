@@ -12,8 +12,8 @@ import { CustomAvatarAccessoriesBaseComponent } from './accessories-base.compone
 
 export class CustomAvatarAccessoriesRoundComponent extends CustomAvatarAccessoriesBaseComponent {
 
-  option = AccessoriesType.Round;
+  get option() { return AccessoriesType.Round; }
 
-  path1: string = randomId('kip-path');
-  filter1: string = randomId('kip-filter');
+  readonly path1: string = randomId('kip-path');
+  readonly filter1: string = randomId('kip-filter');
 }

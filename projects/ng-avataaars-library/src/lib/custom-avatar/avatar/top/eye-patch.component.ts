@@ -12,10 +12,10 @@ import { CustomAvatarTopBaseComponent } from './top-base.component';
 
 export class CustomAvatarTopEyePatchComponent extends CustomAvatarTopBaseComponent {
 
-  option = TopType.Eyepatch;
+  get option() { return TopType.Eyepatch; }
 
-  mask1: string = randomId('kip-mask');
-  path1: string = randomId('kip-path');
+  readonly mask1: string = randomId('kip-mask');
+  readonly path1: string = randomId('kip-path');
 
   constructor() {
     super();

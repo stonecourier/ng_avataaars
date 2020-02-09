@@ -7,7 +7,7 @@ import {
   ClotheColor, EyeType, EyebrowType, MouthType, SkinColor, BackgroundColor, GraphicType,
   PetType, AwardType, HatColor, AccessoriesColor, AvatarSelection, AvatarExclusion,
   NoseType,
-  EarringType, EarringColor
+  EarringType, EarringColor, tabIndexes
 } from './options';
 import { accessoriesColorTranslation } from './colors/accessories-color-translation';
 import { hairColorTranslation } from './colors/hair-color-translation';
@@ -59,21 +59,6 @@ export interface AvatarText {
   earringColors: string;
 }
 
-export enum tabIndexes {
-  background = 1,
-  top = 2,
-  eyes = 3,
-  eyebrows = 4,
-  accessory = 5,
-  nose = 6,
-  mouth = 7,
-  facialHair = 8,
-  clothes = 9,
-  pet = 10,
-  award = 11,
-  earring = 12
-}
-
 @Component({
   selector: 'kip-custom-avatar',
   styleUrls: ['./custom-avatar.css'],
@@ -111,7 +96,7 @@ export class CustomAvatarComponent {
       earringColor: EarringColor.Black
     };
 
-  private _lastSaved: AvatarSelection;
+  private _lastSaved: AvatarSelection | null = null;
 
   constructor(private changeDetectorRef: ChangeDetectorRef) {
     this.refreshAvatar();
@@ -119,9 +104,9 @@ export class CustomAvatarComponent {
 
   tabIndex: tabIndexes = tabIndexes.background;
   tabIndexes = tabIndexes;
-  id: string = randomId('avatar');
-  svgId: string = randomId('svgId');
-  svg: string;
+  readonly id: string = randomId('avatar');
+  readonly svgId: string = randomId('svgId');
+  svg = '';
 
   // All the texts for avatar localization
 
@@ -708,32 +693,32 @@ export class CustomAvatarComponent {
 
   // #region Color Converters
 
-  accessoriesColorConvert(value: AccessoriesColor) {
-    return accessoriesColorTranslation(value);
+  accessoriesColorConvert(value: string) {
+    return accessoriesColorTranslation(value as AccessoriesColor);
   }
 
-  earringColorConvert(value: EarringColor) {
-    return earringColorTranslation(value);
+  earringColorConvert(value: string) {
+    return earringColorTranslation(value as EarringColor);
   }
 
-  hairColorConvert(value: HairColor) {
-    return hairColorTranslation(value);
+  hairColorConvert(value: string) {
+    return hairColorTranslation(value as HairColor);
   }
 
-  skinColorConvert(value: SkinColor) {
-    return skinColorTranslation(value);
+  skinColorConvert(value: string) {
+    return skinColorTranslation(value as SkinColor);
   }
 
-  clotheColorConvert(value: ClotheColor) {
-    return clotheColorTranslation(value);
+  clotheColorConvert(value: string) {
+    return clotheColorTranslation(value as ClotheColor);
   }
 
-  backgroundColorConvert(value: BackgroundColor) {
-    return backgroundColorTranslation(value);
+  backgroundColorConvert(value: string) {
+    return backgroundColorTranslation(value as BackgroundColor);
   }
 
-  hatColorConvert(value: HatColor) {
-    return hatColorTranslation(value);
+  hatColorConvert(value: string) {
+    return hatColorTranslation(value as HatColor);
   }
 
   // #endregion

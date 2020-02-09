@@ -10,10 +10,7 @@ import { EarringType, EarringColor } from '../../../options';
 
 export class CustomAvatarEarringComponent {
 
-  @Input()
-  earringType: EarringType = EarringType.Blank;
-
-  @Input()
-  earringColor: EarringColor;
+  @Input() earringType: EarringType = EarringType.Blank;
+  @Input() earringColor: EarringColor = EarringColor.Black;
 
 }

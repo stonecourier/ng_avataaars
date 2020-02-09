@@ -5,25 +5,12 @@ import { urlfix } from '../../../helper/urlfix';
 
 export class CustomAvatarEarringBaseComponent implements Option<EarringType> {
 
-  private _earringColor: EarringColor;
-  private _color;
+  get option() { return EarringType.Blank; }
 
-  option = EarringType.Blank;
-
-  @Input()
-  set earringColor(value: EarringColor) {
-    if (this._earringColor !== value) {
-      this._earringColor = value;
-      this._color = earringColorTranslation(value);
-    }
-  }
-
-  get earringColor() {
-    return this._earringColor;
-  }
+  @Input() earringColor: EarringColor = EarringColor.Black;
 
   get color() {
-    return this._color;
+    return earringColorTranslation(this.earringColor);
   }
 
   urlFix(path: string) {

@@ -10,6 +10,5 @@ import { PetType } from '../../options';
 
 export class CustomAvatarPetComponent {
 
-  @Input()
-  petType: PetType = PetType.Dog;
+  @Input() petType: PetType = PetType.Dog;
 }
