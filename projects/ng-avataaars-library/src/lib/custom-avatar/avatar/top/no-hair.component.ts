@@ -18,8 +18,4 @@ export class CustomAvatarTopNoHairComponent extends CustomAvatarTopBaseComponent
   readonly path1: string = randomId('kip-path');
   readonly filter1: string = randomId('kip-filter');
 
-  constructor() {
-    super();
-  }
-
 }

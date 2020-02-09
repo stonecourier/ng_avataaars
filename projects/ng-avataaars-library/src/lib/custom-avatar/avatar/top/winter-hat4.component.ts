@@ -25,8 +25,4 @@ export class CustomAvatarTopWinterHat4Component extends CustomAvatarTopBaseCompo
   readonly path5: string = randomId('kip-path');
   readonly filter1: string = randomId('kip-filter');
 
-  constructor() {
-    super();
-  }
-
 }

@@ -25,9 +25,4 @@ export class CustomAvatarTopLongHairFridaComponent extends CustomAvatarTopBaseCo
   readonly filter6: string = randomId('kip-filter');
   readonly filter7: string = randomId('kip-filter');
 
-
-  constructor() {
-    super();
-  }
-
 }

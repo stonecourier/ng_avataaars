@@ -1,7 +1,6 @@
 /* tslint:disable:forin */
 
-import { Component, Input, EventEmitter, Output } from '@angular/core';
-import { ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
+import { Component, Input, EventEmitter, Output, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
 import {
   AvatarStyle, TopType, AccessoriesType, HairColor, FacialHairType, ClotheType,
   ClotheColor, EyeType, EyebrowType, MouthType, SkinColor, BackgroundColor, GraphicType,
@@ -98,7 +97,7 @@ export class CustomAvatarComponent {
 
   private _lastSaved: AvatarSelection | null = null;
 
-  constructor(private changeDetectorRef: ChangeDetectorRef) {
+  constructor(private readonly changeDetectorRef: ChangeDetectorRef) {
     this.refreshAvatar();
   }
 
@@ -724,7 +723,7 @@ export class CustomAvatarComponent {
   // #endregion
 
   selectSvg() {
-    const element = <HTMLTextAreaElement>document.getElementById(this.svgId);
+    const element = document.getElementById(this.svgId) as HTMLTextAreaElement;
 
     if (element !== null) {
       element.style.display = '';
@@ -860,9 +859,7 @@ export class CustomAvatarComponent {
     if (aProps.length !== bProps.length) {
       return false;
     }
-    for (let i = 0; i < aProps.length; i++) {
-
-      const propName = aProps[i];
+    for (const propName of aProps) {
       // If values of same property are not equal,
       // objects are not equivalent
       if (objA[propName] !== objB[propName]) {
@@ -885,7 +882,7 @@ export class CustomAvatarComponent {
     return enumObject[this.randomKey(enumObject)];
   }
 
-  private randomEnumValueWithExclusions<T>(enumObject: T, values: { value: string, label: string }[]) {
+  private randomEnumValueWithExclusions<T>(enumObject: T, values: { value: string; label: string }[]) {
 
     const value = values[Math.floor(Math.random() * values.length)];
 

@@ -19,8 +19,4 @@ export class CustomAvatarTopLongHairMiaWallaceComponent extends CustomAvatarTopB
   readonly path1: string = randomId('kip-path');
   readonly path2: string = randomId('kip-path');
 
-  constructor() {
-    super();
-  }
-
 }

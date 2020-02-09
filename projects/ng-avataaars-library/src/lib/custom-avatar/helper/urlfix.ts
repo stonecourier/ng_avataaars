@@ -3,5 +3,5 @@
 // Once the svg is generated, this is removed and the svg saved
 
 export function urlfix(path: string) {
-  return 'url(' + window.location.href + '#' + path + ')';
+  return `url(${window.location.href}#${path})`;
 }

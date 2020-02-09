@@ -10,8 +10,6 @@ export function hatColorTranslation(hatColor: HatColor) {
       return '#5199E4';
     case HatColor.Blue03:
       return '#25557C';
-    case HatColor.Blue03:
-      return '#25557C';
     case HatColor.Gray01:
       return '#E6E6E6';
     case HatColor.Gray02:

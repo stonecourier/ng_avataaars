@@ -10,8 +10,6 @@ export function accessoriesColorTranslation(accessoriesColor: AccessoriesColor) 
       return '#5199E4';
     case AccessoriesColor.Blue03:
       return '#25557C';
-    case AccessoriesColor.Blue03:
-      return '#25557C';
     case AccessoriesColor.Gray01:
       return '#E6E6E6';
     case AccessoriesColor.Gray02:

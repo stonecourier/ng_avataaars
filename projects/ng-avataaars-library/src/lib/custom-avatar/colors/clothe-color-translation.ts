@@ -10,8 +10,6 @@ export function clotheColorTranslation(clotheColor: ClotheColor) {
       return '#5199E4';
     case ClotheColor.Blue03:
       return '#25557C';
-    case ClotheColor.Blue03:
-      return '#25557C';
     case ClotheColor.Gray01:
       return '#E6E6E6';
     case ClotheColor.Gray02:

@@ -10,8 +10,6 @@ export function earringColorTranslation(earringColor: EarringColor) {
       return '#5199E4';
     case EarringColor.Blue03:
       return '#25557C';
-    case EarringColor.Blue03:
-      return '#25557C';
     case EarringColor.Gray01:
       return '#E6E6E6';
     case EarringColor.Gray02:

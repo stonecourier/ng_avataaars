@@ -20,8 +20,4 @@ export class CustomAvatarTopShortHairTheCaesarSidePartComponent extends CustomAv
   readonly path2: string = randomId('kip-path');
   readonly filter1: string = randomId('kip-filter');
 
-  constructor() {
-    super();
-  }
-
 }

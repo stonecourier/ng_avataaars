@@ -22,8 +22,4 @@ export class CustomAvatarTopLongHairShavedSidesComponent extends CustomAvatarTop
   readonly path3: string = randomId('kip-path');
   readonly path4: string = randomId('kip-path');
 
-  constructor() {
-    super();
-  }
-
 }

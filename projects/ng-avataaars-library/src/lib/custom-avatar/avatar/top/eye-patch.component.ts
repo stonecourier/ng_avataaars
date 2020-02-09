@@ -17,8 +17,4 @@ export class CustomAvatarTopEyePatchComponent extends CustomAvatarTopBaseCompone
   readonly mask1: string = randomId('kip-mask');
   readonly path1: string = randomId('kip-path');
 
-  constructor() {
-    super();
-  }
-
 }
