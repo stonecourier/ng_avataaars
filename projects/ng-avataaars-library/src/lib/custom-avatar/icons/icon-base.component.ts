@@ -1,6 +1,9 @@
-import { Input, Output, EventEmitter } from '@angular/core';
+/* tslint:disable:directive-class-suffix */
+
+import { Input, Output, EventEmitter, Directive } from '@angular/core';
 import { tabIndexes } from '../options';
 
+@Directive()
 export class CustomAvatarIconBaseComponent {
 
   @Input() index: tabIndexes = 0;

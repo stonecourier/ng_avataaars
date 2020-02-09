@@ -1,4 +1,6 @@
-import { Input } from '@angular/core';
+/* tslint:disable:directive-class-suffix */
+
+import { Input, Directive } from '@angular/core';
 import {
   Option, TopType, FacialHairType, HairColor, HatColor,
   AccessoriesType, AccessoriesColor
@@ -7,6 +9,7 @@ import { hatColorTranslation } from '../../colors/hat-color-translation';
 import { hairColorTranslation } from '../../colors/hair-color-translation';
 import { urlfix } from '../../helper/urlfix';
 
+@Directive()
 export class CustomAvatarTopBaseComponent implements Option<TopType> {
 
   get option() { return TopType.Eyepatch; }
