@@ -12,17 +12,17 @@ import {
 @Directive()
 export class CustomAvatarTopBaseComponent implements Option<TopType> {
 
-  get option() { return TopType.Eyepatch; }
+  get option(): TopType { return TopType.Eyepatch; }
 
   @Input() hairColor: HairColor = HairColor.Black;
 
-  get color() {
+  get color(): string {
     return hairColorTranslation(this.hairColor);
   }
 
   @Input() hatColor: HatColor = HatColor.Black;
 
-  get color2() {
+  get color2(): string {
     return hatColorTranslation(this.hatColor);
   }
 
@@ -31,7 +31,7 @@ export class CustomAvatarTopBaseComponent implements Option<TopType> {
   @Input() accessoriesType: AccessoriesType = AccessoriesType.Blank;
   @Input() accessoriesColor: AccessoriesColor = AccessoriesColor.Black;
 
-  urlFix(path: string) {
+  urlFix(path: string): string {
     return urlfix(path);
   }
 }

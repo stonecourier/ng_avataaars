@@ -4,37 +4,37 @@
   "newProjectRoot": "projects",
   "projects": {
     "ng-avataars-lib": {
-      "root": "projects/ng-avataars-lib",
-      "sourceRoot": "projects/ng-avataars-lib/src",
+      "root": "projects/ng-avataaars-library",
+      "sourceRoot": "projects/ng-avataaars-library/src",
       "projectType": "library",
       "prefix": "kip",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
           "options": {
-            "tsConfig": "projects/ng-avataars-lib/tsconfig.lib.json",
-            "project": "projects/ng-avataars-lib/ng-package.json"
+            "tsConfig": "projects/ng-avataaars-library/tsconfig.lib.json",
+            "project": "projects/ng-avataaars-library/ng-package.json"
           },
           "configurations": {
             "production": {
-              "tsConfig": "projects/ng-avataars-lib/tsconfig.lib.prod.json"
+              "tsConfig": "projects/ng-avataaars-library/tsconfig.lib.prod.json"
             }
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/ng-avataars-lib/src/test.ts",
-            "tsConfig": "projects/ng-avataars-lib/tsconfig.spec.json",
-            "karmaConfig": "projects/ng-avataars-lib/karma.conf.js"
+            "main": "projects/ng-avataaars-library/src/test.ts",
+            "tsConfig": "projects/ng-avataaars-library/tsconfig.spec.json",
+            "karmaConfig": "projects/ng-avataaars-library/karma.conf.js"
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "projects/ng-avataars-lib/tsconfig.lib.json",
-              "projects/ng-avataars-lib/tsconfig.spec.json"
+              "projects/ng-avataaars-library/tsconfig.lib.json",
+              "projects/ng-avataaars-library/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"
@@ -44,8 +44,8 @@
       }
     },
     "ng-avataars-tester": {
-      "root": "projects/ng-avataars-tester/",
-      "sourceRoot": "projects/ng-avataars-tester/src",
+      "root": "projects/ng-avataaars-tester/",
+      "sourceRoot": "projects/ng-avataaars-tester/src",
       "projectType": "application",
       "prefix": "app",
       "schematics": {},
@@ -54,16 +54,16 @@
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "dist/ng-avataars-tester",
-            "index": "projects/ng-avataars-tester/src/index.html",
-            "main": "projects/ng-avataars-tester/src/main.ts",
-            "polyfills": "projects/ng-avataars-tester/src/polyfills.ts",
-            "tsConfig": "projects/ng-avataars-tester/tsconfig.app.json",
+            "index": "projects/ng-avataaars-tester/src/index.html",
+            "main": "projects/ng-avataaars-tester/src/main.ts",
+            "polyfills": "projects/ng-avataaars-tester/src/polyfills.ts",
+            "tsConfig": "projects/ng-avataaars-tester/tsconfig.app.json",
             "assets": [
-              "projects/ng-avataars-tester/src/favicon.ico",
-              "projects/ng-avataars-tester/src/assets"
+              "projects/ng-avataaars-tester/src/favicon.ico",
+              "projects/ng-avataaars-tester/src/assets"
             ],
             "styles": [
-              "projects/ng-avataars-tester/src/styles.css"
+              "projects/ng-avataaars-tester/src/styles.css"
             ],
             "scripts": []
           },
@@ -71,8 +71,8 @@
             "production": {
               "fileReplacements": [
                 {
-                  "replace": "projects/ng-avataars-tester/src/environments/environment.ts",
-                  "with": "projects/ng-avataars-tester/src/environments/environment.prod.ts"
+                  "replace": "projects/ng-avataaars-tester/src/environments/environment.ts",
+                  "with": "projects/ng-avataaars-tester/src/environments/environment.prod.ts"
                 }
               ],
               "optimization": true,
@@ -114,17 +114,17 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/ng-avataars-tester/src/test.ts",
-            "polyfills": "projects/ng-avataars-tester/src/polyfills.ts",
-            "tsConfig": "projects/ng-avataars-tester/tsconfig.spec.json",
-            "karmaConfig": "projects/ng-avataars-tester/karma.conf.js",
+            "main": "projects/ng-avataaars-tester/src/test.ts",
+            "polyfills": "projects/ng-avataaars-tester/src/polyfills.ts",
+            "tsConfig": "projects/ng-avataaars-tester/tsconfig.spec.json",
+            "karmaConfig": "projects/ng-avataaars-tester/karma.conf.js",
             "styles": [
-              "projects/ng-avataars-tester/src/styles.css"
+              "projects/ng-avataaars-tester/src/styles.css"
             ],
             "scripts": [],
             "assets": [
-              "projects/ng-avataars-tester/src/favicon.ico",
-              "projects/ng-avataars-tester/src/assets"
+              "projects/ng-avataaars-tester/src/favicon.ico",
+              "projects/ng-avataaars-tester/src/assets"
             ]
           }
         },
@@ -132,8 +132,8 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "projects/ng-avataars-tester/tsconfig.app.json",
-              "projects/ng-avataars-tester/tsconfig.spec.json"
+              "projects/ng-avataaars-tester/tsconfig.app.json",
+              "projects/ng-avataaars-tester/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"
@@ -143,14 +143,14 @@
       }
     },
     "ng-avataars-tester-e2e": {
-      "root": "projects/ng-avataars-tester-e2e/",
+      "root": "projects/ng-avataaars-tester-e2e/",
       "projectType": "application",
       "prefix": "",
       "architect": {
         "e2e": {
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
-            "protractorConfig": "projects/ng-avataars-tester-e2e/protractor.conf.js",
+            "protractorConfig": "projects/ng-avataaars-tester-e2e/protractor.conf.js",
             "devServerTarget": "ng-avataars-tester:serve"
           },
           "configurations": {
@@ -162,7 +162,7 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": "projects/ng-avataars-tester-e2e/tsconfig.e2e.json",
+            "tsConfig": "projects/ng-avataaars-tester-e2e/tsconfig.e2e.json",
             "exclude": [
               "**/node_modules/**"
             ]

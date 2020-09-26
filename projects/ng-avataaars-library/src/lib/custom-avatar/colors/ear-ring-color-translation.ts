@@ -1,6 +1,6 @@
 import { EarringColor } from '../options/ear-ring-color';
 
-export function earringColorTranslation(earringColor: EarringColor) {
+export function earringColorTranslation(earringColor: EarringColor): string {
   switch (earringColor) {
     case EarringColor.Black:
       return '#262E33';

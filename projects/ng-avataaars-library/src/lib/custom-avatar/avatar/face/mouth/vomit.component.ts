@@ -12,7 +12,7 @@ import { MouthBaseComponent } from './mouth-base.component';
 
 export class CustomAvatarMouthVomitComponent extends MouthBaseComponent {
 
-  get option() { return MouthType.Vomit; }
+  get option(): MouthType { return MouthType.Vomit; }
 
   readonly mask1: string = randomId('kip-mask');
   readonly path1: string = randomId('kip-path');

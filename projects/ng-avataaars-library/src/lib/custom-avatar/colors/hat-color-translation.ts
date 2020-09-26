@@ -1,6 +1,6 @@
 import { HatColor } from '../options/hat-color';
 
-export function hatColorTranslation(hatColor: HatColor) {
+export function hatColorTranslation(hatColor: HatColor): string {
   switch (hatColor) {
     case HatColor.Black:
       return '#262E33';

@@ -10,5 +10,5 @@ import { MouthBaseComponent } from './mouth-base.component';
 })
 
 export class CustomAvatarMouthEatingComponent extends MouthBaseComponent {
-  get option() { return MouthType.Eating; }
+  get option(): MouthType { return MouthType.Eating; }
 }

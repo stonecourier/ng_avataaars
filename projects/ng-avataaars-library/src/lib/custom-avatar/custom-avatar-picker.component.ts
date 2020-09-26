@@ -17,14 +17,14 @@ export class CustomAvatarPickerComponent implements AfterContentInit {
 
   itemTemplate: TemplateRef<any> | null = null;
 
-  @ContentChildren(PickerTemplateDirective) templates: any;
+  @ContentChildren(PickerTemplateDirective) templates: PickerTemplateDirective[] = [];
 
-  pick(value: string) {
+  pick(value: string): void {
     this.optionPicked.emit(value);
   }
 
-  ngAfterContentInit() {
-    this.templates.forEach((item: any) => {
+  ngAfterContentInit(): void {
+    this.templates.forEach((item: PickerTemplateDirective) => {
       switch (item.getType()) {
         case 'item':
           this.itemTemplate = item.template;

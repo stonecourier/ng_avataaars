@@ -8,15 +8,15 @@ import { EarringColor, EarringType, Option } from '../../../options';
 @Directive()
 export class CustomAvatarEarringBaseComponent implements Option<EarringType> {
 
-  get option() { return EarringType.Blank; }
+  get option(): EarringType { return EarringType.Blank; }
 
   @Input() earringColor: EarringColor = EarringColor.Black;
 
-  get color() {
+  get color(): string {
     return earringColorTranslation(this.earringColor);
   }
 
-  urlFix(path: string) {
+  urlFix(path: string): string {
     return urlfix(path);
   }
 }

@@ -17,9 +17,9 @@ import {
 
 export class CustomAvatarBaseComponent {
 
-  @Input() width : number | undefined = undefined;
+  @Input() width: number | undefined = undefined;
   @Input() widthFull = false;
-  @Input() height : number | undefined = undefined
+  @Input() height: number | undefined = undefined;
   @Input() transform = '';
   @Input() viewBox = '';
   @Input() noFeatures = false;
@@ -29,7 +29,7 @@ export class CustomAvatarBaseComponent {
   @Input() svgClass = '';
   @Input() backgroundColor: BackgroundColor = BackgroundColor.ColorA;
 
-  get backColor() {
+  get backColor(): string {
     return backgroundColorTranslation(this.backgroundColor);
   }
 
@@ -41,7 +41,7 @@ export class CustomAvatarBaseComponent {
   @Input() topType: TopType = TopType.Hat;
   @Input() skinColor: SkinColor = SkinColor.Black;
 
-  get color() {
+  get color(): string {
     return skinColorTranslation(this.skinColor);
   }
 
@@ -56,13 +56,13 @@ export class CustomAvatarBaseComponent {
   @Input() hairColor: HairColor = HairColor.Black;
   @Input() petType: PetType = PetType.None;
 
-  get petTypeVisible() {
+  get petTypeVisible(): boolean {
     return !this.noFeatures && this.petType !== PetType.None && !this.noPet;
   }
 
   @Input() awardType: AwardType = AwardType.None;
 
-  get awardTypeVisible() {
+  get awardTypeVisible(): boolean {
     return !this.noFeatures && this.awardType !== AwardType.None && !this.noAward;
   }
 
@@ -78,7 +78,7 @@ export class CustomAvatarBaseComponent {
   readonly path3: string = randomId('ptx-path');
   readonly path5: string = randomId('ptx-path');
 
-  urlFix(path: string) {
+  urlFix(path: string): string {
     return urlfix(path);
   }
 }

@@ -9,5 +9,5 @@ import { EyebrowType, Option } from '../../../options';
 })
 
 export class CustomAvatarEyebrowsAngryNaturalComponent implements Option<EyebrowType> {
-  get option() { return EyebrowType.AngryNatural; }
+  get option(): EyebrowType { return EyebrowType.AngryNatural; }
 }

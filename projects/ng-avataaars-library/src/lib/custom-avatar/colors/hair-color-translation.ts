@@ -1,6 +1,6 @@
 import { HairColor } from '../options/hair-color';
 
-export function hairColorTranslation(hairColor: HairColor) {
+export function hairColorTranslation(hairColor: HairColor): string {
   switch (hairColor) {
     case HairColor.Auburn:
       return '#A55728';

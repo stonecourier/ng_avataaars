@@ -11,14 +11,14 @@ import { EyeType, Option } from '../../../options';
 })
 
 export class CustomAvatarEyesSquintComponent implements Option<EyeType> {
-  get option() { return EyeType.Squint; }
+  get option(): EyeType { return EyeType.Squint; }
 
   readonly mask1: string = randomId('kip-mask');
   readonly mask2: string = randomId('kip-mask');
   readonly path1: string = randomId('kip-path');
   readonly path2: string = randomId('kip-path');
 
-  urlFix(path: string) {
+  urlFix(path: string): string {
     return urlfix(path);
   }
 }

@@ -9,5 +9,5 @@ import { AwardType, Option } from '../../options';
 })
 
 export class CustomAvatarAwardCorrectComponent implements Option<AwardType> {
-  get option() { return AwardType.Correct; }
+  get option(): AwardType { return AwardType.Correct; }
 }

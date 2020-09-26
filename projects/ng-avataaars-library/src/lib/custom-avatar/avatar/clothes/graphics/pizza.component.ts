@@ -12,7 +12,7 @@ import { CustomAvatarClothesGraphicsBaseComponent } from './graphics-base.compon
 
 export class CustomAvatarClothesGraphicsPizzaComponent extends CustomAvatarClothesGraphicsBaseComponent {
 
-  get option() { return GraphicType.Pizza; }
+  get option(): GraphicType { return GraphicType.Pizza; }
 
   readonly mask1: string = randomId('kip-mask');
 }

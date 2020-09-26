@@ -12,7 +12,7 @@ import { CustomAvatarAccessoriesBaseComponent } from './accessories-base.compone
 
 export class CustomAvatarAccessoriesPrescription02Component extends CustomAvatarAccessoriesBaseComponent {
 
-  get option() { return AccessoriesType.Prescription02; }
+  get option(): AccessoriesType { return AccessoriesType.Prescription02; }
 
   readonly filter1: string = randomId('kip-filter');
 }

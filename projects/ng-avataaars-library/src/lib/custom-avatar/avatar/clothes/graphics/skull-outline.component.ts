@@ -12,7 +12,7 @@ import { CustomAvatarClothesGraphicsBaseComponent } from './graphics-base.compon
 
 export class CustomAvatarClothesGraphicsSkullOutlineComponent extends CustomAvatarClothesGraphicsBaseComponent {
 
-  get option() { return GraphicType.SkullOutline; }
+  get option(): GraphicType { return GraphicType.SkullOutline; }
 
   readonly mask1: string = randomId('kip-mask');
 }

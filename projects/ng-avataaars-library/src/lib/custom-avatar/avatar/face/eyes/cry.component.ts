@@ -9,5 +9,5 @@ import { EyeType, Option } from '../../../options';
 })
 
 export class CustomAvatarEyesCryComponent implements Option<EyeType> {
-  get option() { return EyeType.Cry; }
+  get option(): EyeType { return EyeType.Cry; }
 }

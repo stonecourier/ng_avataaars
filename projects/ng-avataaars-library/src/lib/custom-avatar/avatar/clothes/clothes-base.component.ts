@@ -8,27 +8,27 @@ import { ClotheColor, ClotheType, GraphicType, Option } from '../../options';
 @Directive()
 export class CustomAvatarClothesBaseComponent implements Option<ClotheType> {
 
-  get option() { return ClotheType.BlazerShirt; }
+  get option(): ClotheType { return ClotheType.BlazerShirt; }
 
   @Input() clotheColor: ClotheColor = ClotheColor.Black;
   @Input() clotheColor2: ClotheColor = ClotheColor.Black;
   @Input() clotheColor3: ClotheColor = ClotheColor.Black;
 
-  get color() {
+  get color(): string {
     return clotheColorTranslation(this.clotheColor);
   }
 
-  get color2() {
+  get color2(): string {
     return clotheColorTranslation(this.clotheColor2);
   }
 
-  get color3() {
+  get color3(): string {
     return clotheColorTranslation(this.clotheColor3);
   }
 
   @Input() graphicType: GraphicType = GraphicType.Bat;
 
-  urlFix(path: string) {
+  urlFix(path: string): string {
     return urlfix(path);
   }
 

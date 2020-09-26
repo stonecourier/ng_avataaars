@@ -12,7 +12,7 @@ import { CustomAvatarTopBaseComponent } from './top-base.component';
 
 export class CustomAvatarTopLongHairCurlyComponent extends CustomAvatarTopBaseComponent {
 
-  get option() { return TopType.LongHairCurly; }
+  get option(): TopType { return TopType.LongHairCurly; }
 
   readonly mask1: string = randomId('kip-mask');
   readonly mask2: string = randomId('kip-mask');

@@ -115,7 +115,7 @@ export class CustomAvatarComponent {
     }
   }
 
-  get backgroundColor() {
+  get backgroundColor(): BackgroundColor {
     return this._currentAvatar.backgroundColor;
   }
 
@@ -134,13 +134,12 @@ export class CustomAvatarComponent {
     }
   }
 
-  get avatarStyle() {
+  get avatarStyle(): AvatarStyle {
     return this._currentAvatar.avatarStyle;
   }
 
   get avatarStyles(): KeyValue[] {
-    return this.getKeyValuesWithExclusions(AvatarStyle, this.avatarExclusion &&
-      this.avatarExclusion.avatarStyles ? this.avatarExclusion.avatarStyles : []);
+    return this.getKeyValuesWithExclusions(AvatarStyle, this.avatarExclusion?.avatarStyles ?? []);
   }
 
   // #endregion
@@ -154,13 +153,12 @@ export class CustomAvatarComponent {
     }
   }
 
-  get topType() {
+  get topType(): TopType {
     return this._currentAvatar.topType;
   }
 
   get topTypes(): KeyValue[] {
-    return this.getKeyValuesWithExclusions(TopType, this.avatarExclusion &&
-      this.avatarExclusion.topTypes ? this.avatarExclusion.topTypes : []);
+    return this.getKeyValuesWithExclusions(TopType, this.avatarExclusion?.topTypes ?? []);
   }
 
   // #endregion
@@ -174,13 +172,12 @@ export class CustomAvatarComponent {
     }
   }
 
-  get accessoriesType() {
+  get accessoriesType(): AccessoriesType {
     return this._currentAvatar.accessoriesType;
   }
 
   get accessoriesTypes(): KeyValue[] {
-    return this.getKeyValuesWithExclusions(AccessoriesType, this.avatarExclusion &&
-      this.avatarExclusion.accessoriesTypes ? this.avatarExclusion.accessoriesTypes : []);
+    return this.getKeyValuesWithExclusions(AccessoriesType, this.avatarExclusion?.accessoriesTypes ?? []);
   }
 
   set accessoriesColor(value: AccessoriesColor) {
@@ -190,7 +187,7 @@ export class CustomAvatarComponent {
     }
   }
 
-  get accessoriesColor() {
+  get accessoriesColor(): AccessoriesColor {
     return this._currentAvatar.accessoriesColor;
   }
 
@@ -209,13 +206,12 @@ export class CustomAvatarComponent {
     }
   }
 
-  get earringType() {
+  get earringType(): EarringType {
     return this._currentAvatar.earringType;
   }
 
   get earringTypes(): KeyValue[] {
-    return this.getKeyValuesWithExclusions(EarringType, this.avatarExclusion &&
-      this.avatarExclusion.earringTypes ? this.avatarExclusion.earringTypes : []);
+    return this.getKeyValuesWithExclusions(EarringType, this.avatarExclusion?.earringTypes ?? []);
   }
 
   set earringColor(value: EarringColor) {
@@ -225,7 +221,7 @@ export class CustomAvatarComponent {
     }
   }
 
-  get earringColor() {
+  get earringColor(): EarringColor {
     return this._currentAvatar.earringColor;
   }
 
@@ -244,7 +240,7 @@ export class CustomAvatarComponent {
     }
   }
 
-  get hairColor() {
+  get hairColor(): HairColor {
     return this._currentAvatar.hairColor;
   }
 
@@ -263,7 +259,7 @@ export class CustomAvatarComponent {
     }
   }
 
-  get hatColor() {
+  get hatColor(): HatColor {
     return this._currentAvatar.hatColor;
   }
 
@@ -271,7 +267,7 @@ export class CustomAvatarComponent {
     return this.getKeyValues(HatColor);
   }
 
-  get hatColorVisible() {
+  get hatColorVisible(): boolean {
     return this._currentAvatar.topType === TopType.Turban ||
       this._currentAvatar.topType === TopType.WinterHat1 ||
       this._currentAvatar.topType === TopType.WinterHat2 ||
@@ -293,13 +289,12 @@ export class CustomAvatarComponent {
     }
   }
 
-  get facialHairType() {
+  get facialHairType(): FacialHairType {
     return this._currentAvatar.facialHairType;
   }
 
   get facialHairTypes(): KeyValue[] {
-    return this.getKeyValuesWithExclusions(FacialHairType, this.avatarExclusion &&
-      this.avatarExclusion.facialHairTypes ? this.avatarExclusion.facialHairTypes : []);
+    return this.getKeyValuesWithExclusions(FacialHairType, this.avatarExclusion?.facialHairTypes ?? []);
   }
 
   set facialHairColor(value: HairColor) {
@@ -309,7 +304,7 @@ export class CustomAvatarComponent {
     }
   }
 
-  get facialHairColor() {
+  get facialHairColor(): HairColor {
     return this._currentAvatar.facialHairColor;
   }
 
@@ -324,13 +319,12 @@ export class CustomAvatarComponent {
     }
   }
 
-  get clotheType() {
+  get clotheType(): ClotheType {
     return this._currentAvatar.clotheType;
   }
 
   get clotheTypes(): KeyValue[] {
-    return this.getKeyValuesWithExclusions(ClotheType, this.avatarExclusion &&
-      this.avatarExclusion.clotheTypes ? this.avatarExclusion.clotheTypes : []);
+    return this.getKeyValuesWithExclusions(ClotheType, this.avatarExclusion?.clotheTypes ?? []);
   }
 
   set graphicType(value: GraphicType) {
@@ -340,13 +334,12 @@ export class CustomAvatarComponent {
     }
   }
 
-  get graphicType() {
+  get graphicType(): GraphicType {
     return this._currentAvatar.graphicType;
   }
 
   get graphicTypes(): KeyValue[] {
-    return this.getKeyValuesWithExclusions(GraphicType, this.avatarExclusion &&
-      this.avatarExclusion.graphicTypes ? this.avatarExclusion.graphicTypes : []);
+    return this.getKeyValuesWithExclusions(GraphicType, this.avatarExclusion?.graphicTypes ?? []);
   }
 
   set clotheColor(value: ClotheColor) {
@@ -356,7 +349,7 @@ export class CustomAvatarComponent {
     }
   }
 
-  get clotheColor() {
+  get clotheColor(): ClotheColor {
     return this._currentAvatar.clotheColor;
   }
 
@@ -367,11 +360,11 @@ export class CustomAvatarComponent {
     }
   }
 
-  get clotheColor2() {
+  get clotheColor2(): ClotheColor {
     return this._currentAvatar.clotheColor2;
   }
 
-  get clotheColor2Visible() {
+  get clotheColor2Visible(): boolean {
     return !(this.clotheType === ClotheType.ShirtScoopNeck || this.clotheType === ClotheType.ShirtVNeck);
   }
 
@@ -382,11 +375,11 @@ export class CustomAvatarComponent {
     }
   }
 
-  get clotheColor3() {
+  get clotheColor3(): ClotheColor {
     return this._currentAvatar.clotheColor3;
   }
 
-  get clotheColor3Visible() {
+  get clotheColor3Visible(): boolean {
     return this.clotheType === ClotheType.BlazerShirt || this.clotheType === ClotheType.BlazerSweater;
   }
 
@@ -412,13 +405,12 @@ export class CustomAvatarComponent {
     }
   }
 
-  get eyeType() {
+  get eyeType(): EyeType {
     return this._currentAvatar.eyeType;
   }
 
   get eyeTypes(): KeyValue[] {
-    return this.getKeyValuesWithExclusions(EyeType, this.avatarExclusion &&
-      this.avatarExclusion.eyeTypes ? this.avatarExclusion.eyeTypes : []);
+    return this.getKeyValuesWithExclusions(EyeType, this.avatarExclusion?.eyeTypes ?? []);
   }
 
   // #endregion
@@ -432,13 +424,12 @@ export class CustomAvatarComponent {
     }
   }
 
-  get noseType() {
+  get noseType(): NoseType {
     return this._currentAvatar.noseType;
   }
 
   get noseTypes(): KeyValue[] {
-    return this.getKeyValuesWithExclusions(NoseType, this.avatarExclusion &&
-      this.avatarExclusion.noseTypes ? this.avatarExclusion.noseTypes : []);
+    return this.getKeyValuesWithExclusions(NoseType, this.avatarExclusion?.noseTypes ?? []);
   }
 
   // #endregion
@@ -452,13 +443,12 @@ export class CustomAvatarComponent {
     }
   }
 
-  get eyebrowType() {
+  get eyebrowType(): EyebrowType {
     return this._currentAvatar.eyebrowType;
   }
 
   get eyebrowTypes(): KeyValue[] {
-    return this.getKeyValuesWithExclusions(EyebrowType, this.avatarExclusion &&
-      this.avatarExclusion.eyebrowTypes ? this.avatarExclusion.eyebrowTypes : []);
+    return this.getKeyValuesWithExclusions(EyebrowType, this.avatarExclusion?.eyebrowTypes ?? []);
   }
 
   set eyebrowColor(value: HairColor) {
@@ -468,11 +458,11 @@ export class CustomAvatarComponent {
     }
   }
 
-  get eyebrowColor() {
+  get eyebrowColor(): HairColor {
     return this._currentAvatar.eyebrowColor;
   }
 
-  get eyebrowColors() {
+  get eyebrowColors(): KeyValue[] {
     return this.getKeyValues(HairColor);
   }
 
@@ -487,13 +477,12 @@ export class CustomAvatarComponent {
     }
   }
 
-  get mouthType() {
+  get mouthType(): MouthType {
     return this._currentAvatar.mouthType;
   }
 
   get mouthTypes(): KeyValue[] {
-    return this.getKeyValuesWithExclusions(MouthType, this.avatarExclusion &&
-      this.avatarExclusion.mouthTypes ? this.avatarExclusion.mouthTypes : []);
+    return this.getKeyValuesWithExclusions(MouthType, this.avatarExclusion?.mouthTypes ?? []);
   }
 
   // #endregion
@@ -507,13 +496,12 @@ export class CustomAvatarComponent {
     }
   }
 
-  get petType() {
+  get petType(): PetType {
     return this._currentAvatar.petType;
   }
 
   get petTypes(): KeyValue[] {
-    return this.getKeyValuesWithExclusions(PetType, this.avatarExclusion &&
-      this.avatarExclusion.petTypes ? this.avatarExclusion.petTypes : []);
+    return this.getKeyValuesWithExclusions(PetType, this.avatarExclusion?.petTypes ?? []);
   }
 
   // #endregion
@@ -527,13 +515,12 @@ export class CustomAvatarComponent {
     }
   }
 
-  get awardType() {
+  get awardType(): AwardType {
     return this._currentAvatar.awardType;
   }
 
   get awardTypes(): KeyValue[] {
-    return this.getKeyValuesWithExclusions(AwardType, this.avatarExclusion &&
-      this.avatarExclusion.awardTypes ? this.avatarExclusion.awardTypes : []);
+    return this.getKeyValuesWithExclusions(AwardType, this.avatarExclusion?.awardTypes ?? []);
   }
 
   // #endregion
@@ -547,7 +534,7 @@ export class CustomAvatarComponent {
     }
   }
 
-  get skinColor() {
+  get skinColor(): SkinColor {
     return this._currentAvatar.skinColor;
   }
 
@@ -555,8 +542,8 @@ export class CustomAvatarComponent {
     return this.getKeyValues(SkinColor);
   }
 
-  get saveAvatarEnabled() {
-    if (this._lastSaved === undefined) {
+  get saveAvatarEnabled(): boolean {
+    if (!this._lastSaved) {
       return true;
     }
 
@@ -691,37 +678,37 @@ export class CustomAvatarComponent {
 
   // #region Color Converters
 
-  accessoriesColorConvert(value: string) {
+  accessoriesColorConvert(value: string): string {
     return accessoriesColorTranslation(value as AccessoriesColor);
   }
 
-  earringColorConvert(value: string) {
+  earringColorConvert(value: string): string {
     return earringColorTranslation(value as EarringColor);
   }
 
-  hairColorConvert(value: string) {
+  hairColorConvert(value: string): string {
     return hairColorTranslation(value as HairColor);
   }
 
-  skinColorConvert(value: string) {
+  skinColorConvert(value: string): string {
     return skinColorTranslation(value as SkinColor);
   }
 
-  clotheColorConvert(value: string) {
+  clotheColorConvert(value: string): string {
     return clotheColorTranslation(value as ClotheColor);
   }
 
-  backgroundColorConvert(value: string) {
+  backgroundColorConvert(value: string): string {
     return backgroundColorTranslation(value as BackgroundColor);
   }
 
-  hatColorConvert(value: string) {
+  hatColorConvert(value: string): string {
     return hatColorTranslation(value as HatColor);
   }
 
   // #endregion
 
-  selectSvg() {
+  selectSvg(): void {
     const element = document.getElementById(this.svgId) as HTMLTextAreaElement;
 
     if (element !== null) {
@@ -736,7 +723,7 @@ export class CustomAvatarComponent {
     }, 100);
   }
 
-  saveAvatar() {
+  saveAvatar(): void {
     if (this.svg !== '') {
       const saveAvatar: AvatarSelection = {
         avatarStyle: this.avatarSelection.avatarStyle,
@@ -770,7 +757,7 @@ export class CustomAvatarComponent {
     }
   }
 
-  revert() {
+  revert(): void {
     if (this._lastSaved) {
       this._currentAvatar = {
         avatarStyle: this._lastSaved.avatarStyle,
@@ -801,7 +788,7 @@ export class CustomAvatarComponent {
     }
   }
 
-  randomAvatar() {
+  randomAvatar(): void {
     if (!this.noColorBackground) {
       this._currentAvatar.avatarStyle = this.randomEnumValueWithExclusions(AvatarStyle, this.avatarStyles);
       this._currentAvatar.backgroundColor = this.randomEnumValue(BackgroundColor);
@@ -837,7 +824,7 @@ export class CustomAvatarComponent {
     this.refreshAvatar();
   }
 
-  private isEqual(objA: any, objB: any) {
+  private isEqual(objA: { [prop: string]: any }, objB: { [prop: string]: any }) {
     // Create arrays of property names
     const aProps = Object.getOwnPropertyNames(objA);
     const bProps = Object.getOwnPropertyNames(objB);
@@ -858,30 +845,24 @@ export class CustomAvatarComponent {
     return true;
   }
 
-  private randomKey<T>(object: T): keyof T {
-    const arrayValues = Object.keys(object);
-    const arrayValue = arrayValues[Math.floor(Math.random() * arrayValues.length)];
-
-    return object[arrayValue];
+  private randomEnumValue<T>(object: T): T[keyof T] {
+    const enumValues = (Object.values(object) as unknown) as T[keyof T][];
+    return enumValues[Math.floor(Math.random() * enumValues.length)];
   }
 
-  private randomEnumValue<T>(enumObject: T) {
-    return enumObject[this.randomKey(enumObject)];
-  }
-
-  private randomEnumValueWithExclusions<T>(enumObject: T, values: { value: string; label: string }[]) {
-
+  private randomEnumValueWithExclusions<T>(enumObject: T, values: { value: string; label: string }[]): T[keyof T] {
     const value = values[Math.floor(Math.random() * values.length)];
 
-    return enumObject[value.value];
+    return enumObject[value.value as keyof T];
   }
 
-  private getKeyValues<T>(enumObject: T) {
-    return Object.keys(enumObject).map(key => ({ value: key, label: enumObject[key] }));
+  private getKeyValues<T>(enumObject: T): KeyValue[] {
+    return Object.keys(enumObject).map(key => ({ value: key, label: ((enumObject as unknown) as { [prop: string]: string })[key] }));
   }
 
-  private getKeyValuesWithExclusions<T>(enumObject: T, excludedValues: string[]) {
-    return Object.keys(enumObject).filter(s => excludedValues.indexOf(s) === -1).map(key => ({ value: key, label: enumObject[key] }));
+  private getKeyValuesWithExclusions<T>(enumObject: T, excludedValues: readonly string[]): KeyValue[] {
+    return Object.keys(enumObject).filter(s => !excludedValues.includes(s))
+      .map(key => ({ value: key, label: ((enumObject as unknown) as { [prop: string]: string })[key] }));
   }
 
   private refreshAvatar() {

@@ -9,5 +9,5 @@ import { AwardType, Option } from '../../options';
 })
 
 export class CustomAvatarAwardTrophyAComponent implements Option<AwardType> {
-  get option() { return AwardType.TrophyA; }
+  get option(): AwardType { return AwardType.TrophyA; }
 }

@@ -12,7 +12,7 @@ import { CustomAvatarTopBaseComponent } from './top-base.component';
 
 export class CustomAvatarTopHijabComponent extends CustomAvatarTopBaseComponent {
 
-  get option() { return TopType.Hijab; }
+  get option(): TopType { return TopType.Hijab; }
 
   readonly mask1: string = randomId('kip-mask');
   readonly mask2: string = randomId('kip-mask');

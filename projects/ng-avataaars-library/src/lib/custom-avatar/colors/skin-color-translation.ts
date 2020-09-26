@@ -1,6 +1,6 @@
 import { SkinColor } from '../options/skin-color';
 
-export function skinColorTranslation(skinColor: SkinColor) {
+export function skinColorTranslation(skinColor: SkinColor): string {
   switch (skinColor) {
     case SkinColor.Tanned:
       return '#FD9841';

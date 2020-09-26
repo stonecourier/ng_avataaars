@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import {  AvatarSelection, AvatarStyle, TopType, AccessoriesType, HairColor, FacialHairType, ClotheType,
-  ClotheColor, EyeType, EyebrowType, MouthType, SkinColor, BackgroundColor, GraphicType, PetType, AwardType,
-  HatColor, AccessoriesColor, NoseType, EarringType, EarringColor, SaveAvatar } from 'ng-avataaars-library';
-
+import {
+  AccessoriesColor, AccessoriesType, AvatarSelection, AvatarStyle, AwardType, BackgroundColor, ClotheColor,
+  ClotheType, EarringColor, EarringType, EyebrowType, EyeType, FacialHairType, GraphicType, HairColor, HatColor,
+  MouthType, NoseType, PetType, SaveAvatar, SkinColor, TopType
+} from 'ng-avataaars-library';
 
 @Component({
   selector: 'app-root',
@@ -39,14 +40,14 @@ export class AppComponent implements OnInit {
     earringColor: EarringColor.Pink
   };
 
-  onAvatarSaved(saveAvatar: SaveAvatar) {
+  onAvatarSaved(saveAvatar: SaveAvatar): void {
     localStorage.setItem('avatar', JSON.stringify(saveAvatar.avatarSelection));
   }
 
-  ngOnInit() {
+  ngOnInit(): void {
     const avatar = localStorage.getItem('avatar');
     if (avatar) {
-      this.avatarSelection = JSON.parse(avatar);
+      this.avatarSelection = JSON.parse(avatar) as AvatarSelection;
     }
   }
 }

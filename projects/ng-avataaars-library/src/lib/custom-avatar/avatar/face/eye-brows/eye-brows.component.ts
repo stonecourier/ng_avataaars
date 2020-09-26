@@ -14,7 +14,7 @@ export class CustomAvatarEyebrowsComponent {
   @Input() eyebrowType: EyebrowType = EyebrowType.Default;
   @Input() eyebrowColor: HairColor = HairColor.Black;
 
-  get color() {
+  get color(): string {
     return hairColorTranslation(this.eyebrowColor);
   }
 }

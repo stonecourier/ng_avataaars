@@ -7,11 +7,11 @@ import { FacialHairType, HairColor, Option } from '../../../options';
 @Directive()
 export class CustomAvatarFacialHairBaseComponent implements Option<FacialHairType> {
 
-  get option() { return FacialHairType.BeardLight; }
+  get option(): FacialHairType { return FacialHairType.BeardLight; }
 
   @Input() facialHairColor: HairColor = HairColor.Black;
 
-  get color() {
+  get color(): string {
     return hairColorTranslation(this.facialHairColor);
   }
 }

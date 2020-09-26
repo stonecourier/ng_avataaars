@@ -12,7 +12,7 @@ import { CustomAvatarAccessoriesBaseComponent } from './accessories-base.compone
 
 export class CustomAvatarAccessoriesSunglassesComponent extends CustomAvatarAccessoriesBaseComponent {
 
-  get option() { return AccessoriesType.Sunglasses; }
+  get option(): AccessoriesType { return AccessoriesType.Sunglasses; }
 
   readonly path1: string = randomId('kip-path');
   readonly path2: string = randomId('kip-path');

@@ -12,7 +12,7 @@ import { CustomAvatarFacialHairBaseComponent } from './facial-hair-base.componen
 
 export class CustomAvatarFacialHairMoustacheMagnumComponent extends CustomAvatarFacialHairBaseComponent {
 
-  get option() { return FacialHairType.MoustacheMagnum; }
+  get option(): FacialHairType { return FacialHairType.MoustacheMagnum; }
 
   readonly mask1: string = randomId('kip-mask');
   readonly path1: string = randomId('kip-path');

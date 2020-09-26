@@ -12,7 +12,7 @@ import { AwardType, ClotheColor, Option, SkinColor } from '../../options';
 
 export class CustomAvatarAwardThumbUpComponent implements Option<AwardType> {
 
-  get option() { return AwardType.ThumbUp; }
+  get option(): AwardType { return AwardType.ThumbUp; }
 
   @Input() clotheColor: ClotheColor = ClotheColor.Black;
 
@@ -20,15 +20,15 @@ export class CustomAvatarAwardThumbUpComponent implements Option<AwardType> {
 
   @Input() skinColor: SkinColor = SkinColor.Black;
 
-  get color() {
+  get color(): string {
     return clotheColorTranslation(this.clotheColor);
   }
 
-  get color2() {
+  get color2(): string {
     return clotheColorTranslation(this.clotheColor2);
   }
 
-  get color3() {
+  get color3(): string {
     return skinColorTranslation(this.skinColor);
   }
 

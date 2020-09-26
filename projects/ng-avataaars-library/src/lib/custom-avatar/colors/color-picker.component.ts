@@ -14,7 +14,7 @@ export class CustomAvatarColorPickerComponent {
   @Output() readonly colorPicked = new EventEmitter<string>();
   @Input() colorConverter: (value: string) => string = (_value: string) => '';
 
-  pick(value: string) {
+  pick(value: string): void {
     this.colorPicked.emit(value);
   }
 }

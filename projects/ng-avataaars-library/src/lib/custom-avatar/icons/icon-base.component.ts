@@ -11,11 +11,11 @@ export class CustomAvatarIconBaseComponent {
 
   @Output() readonly selectTab = new EventEmitter<tabIndexes>();
 
-  get avatarTabFillColor() {
+  get avatarTabFillColor(): string {
     return this.currentIndex === this.index ? 'black' : 'gray';
   }
 
-  select() {
+  select(): void {
     this.selectTab.emit(this.index);
   }
 }

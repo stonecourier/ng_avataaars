@@ -2,6 +2,6 @@
 // If you don't include the full url, the filters and masks break
 // Once the svg is generated, this is removed and the svg saved
 
-export function urlfix(path: string) {
+export function urlfix(path: string): string {
   return `url(${window.location.href}#${path})`;
 }

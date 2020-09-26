@@ -1,6 +1,6 @@
 import { ClotheColor } from '../options/clothe-color';
 
-export function clotheColorTranslation(clotheColor: ClotheColor) {
+export function clotheColorTranslation(clotheColor: ClotheColor): string {
   switch (clotheColor) {
     case ClotheColor.Black:
       return '#262E33';

@@ -1,6 +1,6 @@
 import { BackgroundColor } from '../options/background-color';
 
-export function backgroundColorTranslation(backgroundColor: BackgroundColor) {
+export function backgroundColorTranslation(backgroundColor: BackgroundColor): string {
   switch (backgroundColor) {
     case BackgroundColor.ColorA:
       return '#65C9FF';

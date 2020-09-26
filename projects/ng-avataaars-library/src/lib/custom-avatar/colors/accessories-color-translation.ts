@@ -1,6 +1,6 @@
 import { AccessoriesColor } from '../options/accessories-color';
 
-export function accessoriesColorTranslation(accessoriesColor: AccessoriesColor) {
+export function accessoriesColorTranslation(accessoriesColor: AccessoriesColor): string {
   switch (accessoriesColor) {
     case AccessoriesColor.Black:
       return '#262E33';

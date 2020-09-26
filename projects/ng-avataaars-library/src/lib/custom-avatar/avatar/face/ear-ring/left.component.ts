@@ -11,6 +11,6 @@ import { CustomAvatarEarringBaseComponent } from './ear-ring-base.component';
 
 export class CustomAvatarEarringLeftComponent extends CustomAvatarEarringBaseComponent {
 
-  get option() { return EarringType.Left; }
+  get option(): EarringType { return EarringType.Left; }
 
 }

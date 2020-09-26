@@ -12,7 +12,7 @@ import { CustomAvatarClothesBaseComponent } from './clothes-base.component';
 
 export class CustomAvatarClothesShirtScoopNeckComponent extends CustomAvatarClothesBaseComponent {
 
-  get option() { return ClotheType.ShirtScoopNeck; }
+  get option(): ClotheType { return ClotheType.ShirtScoopNeck; }
 
   readonly mask1: string = randomId('kip-mask');
   readonly path1: string = randomId('kip-path');

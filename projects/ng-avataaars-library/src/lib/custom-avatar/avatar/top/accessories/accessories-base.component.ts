@@ -8,15 +8,15 @@ import { AccessoriesColor, AccessoriesType, Option } from '../../../options';
 @Directive()
 export class CustomAvatarAccessoriesBaseComponent implements Option<AccessoriesType> {
 
-  get option() { return AccessoriesType.Blank; }
+  get option(): AccessoriesType { return AccessoriesType.Blank; }
 
   @Input() accessoriesColor: AccessoriesColor = AccessoriesColor.Black;
 
-  get color() {
+  get color(): string {
     return accessoriesColorTranslation(this.accessoriesColor);
   }
 
-  urlFix(path: string) {
+  urlFix(path: string): string {
     return urlfix(path);
   }
 }

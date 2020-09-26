@@ -3,9 +3,9 @@ import { MouthType, Option } from '../../../options';
 
 export class MouthBaseComponent implements Option<MouthType> {
 
-  get option() { return MouthType.Concerned; }
+  get option(): MouthType { return MouthType.Concerned; }
 
-  urlFix(path: string) {
+  urlFix(path: string): string {
     return urlfix(path);
   }
 }
