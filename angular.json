@@ -178,7 +178,7 @@
       }
     },
     "ng-avataaars-lib": {
-      "root": "projects/ng-avataaars-lib",
+      "root": "projects/ng-avataaars-library/",
       "sourceRoot": "projects/ng-avataaars-lib/src",
       "projectType": "library",
       "prefix": "kip",
