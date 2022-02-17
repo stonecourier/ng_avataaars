@@ -179,31 +179,31 @@
     },
     "ng-avataaars-lib": {
       "root": "projects/ng-avataaars-library/",
-      "sourceRoot": "projects/ng-avataaars-lib/src",
+      "sourceRoot": "projects/ng-avataaars-library/src",
       "projectType": "library",
       "prefix": "kip",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
-            "tsConfig": "projects/ng-avataaars-lib/tsconfig.lib.json",
-            "project": "projects/ng-avataaars-lib/ng-package.json"
+            "tsConfig": "projects/ng-avataaars-library/tsconfig.lib.json",
+            "project": "projects/ng-avataaars-library/ng-package.json"
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/ng-avataaars-lib/src/test.ts",
-            "tsConfig": "projects/ng-avataaars-lib/tsconfig.spec.json",
-            "karmaConfig": "projects/ng-avataaars-lib/karma.conf.js"
+            "main": "projects/ng-avataaars-library/src/test.ts",
+            "tsConfig": "projects/ng-avataaars-library/tsconfig.spec.json",
+            "karmaConfig": "projects/ng-avataaars-library/karma.conf.js"
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "projects/ng-avataaars-lib/tsconfig.lib.json",
-              "projects/ng-avataaars-lib/tsconfig.spec.json"
+              "projects/ng-avataaars-library/tsconfig.lib.json",
+              "projects/ng-avataaars-library/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"
