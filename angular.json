@@ -10,7 +10,7 @@
       "prefix": "kip",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-ng-packagr:build",
+          "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
             "tsConfig": "projects/ng-avataaars-library/tsconfig.lib.json",
             "project": "projects/ng-avataaars-library/ng-package.json"
@@ -78,7 +78,6 @@
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
-              "extractCss": true,
               "namedChunks": false,
               "aot": true,
               "extractLicenses": true,
@@ -177,7 +176,7 @@
       "prefix": "kip",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-ng-packagr:build",
+          "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
             "tsConfig": "projects/ng-avataaars-lib/tsconfig.lib.json",
             "project": "projects/ng-avataaars-lib/ng-package.json"
@@ -240,7 +239,6 @@
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
-              "extractCss": true,
               "namedChunks": false,
               "aot": true,
               "extractLicenses": true,
@@ -339,7 +337,7 @@
       "prefix": "kip",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-ng-packagr:build",
+          "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
             "tsConfig": "projects/ng-avataaars-library/tsconfig.lib.json",
             "project": "projects/ng-avataaars-library/ng-package.json"
