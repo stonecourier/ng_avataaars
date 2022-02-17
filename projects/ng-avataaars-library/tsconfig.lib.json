@@ -9,7 +9,6 @@
     "forceConsistentCasingInFileNames": true,
     "strictNullChecks": true,
     "strictPropertyInitialization": true,
-    "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "strict": false,
     "strictBindCallApply": true,

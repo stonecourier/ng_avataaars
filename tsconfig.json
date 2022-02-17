@@ -13,7 +13,6 @@
     "strict": false,
     "strictBindCallApply": true,
     "strictFunctionTypes": true,
-    "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "importHelpers": true,
     "target": "es5",

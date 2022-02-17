@@ -7,8 +7,8 @@ import {
   BrowserDynamicTestingModule
 } from '@angular/platform-browser-dynamic/testing';
 import 'core-js/es7/reflect';
-import 'zone.js/dist/zone';
-import 'zone.js/dist/zone-testing';
+import 'zone.js';
+import 'zone.js/testing';
 
 declare const require: any;
 
