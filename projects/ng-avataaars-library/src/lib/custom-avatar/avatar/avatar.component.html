@@ -13,7 +13,7 @@
   <g id='Avataaar' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd' [attr.transform]="transform">
     <g transform='translate(-825.000000, -1100.000000)' id='Avataaar/Circle'>
       <g transform='translate(825.000000, 1100.000000)'>
-        <g *ngIf="avatarStyle=='Circle'" id='Circle' stroke-width='1' fill-rule='evenodd'
+        <g *ngIf="avatarStyle==='Circle'" id='Circle' stroke-width='1' fill-rule='evenodd'
           transform='translate(12.000000, 40.000000)'>
           <mask [attr.id]="mask2" fill='white'>
             <use [attr.xlink:href]="'#' + path1" />
@@ -23,11 +23,11 @@
             <rect id='🖍Color' x='0' y='0' width='240' height='240' />
           </g>
         </g>
-        <mask *ngIf="avatarStyle=='Circle'" [attr.id]="mask3" fill='white'>
+        <mask *ngIf="avatarStyle==='Circle'" [attr.id]="mask3" fill='white'>
           <use [attr.xlink:href]="'#' + path3" />
         </mask>
         <g id='Mask' />
-        <g id='Avataaar' stroke-width='1' fill-rule='evenodd' [attr.mask]="avatarStyle=='Circle'?urlFix(mask3):''">
+        <g id='Avataaar' stroke-width='1' fill-rule='evenodd' [attr.mask]="avatarStyle==='Circle'?urlFix(mask3):''">
           <g id='Body' transform='translate(32.000000, 36.000000)'>
             <mask id='mask-6' fill='white'>
               <use [attr.xlink:href]="'#' + path5" />

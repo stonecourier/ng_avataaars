@@ -257,7 +257,7 @@
                     [colors]="clotheColors3" [colorConverter]="clotheColorConvert" [currentColor]="clotheColor3"
                     (colorPicked)="clotheColor3 =$any($event)">
                   </kip-custom-avatar-color-picker>
-                  <kip-custom-avatar-picker *ngIf="clotheType == 'GraphicShirt'" [title]="avatarText.graphics"
+                  <kip-custom-avatar-picker *ngIf="clotheType === 'GraphicShirt'" [title]="avatarText.graphics"
                     [options]="graphicTypes" [currentOption]="graphicType" (optionPicked)="graphicType =$any($event)"
                     [backgroundColor]="clotheColorConvert(clotheColor)">
                     <ng-template let-item kipPickerTemplate="item">

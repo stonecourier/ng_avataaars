@@ -1,6 +1,6 @@
 <span>{{ title }}</span><br />
 <div class="row">
-  <div [ngClass]="{'kip-avatar-pick-color':true,'kip-avatar-selected-color':colorPicked.value==currentColor}"
+  <div [ngClass]="{'kip-avatar-pick-color':true,'kip-avatar-selected-color':colorPicked.value === currentColor}"
     *ngFor="let colorPicked of colors" (click)="pick(colorPicked.value)"
     [style.background-color]="colorConverter(colorPicked.value)">
   </div>

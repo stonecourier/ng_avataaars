@@ -28,6 +28,15 @@
             "tsConfig": "projects/ng-avataaars-library/tsconfig.spec.json",
             "karmaConfig": "projects/ng-avataaars-library/karma.conf.js"
           }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "projects/ng-avataaars-library/**/*.ts",
+              "projects/ng-avataaars-library/**/*.html"
+            ]
+          }
         }
       }
     },
@@ -306,6 +315,7 @@
   },
   "defaultProject": "ng-avataars-lib",
   "cli": {
-    "analytics": false
+    "analytics": false,
+    "defaultCollection": "@angular-eslint/schematics"
   }
 }

@@ -1,4 +1,4 @@
-/* tslint:disable:forin */
+/* eslint-disable guard-for-in */
 
 import { ChangeDetectionStrategy, ChangeDetectorRef, Component, EventEmitter, Input, Output } from '@angular/core';
 import { accessoriesColorTranslation } from './colors/accessories-color-translation';

@@ -1,4 +1,4 @@
-/* tslint:disable:directive-class-suffix */
+/* eslint-disable @angular-eslint/directive-class-suffix */
 
 import { Directive, Input } from '@angular/core';
 import { clotheColorTranslation } from '../../colors/clothe-color-translation';
