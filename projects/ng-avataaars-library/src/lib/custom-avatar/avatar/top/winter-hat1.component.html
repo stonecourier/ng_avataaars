@@ -25,7 +25,7 @@
       <use id="hat-mask" [attr.fill]="color2" [attr.xlink:href]="'#' + path1" />
     </g>
     <g id="hat-front">
-      <use fill="black" fill-opacity="1" [attr.filter]="urlFix(path2)" [attr.xlink:href]="'#' + path2" />
+      <use fill="black" fill-opacity="1" [attr.filter]="path2 | urlfix" [attr.xlink:href]="'#' + path2" />
       <use fill="#F4F4F4" fill-rule="evenodd" [attr.xlink:href]="'#' + path2" />
     </g>
     <g kip-custom-avatar-facial-hair [facialHairType]="facialHairType" [facialHairColor]="facialHairColor" />

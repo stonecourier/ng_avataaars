@@ -8,9 +8,9 @@
     <use [attr.xlink:href]="'#' + path1" />
   </mask>
   <use id='Mouth' fill-opacity='0.699999988' fill='#000000' fill-rule='evenodd' [attr.xlink:href]="'#' + path1" />
-  <rect id='Teeth' fill='#FFFFFF' fill-rule='evenodd' [attr.mask]="urlFix(mask1)" x='39' y='2' width='31'
+  <rect id='Teeth' fill='#FFFFFF' fill-rule='evenodd' [attr.mask]="mask1 | urlfix" x='39' y='2' width='31'
     height='16' rx='5' />
-  <g id='Tongue' stroke-width='1' fill-rule='evenodd' [attr.mask]="urlFix(mask1)" fill='#FF4F6D'>
+  <g id='Tongue' stroke-width='1' fill-rule='evenodd' [attr.mask]="mask1 | urlfix" fill='#FF4F6D'>
     <g transform='translate(38.000000, 24.000000)'>
       <circle cx='11' cy='11' r='11' />
       <circle cx='21' cy='11' r='11' />

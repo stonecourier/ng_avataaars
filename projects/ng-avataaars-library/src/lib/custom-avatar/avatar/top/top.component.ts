@@ -1,6 +1,6 @@
 /* eslint-disable @angular-eslint/component-selector */
 
-import { Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import {
   AccessoriesColor, AccessoriesType, FacialHairType, HairColor, HatColor,
   TopType
@@ -8,7 +8,8 @@ import {
 
 @Component({
   selector: '[kip-custom-avatar-top]',
-  templateUrl: './top.component.html'
+  templateUrl: './top.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 
 export class CustomAvatarTopComponent {

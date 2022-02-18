@@ -1,13 +1,14 @@
 /* eslint-disable @angular-eslint/component-selector */
 
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { randomId } from '../../helper/randomid';
 import { ClotheType } from '../../options';
 import { CustomAvatarClothesBaseComponent } from './clothes-base.component';
 
 @Component({
   selector: '[kip-custom-avatar-clothes-shirt-crew-neck]',
-  templateUrl: './shirt-crew-neck.component.html'
+  templateUrl: './shirt-crew-neck.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 
 export class CustomAvatarClothesShirtCrewNeckComponent extends CustomAvatarClothesBaseComponent {

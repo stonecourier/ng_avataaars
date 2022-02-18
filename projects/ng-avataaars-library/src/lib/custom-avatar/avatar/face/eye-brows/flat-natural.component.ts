@@ -1,11 +1,12 @@
 /* eslint-disable @angular-eslint/component-selector */
 
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { EyebrowType, Option } from '../../../options';
 
 @Component({
   selector: '[kip-custom-avatar-eye-brow-flat-natural]',
-  templateUrl: './flat-natural.component.html'
+  templateUrl: './flat-natural.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 
 export class CustomAvatarEyebrowsFlatNaturalComponent implements Option<EyebrowType> {

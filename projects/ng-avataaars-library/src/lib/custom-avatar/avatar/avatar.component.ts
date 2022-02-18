@@ -1,8 +1,7 @@
-import { Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { backgroundColorTranslation } from '../colors/background-color-translation';
 import { skinColorTranslation } from '../colors/skin-color-translation';
 import { randomId } from '../helper/randomid';
-import { urlfix } from '../helper/urlfix';
 import {
   AccessoriesColor, AccessoriesType, AvatarStyle, AwardType, BackgroundColor,
   ClotheColor, ClotheType, EarringColor, EarringType, EyebrowType,
@@ -12,7 +11,8 @@ import {
 
 @Component({
   selector: 'kip-custom-avatar-base',
-  templateUrl: './avatar.component.html'
+  templateUrl: './avatar.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 
 export class CustomAvatarBaseComponent {
@@ -28,6 +28,10 @@ export class CustomAvatarBaseComponent {
   @Input() avatarStyle: AvatarStyle = AvatarStyle.Transparent;
   @Input() svgClass = '';
   @Input() backgroundColor: BackgroundColor = BackgroundColor.ColorA;
+
+  get avatarStyleIsCircle() {
+    return this.avatarStyle === AvatarStyle.Circle;
+  }
 
   get backColor(): string {
     return backgroundColorTranslation(this.backgroundColor);
@@ -77,8 +81,4 @@ export class CustomAvatarBaseComponent {
   readonly path1: string = randomId('ptx-path');
   readonly path3: string = randomId('ptx-path');
   readonly path5: string = randomId('ptx-path');
-
-  urlFix(path: string): string {
-    return urlfix(path);
-  }
 }

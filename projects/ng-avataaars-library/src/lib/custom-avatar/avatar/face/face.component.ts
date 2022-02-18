@@ -1,11 +1,12 @@
 /* eslint-disable @angular-eslint/component-selector */
 
-import { Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { EarringColor, EarringType, EyebrowType, EyeType, HairColor, MouthType, NoseType } from '../../options';
 
 @Component({
   selector: '[kip-custom-avatar-face]',
-  templateUrl: './face.component.html'
+  templateUrl: './face.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 
 export class CustomAvatarFaceComponent {

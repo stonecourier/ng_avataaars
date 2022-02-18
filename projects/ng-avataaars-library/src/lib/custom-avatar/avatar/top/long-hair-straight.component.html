@@ -9,7 +9,7 @@
     <use [attr.xlink:href]="'#' + path1" />
   </mask>
   <g id='Mask' />
-  <g id='Top/LongHair/Straight' [attr.mask]="urlFix(mask1)">
+  <g id='Top/LongHair/Straight' [attr.mask]="mask1 | urlfix">
     <g transform='translate(-1.000000, 0.000000)'>
       <g id='Hair' stroke-width='1' fill='none' fill-rule='evenodd' transform='translate(59.000000, 18.000000)'>
         <mask [attr.id]="mask2" fill='white'>

@@ -9,7 +9,7 @@
     </filter>
   </defs>
   <g id='Lennon-Glasses'>
-    <use fill='black' fill-opacity='1' [attr.filter]="urlFix(filter1)" [attr.xlink:href]="'#' + path1" />
+    <use fill='black' fill-opacity='1' [attr.filter]="filter1 | urlfix" [attr.xlink:href]="'#' + path1" />
     <use [attr.fill]="color" fill-rule='evenodd' [attr.xlink:href]="'#' + path1" />
   </g>
 </svg:g>

@@ -28,7 +28,7 @@
       </mask>
       <use id='Combined-Shape' [attr.fill]="color2" [attr.xlink:href]="'#' + path1" />
       <rect id='color-dark' fill-opacity='0.2' fill='#000000' x='-1' y='21' width='146' height='46'
-        [attr.mask]="urlFix(mask2)" />
+        [attr.mask]="mask2 | urlfix" />
       <g id='light-triangles' transform='translate(29.000000, 32.000000)' fill='#FFFFFF' fill-opacity='0.5'>
         <polygon id='Triangle'
           transform='translate(12.500000, 9.000000) rotate(180.000000) translate(-12.500000, -9.000000) '

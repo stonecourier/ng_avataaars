@@ -1,11 +1,12 @@
 /* eslint-disable @angular-eslint/component-selector */
 
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { NoseType, Option } from '../../../options';
 
 @Component({
   selector: '[kip-custom-avatar-nose-clown]',
-  templateUrl: './clown.component.html'
+  templateUrl: './clown.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 
 export class CustomAvatarNoseClownComponent implements Option<NoseType> {

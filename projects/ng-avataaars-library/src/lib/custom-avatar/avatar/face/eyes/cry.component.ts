@@ -1,11 +1,12 @@
 /* eslint-disable @angular-eslint/component-selector */
 
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { EyeType, Option } from '../../../options';
 
 @Component({
   selector: '[kip-custom-avatar-eyes-cry]',
-  templateUrl: './cry.component.html'
+  templateUrl: './cry.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 
 export class CustomAvatarEyesCryComponent implements Option<EyeType> {

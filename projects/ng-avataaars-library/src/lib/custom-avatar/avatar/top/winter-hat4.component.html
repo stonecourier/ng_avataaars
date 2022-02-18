@@ -38,7 +38,7 @@
       <use id='light' fill-opacity='0.300000012' fill='#FFFFFF' [attr.xlink:href]="'#' + path3" />
     </g>
     <g id='hat-front'>
-      <use fill='black' fill-opacity='1' [attr.filter]="urlFix(path4)" [attr.xlink:href]="'#' + path4" />
+      <use fill='black' fill-opacity='1' [attr.filter]="path4 | urlfix" [attr.xlink:href]="'#' + path4" />
       <use fill='#F4F4F4' fill-rule='evenodd' [attr.xlink:href]="'#' + path4" />
     </g>
     <g kip-custom-avatar-facial-hair [facialHairType]="facialHairType" [facialHairColor]="facialHairColor" />

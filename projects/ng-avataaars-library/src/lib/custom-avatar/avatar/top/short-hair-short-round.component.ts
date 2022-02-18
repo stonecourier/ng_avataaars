@@ -1,13 +1,14 @@
 /* eslint-disable @angular-eslint/component-selector */
 
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { randomId } from '../../helper/randomid';
 import { TopType } from '../../options';
 import { CustomAvatarTopBaseComponent } from './top-base.component';
 
 @Component({
   selector: '[kip-custom-avatar-top-short-hair-short-round]',
-  templateUrl: './short-hair-short-round.component.html'
+  templateUrl: './short-hair-short-round.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 
 export class CustomAvatarTopShortHairShortRoundComponent extends CustomAvatarTopBaseComponent {

@@ -3,7 +3,6 @@
 import { Directive, Input } from '@angular/core';
 import { hairColorTranslation } from '../../colors/hair-color-translation';
 import { hatColorTranslation } from '../../colors/hat-color-translation';
-import { urlfix } from '../../helper/urlfix';
 import {
   AccessoriesColor, AccessoriesType, FacialHairType, HairColor, HatColor,
   Option, TopType
@@ -30,8 +29,4 @@ export class CustomAvatarTopBaseComponent implements Option<TopType> {
   @Input() facialHairColor: HairColor = HairColor.Black;
   @Input() accessoriesType: AccessoriesType = AccessoriesType.Blank;
   @Input() accessoriesColor: AccessoriesColor = AccessoriesColor.Black;
-
-  urlFix(path: string): string {
-    return urlfix(path);
-  }
 }

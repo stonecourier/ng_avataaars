@@ -1,13 +1,14 @@
 /* eslint-disable @angular-eslint/component-selector */
 
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { randomId } from '../../../helper/randomid';
 import { MouthType } from '../../../options';
 import { MouthBaseComponent } from './mouth-base.component';
 
 @Component({
   selector: '[kip-custom-avatar-mouth-concerned]',
-  templateUrl: './concerned.component.html'
+  templateUrl: './concerned.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 
 export class CustomAvatarMouthConcernedComponent extends MouthBaseComponent {

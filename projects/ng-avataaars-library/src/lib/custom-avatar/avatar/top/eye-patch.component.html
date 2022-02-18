@@ -6,7 +6,7 @@
     <use [attr.xlink:href]="'#' + path1"></use>
   </mask>
   <g id='Mask'></g>
-  <g id='Top/Accesories/Eyepatch' [attr.mask]="urlFix(mask1)">
+  <g id='Top/Accesories/Eyepatch' [attr.mask]="mask1 | urlfix">
     <g transform='translate(-1.000000, 0.000000)'>
       <g kip-custom-avatar-facial-hair [facialHairType]="facialHairType" [facialHairColor]="facialHairColor" />
       <path

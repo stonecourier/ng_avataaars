@@ -12,13 +12,13 @@
       <use [attr.xlink:href]="'#' + path1" />
     </mask>
     <use id='The-white-stuff' fill='#FFFFFF' [attr.xlink:href]="'#' + path1" />
-    <circle fill-opacity='0.699999988' fill='#000000' [attr.mask]="urlFix(mask1)" cx='14' cy='10' r='6' />
+    <circle fill-opacity='0.699999988' fill='#000000' [attr.mask]="mask1 | urlfix" cx='14' cy='10' r='6' />
   </g>
   <g id='Eye' transform='translate(68.000000, 13.000000)'>
     <mask [attr.id]="mask2" fill='white'>
       <use [attr.xlink:href]="'#' + path2" />
     </mask>
     <use id='Eyeball-Mask' fill='#FFFFFF' [attr.xlink:href]="'#' + path2" />
-    <circle fill-opacity='0.699999988' fill='#000000' [attr.mask]="urlFix(mask2)" cx='14' cy='10' r='6' />
+    <circle fill-opacity='0.699999988' fill='#000000' [attr.mask]="mask2 | urlfix" cx='14' cy='10' r='6' />
   </g>
 </svg:g>

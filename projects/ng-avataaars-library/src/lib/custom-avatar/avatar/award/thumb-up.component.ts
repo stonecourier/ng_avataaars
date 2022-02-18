@@ -1,13 +1,14 @@
 /* eslint-disable @angular-eslint/component-selector */
 
-import { Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { clotheColorTranslation } from '../../colors/clothe-color-translation';
 import { skinColorTranslation } from '../../colors/skin-color-translation';
 import { AwardType, ClotheColor, Option, SkinColor } from '../../options';
 
 @Component({
   selector: '[kip-custom-avatar-award-thumb-up]',
-  templateUrl: './thumb-up.component.html'
+  templateUrl: './thumb-up.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 
 export class CustomAvatarAwardThumbUpComponent implements Option<AwardType> {

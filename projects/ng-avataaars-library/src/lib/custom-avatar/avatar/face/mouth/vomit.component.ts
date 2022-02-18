@@ -1,13 +1,14 @@
 /* eslint-disable @angular-eslint/component-selector */
 
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { randomId } from '../../../helper/randomid';
 import { MouthType } from '../../../options';
 import { MouthBaseComponent } from './mouth-base.component';
 
 @Component({
   selector: '[kip-custom-avatar-mouth-vomit]',
-  templateUrl: './vomit.component.html'
+  templateUrl: './vomit.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 
 export class CustomAvatarMouthVomitComponent extends MouthBaseComponent {

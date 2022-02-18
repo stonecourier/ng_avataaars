@@ -1,20 +1,22 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';
+import { ColorValue } from './color-value';
 
 @Component({
   selector: 'kip-custom-avatar-color-picker',
   styleUrls: ['./color-picker.css'],
-  templateUrl: './color-picker.component.html'
+  templateUrl: './color-picker.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 
-export class CustomAvatarColorPickerComponent {
+export class CustomAvatarColorPickerComponent<T> {
 
   @Input() title = '';
   @Input() currentColor = '';
-  @Input() colors: { value: string; label: string }[] = [];
-  @Output() readonly colorPicked = new EventEmitter<string>();
-  @Input() colorConverter: (value: string) => string = (_value: string) => '';
 
-  pick(value: string): void {
+  @Input() colors: ColorValue<T>[] = [];
+  @Output() readonly colorPicked = new EventEmitter<T>();
+
+  pick(value: T) {
     this.colorPicked.emit(value);
   }
 }

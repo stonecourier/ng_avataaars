@@ -1,11 +1,12 @@
 /* eslint-disable @angular-eslint/component-selector */
 
-import { Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { EyeType } from '../../../options';
 
 @Component({
   selector: '[kip-custom-avatar-eyes]',
-  templateUrl: './eyes.component.html'
+  templateUrl: './eyes.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 
 export class CustomAvatarEyesComponent {

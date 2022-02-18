@@ -1,9 +1,10 @@
 /* eslint-disable guard-for-in */
 
-import { ChangeDetectionStrategy, ChangeDetectorRef, Component, EventEmitter, Input, Output } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { accessoriesColorTranslation } from './colors/accessories-color-translation';
 import { backgroundColorTranslation } from './colors/background-color-translation';
 import { clotheColorTranslation } from './colors/clothe-color-translation';
+import { ColorValue } from './colors/color-value';
 import { earringColorTranslation } from './colors/ear-ring-color-translation';
 import { hairColorTranslation } from './colors/hair-color-translation';
 import { hatColorTranslation } from './colors/hat-color-translation';
@@ -65,7 +66,51 @@ export interface AvatarText {
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 
-export class CustomAvatarComponent {
+export class CustomAvatarComponent implements OnInit {
+
+  private earringColorsList: ColorValue<EarringColor>[] = [];
+  private clotheColorsList: ColorValue<ClotheColor>[] = [];
+  private hairColorsList: ColorValue<HairColor>[] = [];
+  private accessoriesColorsList: ColorValue<AccessoriesColor>[] = [];
+  private backgroundColorsList: ColorValue<BackgroundColor>[] = [];
+  private skinColorsList: ColorValue<SkinColor>[] = [];
+  private hatColorsList: ColorValue<HatColor>[] = [];
+
+  private _currentAvatar: AvatarSelection =
+    {
+      avatarStyle: AvatarStyle.Transparent,
+      topType: TopType.LongHairFro,
+      accessoriesType: AccessoriesType.Prescription01,
+      hairColor: HairColor.SilverGray,
+      facialHairType: FacialHairType.Blank,
+      facialHairColor: HairColor.Black,
+      eyebrowColor: HairColor.SilverGray,
+      clotheType: ClotheType.GraphicShirt,
+      clotheColor: ClotheColor.PastelOrange,
+      clotheColor2: ClotheColor.Blue01,
+      clotheColor3: ClotheColor.Black,
+      eyeType: EyeType.Cry,
+      eyebrowType: EyebrowType.UpDownNatural,
+      mouthType: MouthType.Serious,
+      skinColor: SkinColor.Brown,
+      backgroundColor: BackgroundColor.ColorA,
+      graphicType: GraphicType.Bat,
+      petType: PetType.None,
+      awardType: AwardType.None,
+      hatColor: HatColor.Black,
+      accessoriesColor: AccessoriesColor.Black,
+      noseType: NoseType.Default,
+      earringType: EarringType.Blank,
+      earringColor: EarringColor.Black
+    };
+
+  private _lastSaved: AvatarSelection | null = null;
+
+  tabIndex: tabIndexes = tabIndexes.Background;
+  tabIndexes = tabIndexes;
+  readonly id: string = randomId('avatar');
+  readonly svgId: string = randomId('svgId');
+  svg = '';
 
   // Current Avatar options
 
@@ -119,8 +164,8 @@ export class CustomAvatarComponent {
     return this._currentAvatar.backgroundColor;
   }
 
-  get backgroundColors(): KeyValue[] {
-    return this.getKeyValues(BackgroundColor);
+  get backgroundColors() {
+    return this.backgroundColorsList;
   }
 
   // #endregion
@@ -191,8 +236,8 @@ export class CustomAvatarComponent {
     return this._currentAvatar.accessoriesColor;
   }
 
-  get accessoriesColors(): KeyValue[] {
-    return this.getKeyValues(AccessoriesColor);
+  get accessoriesColors() {
+    return this.accessoriesColorsList;
   }
 
   // #endregion
@@ -225,8 +270,8 @@ export class CustomAvatarComponent {
     return this._currentAvatar.earringColor;
   }
 
-  get earringColors(): KeyValue[] {
-    return this.getKeyValues(EarringColor);
+  get earringColors() {
+    return this.earringColorsList;
   }
 
   // #endregion
@@ -244,13 +289,13 @@ export class CustomAvatarComponent {
     return this._currentAvatar.hairColor;
   }
 
+  get hairColors() {
+    return this.hairColorsList;
+  }
+
   // #endregion
 
   // #region Hat Color
-
-  get hairColors(): KeyValue[] {
-    return this.getKeyValues(HairColor);
-  }
 
   set hatColor(value: HatColor) {
     if (this._currentAvatar.hatColor !== value) {
@@ -263,8 +308,8 @@ export class CustomAvatarComponent {
     return this._currentAvatar.hatColor;
   }
 
-  get hatColors(): KeyValue[] {
-    return this.getKeyValues(HatColor);
+  get hatColors() {
+    return this.hatColorsList;
   }
 
   get hatColorVisible(): boolean {
@@ -321,6 +366,10 @@ export class CustomAvatarComponent {
 
   get clotheType(): ClotheType {
     return this._currentAvatar.clotheType;
+  }
+
+  get clotheTypeIsGraphicShirt() {
+    return this._currentAvatar.clotheType === ClotheType.GraphicShirt;
   }
 
   get clotheTypes(): KeyValue[] {
@@ -383,15 +432,15 @@ export class CustomAvatarComponent {
     return this.clotheType === ClotheType.BlazerShirt || this.clotheType === ClotheType.BlazerSweater;
   }
 
-  get clotheColors(): KeyValue[] {
-    return this.getKeyValues(ClotheColor);
+  get clotheColors() {
+    return this.clotheColorsList;
   }
-  get clotheColors2(): KeyValue[] {
-    return this.getKeyValues(ClotheColor).filter(s => this.clotheColor !== s.value);
+  get clotheColors2() {
+    return this.clotheColorsList.filter(s => this.clotheColor !== s.value);
   }
 
-  get clotheColors3(): KeyValue[] {
-    return this.getKeyValues(ClotheColor).filter(s => this.clotheColor !== s.value && this.clotheColor2 !== s.value);
+  get clotheColors3() {
+    return this.clotheColorsList.filter(s => this.clotheColor !== s.value && this.clotheColor2 !== s.value);
   }
 
   // #endregion
@@ -462,8 +511,8 @@ export class CustomAvatarComponent {
     return this._currentAvatar.eyebrowColor;
   }
 
-  get eyebrowColors(): KeyValue[] {
-    return this.getKeyValues(HairColor);
+  get eyebrowColors() {
+    return this.hairColorsList;
   }
 
   // #endregion
@@ -538,8 +587,8 @@ export class CustomAvatarComponent {
     return this._currentAvatar.skinColor;
   }
 
-  get skinColors(): KeyValue[] {
-    return this.getKeyValues(SkinColor);
+  get skinColors() {
+    return this.skinColorsList;
   }
 
   get saveAvatarEnabled(): boolean {
@@ -554,41 +603,7 @@ export class CustomAvatarComponent {
     return true;
   }
 
-  private _currentAvatar: AvatarSelection =
-    {
-      avatarStyle: AvatarStyle.Transparent,
-      topType: TopType.LongHairFro,
-      accessoriesType: AccessoriesType.Prescription01,
-      hairColor: HairColor.SilverGray,
-      facialHairType: FacialHairType.Blank,
-      facialHairColor: HairColor.Black,
-      eyebrowColor: HairColor.SilverGray,
-      clotheType: ClotheType.GraphicShirt,
-      clotheColor: ClotheColor.PastelOrange,
-      clotheColor2: ClotheColor.Blue01,
-      clotheColor3: ClotheColor.Black,
-      eyeType: EyeType.Cry,
-      eyebrowType: EyebrowType.UpDownNatural,
-      mouthType: MouthType.Serious,
-      skinColor: SkinColor.Brown,
-      backgroundColor: BackgroundColor.ColorA,
-      graphicType: GraphicType.Bat,
-      petType: PetType.None,
-      awardType: AwardType.None,
-      hatColor: HatColor.Black,
-      accessoriesColor: AccessoriesColor.Black,
-      noseType: NoseType.Default,
-      earringType: EarringType.Blank,
-      earringColor: EarringColor.Black
-    };
 
-  private _lastSaved: AvatarSelection | null = null;
-
-  tabIndex: tabIndexes = tabIndexes.background;
-  tabIndexes = tabIndexes;
-  readonly id: string = randomId('avatar');
-  readonly svgId: string = randomId('svgId');
-  svg = '';
 
   // All the texts for avatar localization
 
@@ -676,37 +691,9 @@ export class CustomAvatarComponent {
 
   // #endregion
 
-  // #region Color Converters
-
-  accessoriesColorConvert(value: string): string {
-    return accessoriesColorTranslation(value as AccessoriesColor);
+  ngOnInit(): void {
+    this.calculateColors();
   }
-
-  earringColorConvert(value: string): string {
-    return earringColorTranslation(value as EarringColor);
-  }
-
-  hairColorConvert(value: string): string {
-    return hairColorTranslation(value as HairColor);
-  }
-
-  skinColorConvert(value: string): string {
-    return skinColorTranslation(value as SkinColor);
-  }
-
-  clotheColorConvert(value: string): string {
-    return clotheColorTranslation(value as ClotheColor);
-  }
-
-  backgroundColorConvert(value: string): string {
-    return backgroundColorTranslation(value as BackgroundColor);
-  }
-
-  hatColorConvert(value: string): string {
-    return hatColorTranslation(value as HatColor);
-  }
-
-  // #endregion
 
   selectSvg(): void {
     const element = document.getElementById(this.svgId) as HTMLTextAreaElement;
@@ -824,6 +811,21 @@ export class CustomAvatarComponent {
     this.refreshAvatar();
   }
 
+  private getColorValues<T>(enumObject: any, converter: (value: T) => string): ColorValue<T>[] {
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-argument, @typescript-eslint/no-unsafe-assignment
+    return Object.keys(enumObject).map(key => ({ value: key, color: converter(key as any), key: key as any, label: ((enumObject as unknown) as { [prop: string]: string })[key] }));
+  }
+
+  private calculateColors() {
+    this.earringColorsList = this.getColorValues(EarringColor, earringColorTranslation);
+    this.clotheColorsList = this.getColorValues(ClotheColor, clotheColorTranslation);
+    this.hairColorsList = this.getColorValues(HairColor, hairColorTranslation);
+    this.accessoriesColorsList = this.getColorValues(AccessoriesColor, accessoriesColorTranslation);
+    this.skinColorsList = this.getColorValues(SkinColor, skinColorTranslation);
+    this.backgroundColorsList = this.getColorValues(BackgroundColor, backgroundColorTranslation);
+    this.hatColorsList = this.getColorValues(HatColor, hatColorTranslation);
+  }
+
   private isEqual(objA: { [prop: string]: any }, objB: { [prop: string]: any }) {
     // Create arrays of property names
     const aProps = Object.getOwnPropertyNames(objA);
@@ -850,14 +852,10 @@ export class CustomAvatarComponent {
     return enumValues[Math.floor(Math.random() * enumValues.length)];
   }
 
-  private randomEnumValueWithExclusions<T>(enumObject: T, values: { value: string; label: string }[]): T[keyof T] {
+  private randomEnumValueWithExclusions<T>(enumObject: T, values: { value: string, label: string }[]): T[keyof T] {
     const value = values[Math.floor(Math.random() * values.length)];
 
     return enumObject[value.value as keyof T];
-  }
-
-  private getKeyValues<T>(enumObject: T): KeyValue[] {
-    return Object.keys(enumObject).map(key => ({ value: key, label: ((enumObject as unknown) as { [prop: string]: string })[key] }));
   }
 
   private getKeyValuesWithExclusions<T>(enumObject: T, excludedValues: readonly string[]): KeyValue[] {

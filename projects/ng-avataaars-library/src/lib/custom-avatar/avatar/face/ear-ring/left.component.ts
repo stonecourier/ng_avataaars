@@ -1,12 +1,13 @@
 /* eslint-disable @angular-eslint/component-selector */
 
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { EarringType } from '../../../options';
 import { CustomAvatarEarringBaseComponent } from './ear-ring-base.component';
 
 @Component({
   selector: '[kip-custom-avatar-ear-ring-left]',
-  templateUrl: './left.component.html'
+  templateUrl: './left.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 
 export class CustomAvatarEarringLeftComponent extends CustomAvatarEarringBaseComponent {

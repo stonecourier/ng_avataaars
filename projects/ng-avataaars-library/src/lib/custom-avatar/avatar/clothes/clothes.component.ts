@@ -1,11 +1,12 @@
 /* eslint-disable @angular-eslint/component-selector */
 
-import { Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { ClotheColor, ClotheType, GraphicType } from '../../options';
 
 @Component({
   selector: '[kip-custom-avatar-clothes]',
-  templateUrl: './clothes.component.html'
+  templateUrl: './clothes.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 
 export class CustomAvatarClothesComponent {

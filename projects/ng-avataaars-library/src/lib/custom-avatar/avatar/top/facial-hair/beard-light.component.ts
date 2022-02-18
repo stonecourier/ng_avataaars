@@ -1,13 +1,14 @@
 /* eslint-disable @angular-eslint/component-selector */
 
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { randomId } from '../../../helper/randomid';
 import { FacialHairType } from '../../../options';
 import { CustomAvatarFacialHairBaseComponent } from './facial-hair-base.component';
 
 @Component({
   selector: '[kip-custom-avatar-facial-hair-beard-light]',
-  templateUrl: './beard-light.component.html'
+  templateUrl: './beard-light.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 
 export class CustomAvatarFacialHairBeardLightComponent extends CustomAvatarFacialHairBaseComponent {

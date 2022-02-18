@@ -1,11 +1,12 @@
 /* eslint-disable @angular-eslint/component-selector */
 
-import { Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { AwardType, ClotheColor, SkinColor } from '../../options';
 
 @Component({
   selector: '[kip-custom-avatar-award]',
-  templateUrl: './award.component.html'
+  templateUrl: './award.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 
 export class CustomAvatarAwardComponent {

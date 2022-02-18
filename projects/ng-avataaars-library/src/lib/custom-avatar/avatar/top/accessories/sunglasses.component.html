@@ -24,15 +24,15 @@
       <stop stop-color='#000000' stop-opacity='0.5' offset='70.5058195%' />
     </linearGradient>
   </defs>
-  <g id='Sunglasses' [attr.filter]="urlFix(filter1)" transform='translate(8.000000, 8.000000)'>
+  <g id='Sunglasses' [attr.filter]="filter1 | urlfix" transform='translate(8.000000, 8.000000)'>
     <g id='shades'>
       <use fill-opacity='0.700000048' fill='#000000' [attr.xlink:href]="'#' + path1" />
-      <use [attr.fill]="urlFix(linearGradient1)" style="mix-blend-mode: 'screen'"
+      <use [attr.fill]="linearGradient1 | urlfix" style="mix-blend-mode: 'screen'"
         [attr.xlink:href]="'#' + path1" />
     </g>
     <g id='shades'>
       <use fill-opacity='0.700000048' fill='#000000' [attr.xlink:href]="'#' + path2" />
-      <use [attr.fill]="urlFix(linearGradient2)" style="mix-blend-mode: 'screen'"
+      <use [attr.fill]="linearGradient2 | urlfix" style="mix-blend-mode: 'screen'"
         [attr.xlink:href]="'#' + path2" />
     </g>
     <g id='Glasses' [attr.fill]='color'>

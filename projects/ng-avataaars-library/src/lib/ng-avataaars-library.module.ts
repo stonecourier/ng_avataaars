@@ -178,6 +178,7 @@ import { CustomAvatarAwardIncorrectComponent } from './custom-avatar/avatar/awar
 import { CustomAvatarAwardThumbUpComponent } from './custom-avatar/avatar/award/thumb-up.component';
 import { CustomAvatarAwardTrophyAComponent } from './custom-avatar/avatar/award/trophy-a.component';
 import { CustomAvatarAwardTrophyBComponent } from './custom-avatar/avatar/award/trophy-b.component';
+import { UrlFixPipe, SkinColorPipe, ClotheColorPipe } from './custom-avatar/pipes';
 
 @NgModule({
   imports: [
@@ -345,7 +346,10 @@ import { CustomAvatarAwardTrophyBComponent } from './custom-avatar/avatar/award/
     CustomAvatarFacialHairBeardMajesticComponent,
     CustomAvatarFacialHairBeardMediumComponent,
     CustomAvatarFacialHairMoustacheFancyComponent,
-    CustomAvatarFacialHairMoustacheMagnumComponent
+    CustomAvatarFacialHairMoustacheMagnumComponent,
+    UrlFixPipe,
+    SkinColorPipe,
+    ClotheColorPipe
   ],
   exports: [CustomAvatarComponent, CustomAvatarBaseComponent]
 })

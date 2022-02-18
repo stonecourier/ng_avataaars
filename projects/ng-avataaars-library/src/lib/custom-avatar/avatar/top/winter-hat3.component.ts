@@ -1,13 +1,14 @@
 /* eslint-disable @angular-eslint/component-selector */
 
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { randomId } from '../../helper/randomid';
 import { TopType } from '../../options';
 import { CustomAvatarTopBaseComponent } from './top-base.component';
 
 @Component({
   selector: '[kip-custom-avatar-top-winter-hat3]',
-  templateUrl: './winter-hat3.component.html'
+  templateUrl: './winter-hat3.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 
 export class CustomAvatarTopWinterHat3Component extends CustomAvatarTopBaseComponent {

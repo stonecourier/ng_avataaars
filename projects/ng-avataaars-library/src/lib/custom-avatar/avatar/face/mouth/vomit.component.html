@@ -20,10 +20,10 @@
   <use id='Mouth' fill-opacity='0.699999988' fill='#000000' fill-rule='evenodd'
     transform='translate(54.000000, 21.499998) scale(1, -1) translate(-54.000000, -21.499998) '
     [attr.xlink:href]="'#' + path1" />
-  <rect id='Teeth' fill='#FFFFFF' fill-rule='evenodd' [attr.mask]="urlFix(mask1)" x='39' y='0' width='31'
+  <rect id='Teeth' fill='#FFFFFF' fill-rule='evenodd' [attr.mask]="mask1 | urlfix" x='39' y='0' width='31'
     height='16' rx='5' />
   <g id='Vomit-Stuff'>
     <use fill='#88C553' fill-rule='evenodd' [attr.xlink:href]="'#' + path2" />
-    <use fill='black' fill-opacity='1' [attr.filter]="urlFix(filter1)" [attr.xlink:href]="'#' + path2" />
+    <use fill='black' fill-opacity='1' [attr.filter]="filter1 | urlfix" [attr.xlink:href]="'#' + path2" />
   </g>
 </svg:g>

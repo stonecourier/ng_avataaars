@@ -20,16 +20,16 @@
       d='M106.486068,17.5714286 C106.486068,27.2737857 98.2388636,35.1428571 84.4886364,35.1428571 L81.7385909,35.1428571 C67.9912955,35.1428571 62.4912045,27.2708571 62.4912045,17.5714286 L62.4912045,17.5714286 C62.4912045,7.86614286 63.7753409,0 83.0227273,0 L85.9545455,0 C105.199,0 106.486068,7.86614286 106.486068,17.5714286 L106.486068,17.5714286 Z'
       [attr.id]="path2" />
   </defs>
-  <g id='Wayfarers' [attr.filter]="urlFix(filter1)" transform='translate(7.000000, 7.000000)'>
+  <g id='Wayfarers' [attr.filter]="filter1 | urlfix" transform='translate(7.000000, 7.000000)'>
     <g id='Shades' transform='translate(10.795455, 2.928571)' fill-rule='nonzero'>
       <g id='Shade'>
         <use fill-opacity='0.700000048' fill='#000000' fill-rule='evenodd' [attr.xlink:href]="'#' + path1" />
-        <use [attr.fill]="urlFix(linearGradient1)" fill-rule='evenodd' style="mix-blend-mode: 'screen'"
+        <use [attr.fill]="linearGradient1 | urlfix" fill-rule='evenodd' style="mix-blend-mode: 'screen'"
           [attr.xlink:href]="'#' + path1" />
       </g>
       <g id='Shade'>
         <use fill-opacity='0.700000048' fill='#000000' fill-rule='evenodd' [attr.xlink:href]="'#' + path2" />
-        <use [attr.fill]="urlFix(linearGradient1)" fill-rule='evenodd' style="mix-blend-mode: 'screen'"
+        <use [attr.fill]="linearGradient1 | urlfix" fill-rule='evenodd' style="mix-blend-mode: 'screen'"
           [attr.xlink:href]="'#' + path2" />
       </g>
     </g>

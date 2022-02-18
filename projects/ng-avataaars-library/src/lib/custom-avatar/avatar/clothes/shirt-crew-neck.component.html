@@ -8,7 +8,7 @@
     <use [attr.xlink:href]="'#' + path1" />
   </mask>
   <use id='Clothes' [attr.fill]="color" fill-rule='evenodd' [attr.xlink:href]="'#' + path1" />
-  <g id='Shadowy' opacity='0.599999964' stroke-width='1' fill-rule='evenodd' [attr.mask]="urlFix(mask1)"
+  <g id='Shadowy' opacity='0.599999964' stroke-width='1' fill-rule='evenodd' [attr.mask]="mask1 | urlfix"
      [attr.fill]="color2">
     <g transform='translate(92.000000, 4.000000)' id='Hola-👋🏼'>
       <ellipse cx='40.5' cy='27.8476251' rx='39.6351047' ry='26.9138272' />

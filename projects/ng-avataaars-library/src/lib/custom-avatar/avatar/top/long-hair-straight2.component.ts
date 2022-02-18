@@ -1,13 +1,14 @@
 /* eslint-disable @angular-eslint/component-selector */
 
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { randomId } from '../../helper/randomid';
 import { TopType } from '../../options';
 import { CustomAvatarTopBaseComponent } from './top-base.component';
 
 @Component({
   selector: '[kip-custom-avatar-top-long-hair-straight2]',
-  templateUrl: './long-hair-straight2.component.html'
+  templateUrl: './long-hair-straight2.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 
 export class CustomAvatarTopLongHairStraight2Component extends CustomAvatarTopBaseComponent {

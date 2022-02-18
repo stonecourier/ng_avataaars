@@ -1,11 +1,12 @@
 /* eslint-disable @angular-eslint/component-selector */
 
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { AwardType, Option } from '../../options';
 
 @Component({
   selector: '[kip-custom-avatar-award-birthday-c]',
-  templateUrl: './birthday-c.component.html'
+  templateUrl: './birthday-c.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 
 export class CustomAvatarAwardBirthdayCComponent implements Option<AwardType> {

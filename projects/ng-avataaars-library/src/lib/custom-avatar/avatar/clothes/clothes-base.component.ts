@@ -2,7 +2,6 @@
 
 import { Directive, Input } from '@angular/core';
 import { clotheColorTranslation } from '../../colors/clothe-color-translation';
-import { urlfix } from '../../helper/urlfix';
 import { ClotheColor, ClotheType, GraphicType, Option } from '../../options';
 
 @Directive()
@@ -27,9 +26,5 @@ export class CustomAvatarClothesBaseComponent implements Option<ClotheType> {
   }
 
   @Input() graphicType: GraphicType = GraphicType.Bat;
-
-  urlFix(path: string): string {
-    return urlfix(path);
-  }
 
 }

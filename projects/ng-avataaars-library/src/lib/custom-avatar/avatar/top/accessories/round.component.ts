@@ -1,13 +1,14 @@
 /* eslint-disable @angular-eslint/component-selector */
 
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { randomId } from '../../../helper/randomid';
 import { AccessoriesType } from '../../../options';
 import { CustomAvatarAccessoriesBaseComponent } from './accessories-base.component';
 
 @Component({
   selector: '[kip-custom-avatar-accessories-round]',
-  templateUrl: './round.component.html'
+  templateUrl: './round.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 
 export class CustomAvatarAccessoriesRoundComponent extends CustomAvatarAccessoriesBaseComponent {

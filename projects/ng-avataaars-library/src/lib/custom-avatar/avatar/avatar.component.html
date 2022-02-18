@@ -13,21 +13,21 @@
   <g id='Avataaar' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd' [attr.transform]="transform">
     <g transform='translate(-825.000000, -1100.000000)' id='Avataaar/Circle'>
       <g transform='translate(825.000000, 1100.000000)'>
-        <g *ngIf="avatarStyle==='Circle'" id='Circle' stroke-width='1' fill-rule='evenodd'
+        <g *ngIf="avatarStyleIsCircle" id='Circle' stroke-width='1' fill-rule='evenodd'
           transform='translate(12.000000, 40.000000)'>
           <mask [attr.id]="mask2" fill='white'>
             <use [attr.xlink:href]="'#' + path1" />
           </mask>
           <use id='Circle-Background' fill='#E6E6E6' [attr.xlink:href]="'#' + path1" />
-          <g id='Color/Palette/Blue-01' [attr.mask]="urlFix(mask2)" [attr.fill]='backColor'>
+          <g id='Color/Palette/Blue-01' [attr.mask]="mask2 | urlfix" [attr.fill]='backColor'>
             <rect id='🖍Color' x='0' y='0' width='240' height='240' />
           </g>
         </g>
-        <mask *ngIf="avatarStyle==='Circle'" [attr.id]="mask3" fill='white'>
+        <mask *ngIf="avatarStyleIsCircle" [attr.id]="mask3" fill='white'>
           <use [attr.xlink:href]="'#' + path3" />
         </mask>
         <g id='Mask' />
-        <g id='Avataaar' stroke-width='1' fill-rule='evenodd' [attr.mask]="avatarStyle==='Circle'?urlFix(mask3):''">
+        <g id='Avataaar' stroke-width='1' fill-rule='evenodd' [attr.mask]="avatarStyleIsCircle?(mask3 | urlfix):''">
           <g id='Body' transform='translate(32.000000, 36.000000)'>
             <mask id='mask-6' fill='white'>
               <use [attr.xlink:href]="'#' + path5" />
@@ -40,7 +40,8 @@
           <g *ngIf="!noFeatures" kip-custom-avatar-clothes [clotheType]="clotheType" [clotheColor]="clotheColor"
             [graphicType]="graphicType" [clotheColor2]="clotheColor2" [clotheColor3]="clotheColor3" />
           <g *ngIf="!noFeatures" kip-custom-avatar-face [mouthType]="mouthType" [eyeType]="eyeType"
-            [eyebrowType]="eyebrowType" [eyebrowColor]="eyebrowColor" [noseType]="noseType" [earringType]="earringType" [earringColor]="earringColor" />
+            [eyebrowType]="eyebrowType" [eyebrowColor]="eyebrowColor" [noseType]="noseType" [earringType]="earringType"
+            [earringColor]="earringColor" />
           <g *ngIf="!noFeatures" kip-custom-avatar-top [topType]="topType" [accessoriesType]="accessoriesType"
             [facialHairType]="facialHairType" [hairColor]="hairColor" [facialHairColor]="facialHairColor"
             [hatColor]="hatColor" [accessoriesColor]="accessoriesColor" />

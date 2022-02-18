@@ -2,7 +2,6 @@
 
 import { Directive, Input } from '@angular/core';
 import { accessoriesColorTranslation } from '../../../colors/accessories-color-translation';
-import { urlfix } from '../../../helper/urlfix';
 import { AccessoriesColor, AccessoriesType, Option } from '../../../options';
 
 @Directive()
@@ -14,9 +13,5 @@ export class CustomAvatarAccessoriesBaseComponent implements Option<AccessoriesT
 
   get color(): string {
     return accessoriesColorTranslation(this.accessoriesColor);
-  }
-
-  urlFix(path: string): string {
-    return urlfix(path);
   }
 }

@@ -1,11 +1,12 @@
 /* eslint-disable @angular-eslint/component-selector */
 
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { Option, PetType } from '../../options';
 
 @Component({
   selector: '[kip-custom-avatar-pet-rat]',
-  templateUrl: './rat.component.html'
+  templateUrl: './rat.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 
 export class CustomAvatarPetRatComponent implements Option<PetType> {

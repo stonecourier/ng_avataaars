@@ -1,13 +1,13 @@
 /* eslint-disable @angular-eslint/component-selector */
 
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { randomId } from '../../../helper/randomid';
-import { urlfix } from '../../../helper/urlfix';
 import { EyeType, Option } from '../../../options';
 
 @Component({
   selector: '[kip-custom-avatar-eyes-squint]',
-  templateUrl: './squint.component.html'
+  templateUrl: './squint.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 
 export class CustomAvatarEyesSquintComponent implements Option<EyeType> {
@@ -17,8 +17,4 @@ export class CustomAvatarEyesSquintComponent implements Option<EyeType> {
   readonly mask2: string = randomId('kip-mask');
   readonly path1: string = randomId('kip-path');
   readonly path2: string = randomId('kip-path');
-
-  urlFix(path: string): string {
-    return urlfix(path);
-  }
 }

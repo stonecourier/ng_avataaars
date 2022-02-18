@@ -1,13 +1,14 @@
 /* eslint-disable @angular-eslint/component-selector */
 
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { randomId } from '../../../helper/randomid';
 import { GraphicType } from '../../../options';
 import { CustomAvatarClothesGraphicsBaseComponent } from './graphics-base.component';
 
 @Component({
   selector: '[kip-custom-avatar-clothes-graphics-hola]',
-  templateUrl: './hola.component.html'
+  templateUrl: './hola.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 
 export class CustomAvatarClothesGraphicsHolaComponent extends CustomAvatarClothesGraphicsBaseComponent {

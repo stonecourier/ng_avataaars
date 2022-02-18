@@ -2,7 +2,6 @@
 
 import { Directive, Input } from '@angular/core';
 import { earringColorTranslation } from '../../../colors/ear-ring-color-translation';
-import { urlfix } from '../../../helper/urlfix';
 import { EarringColor, EarringType, Option } from '../../../options';
 
 @Directive()
@@ -14,9 +13,5 @@ export class CustomAvatarEarringBaseComponent implements Option<EarringType> {
 
   get color(): string {
     return earringColorTranslation(this.earringColor);
-  }
-
-  urlFix(path: string): string {
-    return urlfix(path);
   }
 }

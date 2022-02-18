@@ -12,7 +12,7 @@
     <use [attr.xlink:href]="'#' + path1" />
   </mask>
   <g id='Mask' />
-  <g id='Top/Short-Hair/Shaggy-Mullet' [attr.mask]="urlFix(mask1)">
+  <g id='Top/Short-Hair/Shaggy-Mullet' [attr.mask]="mask1 | urlfix">
     <g transform='translate(-1.000000, 0.000000)'>
       <mask [attr.id]="mask2" fill='white'>
         <use [attr.xlink:href]="'#' + path2" />
