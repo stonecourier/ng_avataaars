@@ -33,7 +33,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { NgAvataaarsModule } from 'ng-avataaars';
+import { NgAvataaarsLibraryModule } from 'ng-avataaars-library';
 
 @NgModule({
   declarations: [
@@ -41,7 +41,7 @@ import { NgAvataaarsModule } from 'ng-avataaars';
   ],
   imports: [
     BrowserModule,
-    NgAvataaarsModule
+    NgAvataaarsLibraryModule
   ],
   providers: [],
   bootstrap: [AppComponent]
