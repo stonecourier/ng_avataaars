@@ -7,8 +7,6 @@
     "build": "ng build",
     "buildlib": "ng build ng-avataaars-library",
     "test": "ng test",
-    "eslint": "eslint projects/**/*.ts",
-    "eslintfix": "eslint projects/**/*.ts --fix",
     "lint": "ng lint",
     "lintfix": "ng lint --fix",
     "e2e": "ng e2e"

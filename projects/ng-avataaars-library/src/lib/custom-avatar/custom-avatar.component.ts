@@ -853,10 +853,9 @@ export class CustomAvatarComponent implements OnInit {
     return enumObject[value.value as keyof T];
   }
 
-  private getKeyValuesWithExclusions<T>(enumObject: T, excludedValues: readonly string[]): KeyValue<T>[] {
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-    return Object.keys(enumObject).filter(s => !excludedValues.includes(s))
-      .map(key => ({ value: key, key: key as any, label: ((enumObject as unknown) as { [prop: string]: string })[key] }));
+  private getKeyValuesWithExclusions<T>(enumObject: any, excludedValues: readonly T[]): KeyValue<T>[] {
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-argument, @typescript-eslint/no-unsafe-assignment
+    return Object.keys(enumObject).filter(s => !excludedValues.includes(s as any)).map(key => ({ value: key, key: key as any, label: ((enumObject as unknown) as { [prop: string]: string })[key] }));
   }
 
   private refreshAvatar() {
