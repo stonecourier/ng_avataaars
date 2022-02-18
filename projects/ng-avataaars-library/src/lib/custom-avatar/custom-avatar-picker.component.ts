@@ -1,5 +1,6 @@
 import { AfterContentInit, ChangeDetectionStrategy, Component, ContentChildren, EventEmitter, Input, Output, TemplateRef } from '@angular/core';
 import { PickerTemplateDirective } from './custom-avatar-picker-template.directive';
+import { KeyValue } from './options';
 
 @Component({
   selector: 'kip-custom-avatar-picker',
@@ -8,19 +9,19 @@ import { PickerTemplateDirective } from './custom-avatar-picker-template.directi
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 
-export class CustomAvatarPickerComponent implements AfterContentInit {
+export class CustomAvatarPickerComponent<T> implements AfterContentInit {
 
   @Input() title = '';
   @Input() currentOption = '';
-  @Input() options: { value: string, label: string }[] = [];
+  @Input() options: KeyValue<T>[] = [];
   @Input() backgroundColor = '';
-  @Output() readonly optionPicked = new EventEmitter<string>();
+  @Output() readonly optionPicked = new EventEmitter<T>();
 
   itemTemplate: TemplateRef<any> | null = null;
 
   @ContentChildren(PickerTemplateDirective) templates: PickerTemplateDirective[] = [];
 
-  pick(value: string): void {
+  pick(value: T): void {
     this.optionPicked.emit(value);
   }
 

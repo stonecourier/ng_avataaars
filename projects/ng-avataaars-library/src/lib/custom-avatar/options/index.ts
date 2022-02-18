@@ -22,3 +22,4 @@ export { AvatarExclusion } from './avatar-exclusion';
 export { EarringColor } from './ear-ring-color';
 export { EarringType } from './ear-ring-type';
 export { tabIndexes } from './tab-indexes';
+export { KeyValue } from './key-value';

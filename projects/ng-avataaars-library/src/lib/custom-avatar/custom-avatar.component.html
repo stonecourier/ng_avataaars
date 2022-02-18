@@ -83,7 +83,7 @@
               <div class="tab-content col-12" [ngSwitch]="tabIndex">
                 <div *ngSwitchCase="tabIndexes.Background">
                   <kip-custom-avatar-picker *ngIf="!noColorBackground" [title]="avatarText.background"
-                    [options]="avatarStyles" [currentOption]="avatarStyle" (optionPicked)="avatarStyle=$any($event)">
+                    [options]="avatarStyles" [currentOption]="avatarStyle" (optionPicked)="avatarStyle=$event">
                     <ng-template let-item kipPickerTemplate="item">
                       <kip-custom-avatar-base [widthFull]="true" transform="scale(0.4) translate(-5,-33)"
                         viewBox="0 0 100 100" [noFeatures]="true" [avatarStyle]="item.value"
@@ -101,7 +101,7 @@
                 </div>
                 <div *ngSwitchCase="tabIndexes.Eyebrows" class="kip-avatar-pick-svg">
                   <kip-custom-avatar-picker [title]="avatarText.eyebrows" [options]="eyebrowTypes"
-                    [currentOption]="eyebrowType" (optionPicked)="eyebrowType =$any($event)"
+                    [currentOption]="eyebrowType" (optionPicked)="eyebrowType = $event"
                     [backgroundColor]="skinColor | skinColor">
                     <ng-template let-item kipPickerTemplate="item">
                       <svg viewBox="0 0 85 85">
@@ -116,7 +116,7 @@
                 </div>
                 <div *ngSwitchCase="tabIndexes.Accessory" class="kip-avatar-pick-svg">
                   <kip-custom-avatar-picker [title]="avatarText.accessories" [options]="accessoriesTypes"
-                    [currentOption]="accessoriesType" (optionPicked)="accessoriesType =$any($event)"
+                    [currentOption]="accessoriesType" (optionPicked)="accessoriesType = $event"
                     [backgroundColor]="skinColor | skinColor">
                     <ng-template let-item kipPickerTemplate="item">
                       <svg viewBox="0 0 200 200">
@@ -131,7 +131,7 @@
                 </div>
                 <div *ngSwitchCase="tabIndexes.Earring" class="kip-avatar-pick-svg">
                   <kip-custom-avatar-picker [title]="avatarText.earrings" [options]="earringTypes"
-                    [currentOption]="earringType" (optionPicked)="earringType =$any($event)"
+                    [currentOption]="earringType" (optionPicked)="earringType = $event"
                     [backgroundColor]="skinColor | skinColor">
                     <ng-template let-item kipPickerTemplate="item">
                       <svg viewBox="0 0 200 200">
@@ -146,7 +146,7 @@
                 </div>
                 <div *ngSwitchCase="tabIndexes.FacialHair" class="kip-avatar-pick-svg">
                   <kip-custom-avatar-picker [title]="avatarText.facialHairs" [options]="facialHairTypes"
-                    [currentOption]="facialHairType" (optionPicked)="facialHairType =$any($event)"
+                    [currentOption]="facialHairType" (optionPicked)="facialHairType = $event"
                     [backgroundColor]="skinColor | skinColor">
                     <ng-template let-item kipPickerTemplate="item">
                       <svg viewBox="0 0 200 200">
@@ -161,7 +161,7 @@
                 </div>
                 <div *ngSwitchCase="tabIndexes.Nose" class="kip-avatar-pick-svg">
                   <kip-custom-avatar-picker [title]="avatarText.noses" [options]="noseTypes" [currentOption]="noseType"
-                    (optionPicked)="noseType =$any($event)" [backgroundColor]="skinColor | skinColor">
+                    (optionPicked)="noseType = $event" [backgroundColor]="skinColor | skinColor">
                     <ng-template let-item kipPickerTemplate="item">
                       <svg viewBox="0 0 100 100">
                         <g transform="translate(-5,0)" kip-custom-avatar-nose [noseType]="item.value" />
@@ -171,7 +171,7 @@
                 </div>
                 <div *ngSwitchCase="tabIndexes.Mouth" class="kip-avatar-pick-svg">
                   <kip-custom-avatar-picker [title]="avatarText.mouths" [options]="mouthTypes"
-                    [currentOption]="mouthType" (optionPicked)="mouthType =$any($event)"
+                    [currentOption]="mouthType" (optionPicked)="mouthType = $event"
                     [backgroundColor]="skinColor | skinColor">
                     <ng-template let-item kipPickerTemplate="item">
                       <svg viewBox="0 0 100 100">
@@ -182,7 +182,7 @@
                 </div>
                 <div *ngSwitchCase="tabIndexes.Eyes" class="kip-avatar-pick-svg">
                   <kip-custom-avatar-picker [title]="avatarText.eyes" [options]="eyeTypes" [currentOption]="eyeType"
-                    (optionPicked)="eyeType =$any($event)" [backgroundColor]="skinColor | skinColor">
+                    (optionPicked)="eyeType = $event" [backgroundColor]="skinColor | skinColor">
                     <ng-template let-item kipPickerTemplate="item">
                       <svg viewBox="0 0 100 100">
                         <g transform="translate(-5,20)" kip-custom-avatar-eyes [eyeType]="item.value" />
@@ -192,7 +192,7 @@
                 </div>
                 <div *ngSwitchCase="tabIndexes.Pet" class="kip-avatar-pick-svg">
                   <kip-custom-avatar-picker [title]="avatarText.pets" [options]="petTypes" [currentOption]="petType"
-                    (optionPicked)="petType =$any($event)">
+                    (optionPicked)="petType = $event">
                     <ng-template let-item kipPickerTemplate="item">
                       <svg viewBox="0 0 100 100">
                         <g transform="scale(0.18) translate(20,20)" kip-custom-avatar-pet [petType]="item.value" />
@@ -202,7 +202,7 @@
                 </div>
                 <div *ngSwitchCase="tabIndexes.Award" class="kip-avatar-pick-svg">
                   <kip-custom-avatar-picker [title]="avatarText.awards" [options]="awardTypes"
-                    [currentOption]="awardType" (optionPicked)="awardType =$any($event)">
+                    [currentOption]="awardType" (optionPicked)="awardType = $event">
                     <ng-template let-item kipPickerTemplate="item">
                       <svg viewBox="0 0 100 100">
                         <g transform="scale(0.18) translate(20,20)" kip-custom-avatar-award [awardType]="item.value"
@@ -213,7 +213,7 @@
                 </div>
                 <div *ngSwitchCase="tabIndexes.Top" class="kip-avatar-pick-svg">
                   <kip-custom-avatar-picker [title]="avatarText.hatsAndHairStyles" [options]="topTypes"
-                    [currentOption]="topType" (optionPicked)="topType =$any($event)">
+                    [currentOption]="topType" (optionPicked)="topType = $event">
                     <ng-template let-item kipPickerTemplate="item">
                       <svg viewBox="0 0 200 200">
                         <g transform="translate(-10,10) scale(0.9)" kip-custom-avatar-top [hairColor]="hairColor"
@@ -230,7 +230,7 @@
                 </div>
                 <div *ngSwitchCase="tabIndexes.Clothes" class="kip-avatar-pick-svg">
                   <kip-custom-avatar-picker [title]="avatarText.clothes" [options]="clotheTypes"
-                    [currentOption]="clotheType" (optionPicked)="clotheType =$any($event)">
+                    [currentOption]="clotheType" (optionPicked)="clotheType = $event">
                     <ng-template let-item kipPickerTemplate="item">
                       <svg viewBox="0 0 200 200">
                         <g transform="translate(-32,-130)" kip-custom-avatar-clothes [clotheType]="item.value"
@@ -249,7 +249,7 @@
                     [colors]="clotheColors3" [currentColor]="clotheColor3" (colorPicked)="clotheColor3 = $event">
                   </kip-custom-avatar-color-picker>
                   <kip-custom-avatar-picker *ngIf="clotheTypeIsGraphicShirt" [title]="avatarText.graphics"
-                    [options]="graphicTypes" [currentOption]="graphicType" (optionPicked)="graphicType =$any($event)"
+                    [options]="graphicTypes" [currentOption]="graphicType" (optionPicked)="graphicType = $event"
                     [backgroundColor]="clotheColor | clotheColor">
                     <ng-template let-item kipPickerTemplate="item">
                       <svg viewBox="0 0 200 200">

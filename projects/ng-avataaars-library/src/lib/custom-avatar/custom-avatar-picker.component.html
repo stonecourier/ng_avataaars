@@ -2,8 +2,7 @@
 <div class="row">
   <div *ngFor="let optionPicked of options" class="col-4 col-md-2 py-1 px-1">
     <div [ngClass]="{'kip-avatar-pick':true,'kip-avatar-selected':optionPicked.value === currentOption}"
-      (click)="pick(optionPicked.value)" [title]="optionPicked.value"
-      [style.background-color]="backgroundColor">
+      (click)="pick(optionPicked.key)" [title]="optionPicked.value" [style.background-color]="backgroundColor">
       <ng-container *ngTemplateOutlet="itemTemplate; context: {$implicit: optionPicked}"></ng-container>
     </div>
   </div>

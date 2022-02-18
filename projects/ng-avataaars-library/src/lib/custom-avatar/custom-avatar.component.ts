@@ -15,13 +15,8 @@ import {
   AwardType, BackgroundColor, ClotheColor, ClotheType, EarringColor, EarringType, EyebrowType,
   EyeType, FacialHairType, GraphicType, HairColor, HatColor, MouthType,
   NoseType,
-  PetType, SkinColor, TopType
+  PetType, SkinColor, TopType, KeyValue
 } from './options';
-
-export interface KeyValue {
-  value: string;
-  label: string;
-}
 
 export interface SaveAvatar {
   avatarSelection: AvatarSelection;
@@ -183,7 +178,7 @@ export class CustomAvatarComponent implements OnInit {
     return this._currentAvatar.avatarStyle;
   }
 
-  get avatarStyles(): KeyValue[] {
+  get avatarStyles() {
     return this.getKeyValuesWithExclusions(AvatarStyle, this.avatarExclusion?.avatarStyles ?? []);
   }
 
@@ -202,7 +197,7 @@ export class CustomAvatarComponent implements OnInit {
     return this._currentAvatar.topType;
   }
 
-  get topTypes(): KeyValue[] {
+  get topTypes() {
     return this.getKeyValuesWithExclusions(TopType, this.avatarExclusion?.topTypes ?? []);
   }
 
@@ -221,7 +216,7 @@ export class CustomAvatarComponent implements OnInit {
     return this._currentAvatar.accessoriesType;
   }
 
-  get accessoriesTypes(): KeyValue[] {
+  get accessoriesTypes() {
     return this.getKeyValuesWithExclusions(AccessoriesType, this.avatarExclusion?.accessoriesTypes ?? []);
   }
 
@@ -255,7 +250,7 @@ export class CustomAvatarComponent implements OnInit {
     return this._currentAvatar.earringType;
   }
 
-  get earringTypes(): KeyValue[] {
+  get earringTypes() {
     return this.getKeyValuesWithExclusions(EarringType, this.avatarExclusion?.earringTypes ?? []);
   }
 
@@ -338,7 +333,7 @@ export class CustomAvatarComponent implements OnInit {
     return this._currentAvatar.facialHairType;
   }
 
-  get facialHairTypes(): KeyValue[] {
+  get facialHairTypes() {
     return this.getKeyValuesWithExclusions(FacialHairType, this.avatarExclusion?.facialHairTypes ?? []);
   }
 
@@ -372,7 +367,7 @@ export class CustomAvatarComponent implements OnInit {
     return this._currentAvatar.clotheType === ClotheType.GraphicShirt;
   }
 
-  get clotheTypes(): KeyValue[] {
+  get clotheTypes() {
     return this.getKeyValuesWithExclusions(ClotheType, this.avatarExclusion?.clotheTypes ?? []);
   }
 
@@ -387,7 +382,7 @@ export class CustomAvatarComponent implements OnInit {
     return this._currentAvatar.graphicType;
   }
 
-  get graphicTypes(): KeyValue[] {
+  get graphicTypes() {
     return this.getKeyValuesWithExclusions(GraphicType, this.avatarExclusion?.graphicTypes ?? []);
   }
 
@@ -458,7 +453,7 @@ export class CustomAvatarComponent implements OnInit {
     return this._currentAvatar.eyeType;
   }
 
-  get eyeTypes(): KeyValue[] {
+  get eyeTypes() {
     return this.getKeyValuesWithExclusions(EyeType, this.avatarExclusion?.eyeTypes ?? []);
   }
 
@@ -477,7 +472,7 @@ export class CustomAvatarComponent implements OnInit {
     return this._currentAvatar.noseType;
   }
 
-  get noseTypes(): KeyValue[] {
+  get noseTypes() {
     return this.getKeyValuesWithExclusions(NoseType, this.avatarExclusion?.noseTypes ?? []);
   }
 
@@ -496,7 +491,7 @@ export class CustomAvatarComponent implements OnInit {
     return this._currentAvatar.eyebrowType;
   }
 
-  get eyebrowTypes(): KeyValue[] {
+  get eyebrowTypes() {
     return this.getKeyValuesWithExclusions(EyebrowType, this.avatarExclusion?.eyebrowTypes ?? []);
   }
 
@@ -530,7 +525,7 @@ export class CustomAvatarComponent implements OnInit {
     return this._currentAvatar.mouthType;
   }
 
-  get mouthTypes(): KeyValue[] {
+  get mouthTypes() {
     return this.getKeyValuesWithExclusions(MouthType, this.avatarExclusion?.mouthTypes ?? []);
   }
 
@@ -549,7 +544,7 @@ export class CustomAvatarComponent implements OnInit {
     return this._currentAvatar.petType;
   }
 
-  get petTypes(): KeyValue[] {
+  get petTypes() {
     return this.getKeyValuesWithExclusions(PetType, this.avatarExclusion?.petTypes ?? []);
   }
 
@@ -568,7 +563,7 @@ export class CustomAvatarComponent implements OnInit {
     return this._currentAvatar.awardType;
   }
 
-  get awardTypes(): KeyValue[] {
+  get awardTypes() {
     return this.getKeyValuesWithExclusions(AwardType, this.avatarExclusion?.awardTypes ?? []);
   }
 
@@ -858,9 +853,10 @@ export class CustomAvatarComponent implements OnInit {
     return enumObject[value.value as keyof T];
   }
 
-  private getKeyValuesWithExclusions<T>(enumObject: T, excludedValues: readonly string[]): KeyValue[] {
+  private getKeyValuesWithExclusions<T>(enumObject: T, excludedValues: readonly string[]): KeyValue<T>[] {
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
     return Object.keys(enumObject).filter(s => !excludedValues.includes(s))
-      .map(key => ({ value: key, label: ((enumObject as unknown) as { [prop: string]: string })[key] }));
+      .map(key => ({ value: key, key: key as any, label: ((enumObject as unknown) as { [prop: string]: string })[key] }));
   }
 
   private refreshAvatar() {
