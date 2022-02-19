@@ -21,7 +21,7 @@ Free for personal and commercial use.
 Navigate to the level of your package.json and type
 
 ```typescript
- npm install ng-avataaars --save
+ npm install ng-avataaars-library --save
 ```
 
 Import the module into your app.module.ts
