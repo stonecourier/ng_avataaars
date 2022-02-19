@@ -351,6 +351,11 @@ import { UrlFixPipe, SkinColorPipe, ClotheColorPipe } from './custom-avatar/pipe
     SkinColorPipe,
     ClotheColorPipe
   ],
-  exports: [CustomAvatarComponent, CustomAvatarBaseComponent]
+  exports: [
+    CustomAvatarComponent,
+    CustomAvatarBaseComponent,
+    UrlFixPipe,
+    SkinColorPipe,
+    ClotheColorPipe]
 })
 export class NgAvataaarsLibraryModule { }
