@@ -60,7 +60,8 @@
               "projects/ng-avataaars-tester/src/assets"
             ],
             "styles": [
-              "projects/ng-avataaars-tester/src/styles.css"
+              "projects/ng-avataaars-tester/src/styles.css",
+              "../node_modules/bootstrap/dist/css/bootstrap.css"
             ],
             "scripts": [],
             "aot": false,

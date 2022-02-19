@@ -10,7 +10,7 @@ Features
   * Can be localised into other languages
   * Unwanted options can be turned of
   * Can wire up your own services to save/load avatar. This example uses local storage.
-  * Uses bootstrap for styling.
+   * Uses bootstrap for styling. So you will need to add bootstrap to your css files.
 
 Angular component ported from the [React Component](https://github.com/fangpenlin/avataaars) developed by [Fang-Pen Lin](https://twitter.com/fangpenlin), based on the Sketch library [Avataaars](https://avataaars.com/) designed by [Pablo Stanley](https://twitter.com/pablostanley).
 
