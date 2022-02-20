@@ -50,7 +50,7 @@ export class AppModule { }
 You can then use in one of your component html pages.
 
 ```
-<kip-custom-avatar (avatarSaved)="onAvatarSaved($event)" [avatarSelection]="avatarSelection"></<kip-custom-avatar>
+<kip-custom-avatar (avatarSaved)="onAvatarSaved($event)" [avatarSelection]="avatarSelection"></kip-custom-avatar>
 ```
 
 Options that can be passed in
