@@ -314,9 +314,10 @@
       }
     }
   },
-  "defaultProject": "ng-avataars-lib",
   "cli": {
     "analytics": false,
-    "defaultCollection": "@angular-eslint/schematics"
+    "schematicCollections": [
+      "@angular-eslint/schematics"
+    ]
   }
 }

@@ -269,14 +269,14 @@
   <div class="kip-footer fixed-bottom">
     <div class="d-flex flex-row align-items-center justify-content-between mx-auto py-2 px-3">
       <div class="flex">
-        <button *ngIf="!noSave" type="button" class="btn btn-primary mr-2" (click)="saveAvatar()"
+        <button *ngIf="!noSave" type="button" class="btn btn-primary me-2" (click)="saveAvatar()"
           [disabled]='saveAvatarEnabled?null:true'>
           {{ avatarText.save }}
         </button>
-        <button *ngIf="!noRandom" type="button" class="btn btn-secondary mr-2" (click)="randomAvatar()">
+        <button *ngIf="!noRandom" type="button" class="btn btn-secondary me-2" (click)="randomAvatar()">
           {{ avatarText.random }}
         </button>
-        <button *ngIf="!noSvgOutput" type="button" class="btn btn-secondary mr-2" (click)="selectSvg()">
+        <button *ngIf="!noSvgOutput" type="button" class="btn btn-secondary me-2" (click)="selectSvg()">
           {{ avatarText.svg }}
         </button>
         <button *ngIf="!noSave" type="button" class="btn btn-secondary" (click)="revert()"
