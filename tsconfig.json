@@ -15,7 +15,7 @@
     "strictFunctionTypes": true,
     "experimentalDecorators": true,
     "importHelpers": true,
-    "target": "es2020",
+    "target": "ES2022",
     "typeRoots": [
       "node_modules/@types"
     ],
@@ -42,7 +42,8 @@
       "ng-avataaars-library/*": [
         "dist/ng-avataaars-library/*"
       ]
-    }
+    },
+    "useDefineForClassFields": false
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,

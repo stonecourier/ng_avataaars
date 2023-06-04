@@ -842,7 +842,7 @@ export class CustomAvatarComponent implements OnInit {
     return true;
   }
 
-  private randomEnumValue<T>(object: T): T[keyof T] {
+  private randomEnumValue<T extends object>(object: T): T[keyof T] {
     const enumValues = (Object.values(object) as unknown) as T[keyof T][];
     return enumValues[Math.floor(Math.random() * enumValues.length)];
   }

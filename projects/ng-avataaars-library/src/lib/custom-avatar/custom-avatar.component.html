@@ -11,71 +11,58 @@
             [awardType]="awardType" [hatColor]="hatColor" [accessoriesType]="accessoriesType"
             [accessoriesColor]="accessoriesColor" [clotheColor2]="clotheColor2" [clotheColor3]="clotheColor3"
             [noPet]="noPet" [noAward]="noAward" [noseType]="noseType" [earringType]="earringType"
-            [earringColor]="earringColor">
-          </kip-custom-avatar-base>
+            [earringColor]="earringColor" />
           <textarea [id]="svgId" style="display:none">{{ svg }}</textarea>
         </div>
         <div class="col-sm-8 p-2">
           <ul class="nav nav-tabs">
             <li class="nav-item">
               <kip-custom-avatar-icon-background [index]="tabIndexes.Background" [currentIndex]="tabIndex"
-                (selectTab)="tabIndex = $event">
-              </kip-custom-avatar-icon-background>
+                (selectTab)="tabIndex = $event" />
             </li>
             <li class="nav-item">
               <kip-custom-avatar-icon-top [index]="tabIndexes.Top" [currentIndex]="tabIndex"
-                (selectTab)="tabIndex = $event">
-              </kip-custom-avatar-icon-top>
+                (selectTab)="tabIndex = $event" />
             </li>
             <li class="nav-item">
               <kip-custom-avatar-icon-eye [index]="tabIndexes.Eyes" [currentIndex]="tabIndex"
-                (selectTab)="tabIndex = $event">
-              </kip-custom-avatar-icon-eye>
+                (selectTab)="tabIndex = $event" />
             </li>
             <li class="nav-item">
               <kip-custom-avatar-icon-eye-brow [index]="tabIndexes.Eyebrows" [currentIndex]="tabIndex"
-                (selectTab)="tabIndex = $event">
-              </kip-custom-avatar-icon-eye-brow>
+                (selectTab)="tabIndex = $event" />
             </li>
             <li class="nav-item">
               <kip-custom-avatar-icon-accessories [index]="tabIndexes.Accessory" [currentIndex]="tabIndex"
-                (selectTab)="tabIndex = $event">
-              </kip-custom-avatar-icon-accessories>
+                (selectTab)="tabIndex = $event" />
             </li>
             <li class="nav-item" *ngIf="!noEarring">
               <kip-custom-avatar-icon-ear-ring [index]="tabIndexes.Earring" [currentIndex]="tabIndex"
-                (selectTab)="tabIndex = $event">
-              </kip-custom-avatar-icon-ear-ring>
+                (selectTab)="tabIndex = $event" />
             </li>
             <li class="nav-item" *ngIf="!noNose">
               <kip-custom-avatar-icon-nose [index]="tabIndexes.Nose" [currentIndex]="tabIndex"
-                (selectTab)="tabIndex = $event">
-              </kip-custom-avatar-icon-nose>
+                (selectTab)="tabIndex = $event" />
             </li>
             <li class="nav-item">
               <kip-custom-avatar-icon-mouth [index]="tabIndexes.Mouth" [currentIndex]="tabIndex"
-                (selectTab)="tabIndex = $event">
-              </kip-custom-avatar-icon-mouth>
+                (selectTab)="tabIndex = $event" />
             </li>
             <li class="nav-item" *ngIf="!noFacialHair">
               <kip-custom-avatar-icon-facial-hair [index]="tabIndexes.FacialHair" [currentIndex]="tabIndex"
-                (selectTab)="tabIndex = $event">
-              </kip-custom-avatar-icon-facial-hair>
+                (selectTab)="tabIndex = $event" />
             </li>
             <li class="nav-item">
               <kip-custom-avatar-icon-clothes [index]="tabIndexes.Clothes" [currentIndex]="tabIndex"
-                (selectTab)="tabIndex = $event">
-              </kip-custom-avatar-icon-clothes>
+                (selectTab)="tabIndex = $event" />
             </li>
             <li class="nav-item" *ngIf="!noPet">
               <kip-custom-avatar-icon-pet [index]="tabIndexes.Pet" [currentIndex]="tabIndex"
-                (selectTab)="tabIndex = $event">
-              </kip-custom-avatar-icon-pet>
+                (selectTab)="tabIndex = $event" />
             </li>
             <li class="nav-item" *ngIf="!noAward">
               <kip-custom-avatar-icon-award [index]="tabIndexes.Award" [currentIndex]="tabIndex"
-                (selectTab)="tabIndex = $event">
-              </kip-custom-avatar-icon-award>
+                (selectTab)="tabIndex = $event" />
             </li>
           </ul>
           <div class="card-body">
@@ -87,17 +74,14 @@
                     <ng-template let-item kipPickerTemplate="item">
                       <kip-custom-avatar-base [widthFull]="true" transform="scale(0.4) translate(-5,-33)"
                         viewBox="0 0 100 100" [noFeatures]="true" [avatarStyle]="item.value"
-                        [backgroundColor]="backgroundColor" [skinColor]="skinColor">
-                      </kip-custom-avatar-base>
+                        [backgroundColor]="backgroundColor" [skinColor]="skinColor" />
                     </ng-template>
                   </kip-custom-avatar-picker>
                   <kip-custom-avatar-color-picker *ngIf="!noColorBackground" [title]="avatarText.backgroundColor"
                     [colors]="backgroundColors" [currentColor]="backgroundColor"
-                    (colorPicked)="backgroundColor = $event">
-                  </kip-custom-avatar-color-picker>
+                    (colorPicked)="backgroundColor = $event" />
                   <kip-custom-avatar-color-picker [title]="avatarText.skinColors" [colors]="skinColors"
-                    [currentColor]="skinColor" (colorPicked)="skinColor = $event">
-                  </kip-custom-avatar-color-picker>
+                    [currentColor]="skinColor" (colorPicked)="skinColor = $event" />
                 </div>
                 <div *ngSwitchCase="tabIndexes.Eyebrows" class="kip-avatar-pick-svg">
                   <kip-custom-avatar-picker [title]="avatarText.eyebrows" [options]="eyebrowTypes"
@@ -111,8 +95,7 @@
                     </ng-template>
                   </kip-custom-avatar-picker>
                   <kip-custom-avatar-color-picker [title]="avatarText.eyebrowColors" [colors]="eyebrowColors"
-                    [currentColor]="eyebrowColor" (colorPicked)="eyebrowColor = $event">
-                  </kip-custom-avatar-color-picker>
+                    [currentColor]="eyebrowColor" (colorPicked)="eyebrowColor = $event" />
                 </div>
                 <div *ngSwitchCase="tabIndexes.Accessory" class="kip-avatar-pick-svg">
                   <kip-custom-avatar-picker [title]="avatarText.accessories" [options]="accessoriesTypes"
@@ -126,8 +109,7 @@
                     </ng-template>
                   </kip-custom-avatar-picker>
                   <kip-custom-avatar-color-picker [title]="avatarText.accessoryColors" [colors]="accessoriesColors"
-                    [currentColor]="accessoriesColor" (colorPicked)="accessoriesColor = $event">
-                  </kip-custom-avatar-color-picker>
+                    [currentColor]="accessoriesColor" (colorPicked)="accessoriesColor = $event" />
                 </div>
                 <div *ngSwitchCase="tabIndexes.Earring" class="kip-avatar-pick-svg">
                   <kip-custom-avatar-picker [title]="avatarText.earrings" [options]="earringTypes"
@@ -141,8 +123,7 @@
                     </ng-template>
                   </kip-custom-avatar-picker>
                   <kip-custom-avatar-color-picker [title]="avatarText.earringColors" [colors]="earringColors"
-                    [currentColor]="earringColor" (colorPicked)="earringColor = $event">
-                  </kip-custom-avatar-color-picker>
+                    [currentColor]="earringColor" (colorPicked)="earringColor = $event" />
                 </div>
                 <div *ngSwitchCase="tabIndexes.FacialHair" class="kip-avatar-pick-svg">
                   <kip-custom-avatar-picker [title]="avatarText.facialHairs" [options]="facialHairTypes"
@@ -156,8 +137,7 @@
                     </ng-template>
                   </kip-custom-avatar-picker>
                   <kip-custom-avatar-color-picker [title]="avatarText.facialHairColors" [colors]="eyebrowColors"
-                    [currentColor]="facialHairColor" (colorPicked)="facialHairColor = $event">
-                  </kip-custom-avatar-color-picker>
+                    [currentColor]="facialHairColor" (colorPicked)="facialHairColor = $event" />
                 </div>
                 <div *ngSwitchCase="tabIndexes.Nose" class="kip-avatar-pick-svg">
                   <kip-custom-avatar-picker [title]="avatarText.noses" [options]="noseTypes" [currentOption]="noseType"
@@ -222,11 +202,9 @@
                     </ng-template>
                   </kip-custom-avatar-picker>
                   <kip-custom-avatar-color-picker *ngIf="!hatColorVisible" [title]="avatarText.hairColors"
-                    [colors]="hairColors" [currentColor]="hairColor" (colorPicked)="hairColor = $event">
-                  </kip-custom-avatar-color-picker>
+                    [colors]="hairColors" [currentColor]="hairColor" (colorPicked)="hairColor = $event" />
                   <kip-custom-avatar-color-picker *ngIf="hatColorVisible" [title]="avatarText.hatColors"
-                    [colors]="hatColors" [currentColor]="hatColor" (colorPicked)="hatColor = $event">
-                  </kip-custom-avatar-color-picker>
+                    [colors]="hatColors" [currentColor]="hatColor" (colorPicked)="hatColor = $event" />
                 </div>
                 <div *ngSwitchCase="tabIndexes.Clothes" class="kip-avatar-pick-svg">
                   <kip-custom-avatar-picker [title]="avatarText.clothes" [options]="clotheTypes"
@@ -240,14 +218,11 @@
                     </ng-template>
                   </kip-custom-avatar-picker>
                   <kip-custom-avatar-color-picker [title]="avatarText.clotheColors1" [colors]="clotheColors"
-                    [currentColor]="clotheColor" (colorPicked)="clotheColor = $event">
-                  </kip-custom-avatar-color-picker>
+                    [currentColor]="clotheColor" (colorPicked)="clotheColor = $event" />
                   <kip-custom-avatar-color-picker *ngIf="clotheColor2Visible" [title]="avatarText.clotheColors2"
-                    [colors]="clotheColors2" [currentColor]="clotheColor2" (colorPicked)="clotheColor2 = $event">
-                  </kip-custom-avatar-color-picker>
+                    [colors]="clotheColors2" [currentColor]="clotheColor2" (colorPicked)="clotheColor2 = $event" />
                   <kip-custom-avatar-color-picker *ngIf="clotheColor3Visible" [title]="avatarText.clotheColors3"
-                    [colors]="clotheColors3" [currentColor]="clotheColor3" (colorPicked)="clotheColor3 = $event">
-                  </kip-custom-avatar-color-picker>
+                    [colors]="clotheColors3" [currentColor]="clotheColor3" (colorPicked)="clotheColor3 = $event" />
                   <kip-custom-avatar-picker *ngIf="clotheTypeIsGraphicShirt" [title]="avatarText.graphics"
                     [options]="graphicTypes" [currentOption]="graphicType" (optionPicked)="graphicType = $event"
                     [backgroundColor]="clotheColor | clotheColor">

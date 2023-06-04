@@ -2,7 +2,7 @@
  * Public API Surface of ng-avataaars-library
  */
 export {
-  AvatarSelection, AvatarStyle, TopType, AccessoriesType, HairColor, FacialHairType, ClotheType,
+  AvatarExclusion, AvatarSelection, AvatarStyle, TopType, AccessoriesType, HairColor, FacialHairType, ClotheType,
   ClotheColor, EyeType, EyebrowType, MouthType, SkinColor, BackgroundColor, GraphicType, PetType, AwardType,
   HatColor, AccessoriesColor, NoseType, EarringType, EarringColor
 } from './lib/custom-avatar/options';
